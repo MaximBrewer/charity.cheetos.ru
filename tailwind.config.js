@@ -1,93 +1,83 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
-    theme: {
-        fontFamily: {
-            sans: [
-                "ui-sans-serif",
-                "system-ui",
-                "-apple-system",
-                "BlinkMacSystemFont",
-                "Segoe UI",
-                "Roboto",
-                "Helvetica Neue",
-                "Arial",
-                "Noto Sans",
-                "sans-serif",
-                "Apple Color Emoji",
-                "Segoe UI Emoji",
-                "Segoe UI Symbol",
-                "Noto Color Emoji"
-            ],
-            serif: [
-                "ui-serif",
-                "Georgia",
-                "Cambria",
-                "Times New Roman",
-                "Times",
-                "serif"
-            ],
-            mono: [
-                "ui-monospace",
-                "SFMono-Regular",
-                "Menlo",
-                "Monaco",
-                "Consolas",
-                "Liberation Mono",
-                "Courier New",
-                "monospace"
-            ],
-            body: ["Montserrat", "sans-serif"],
-            monserrat: ["Montserrat", "sans-serif"],
-            druk: ["druk_text_widebold"]
-        },
-        screens: {
-            sm: "640px",
-            md: "768px",
-            lg: "1024px",
-            xl: "1140px"
-        },
-        extend: {
-            spacing: {
-                "72": "18rem",
-                "84": "21rem",
-                "96": "24rem"
-            }
-        },
-        colors: {
-            transparent: "transparent",
-            current: "currentColor",
-            black: colors.black,
-            white: colors.white,
-            gray: colors.trueGray,
-            indigo: colors.indigo,
-            red: colors.rose,
-            yellow: colors.amber,
-            orange: {
-                50: "#ffe8e5",
-                100: "#fff2e5",
-                200: "#ffe5cc",
-                300: "#ffd7b2",
-                400: "#ffca99",
-                500: "#ffbd80",
-                600: "#ffb066",
-                700: "#ffa34d",
-                800: "#ff9633",
-                900: "#ff7b00"
-            },
-            purple: {
-                50: "#ab49f5",
-                100: "#ab49f5",
-                200: "#ab49f5",
-                300: "#ab49f5",
-                400: "#ab49f5",
-                500: "#ab49f5",
-                600: "#ab49f5",
-                700: "#a031f5",
-                800: "#9518f5",
-                900: "#8b00f5"
-            }
-        }
+  theme: {
+    fontFamily: {
+      rotonda: ["RotondaC", "Arial", "Helvetica", "sans-serif"],
     },
-    variants: {},
-    plugins: []
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1140px",
+    },
+    extend: {
+      spacing: {
+        "72": "18rem",
+        "84": "21rem",
+        "96": "24rem",
+      },
+      backgroundSize: {
+        "100%": "100%",
+        "40": "10rem",
+        "80": "20rem",
+      },
+      borderWidth: {
+        "3": "3px",
+        "7": "7px",
+      },
+      padding: { "fluid-video": "56.25%", "100%": "100%" },
+    },
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: colors.black,
+      white: colors.white,
+      gray: colors.trueGray,
+      indigo: colors.indigo,
+      red: colors.rose,
+      yellow: {
+        50: "#fffae5",
+        100: "#fff6cc",
+        200: "#fff1b2",
+        300: "#ffec99",
+        400: "#ffe880",
+        500: "#ffe366",
+        600: "#ffde4d",
+        700: "#ffda33",
+        800: "#ffd51a",
+        900: "#ffd200",
+      },
+      orange: {
+        50: "#f5e7dc",
+        100: "#f5dac4",
+        200: "#f5ccab",
+        300: "#f5bf93",
+        400: "#f5b17a",
+        500: "#f5a462",
+        600: "#f59749",
+        700: "#f58931",
+        800: "#f58122",
+        900: "#f56e00",
+      },
+      darkOrange: {
+        50: "#ede0d5",
+        100: "#edd3be",
+        200: "#edc6a6",
+        300: "#edb98e",
+        400: "#edac77",
+        500: "#ed9f5f",
+        600: "#ed9247",
+        700: "#ed852f",
+        800: "#ed7818",
+        900: "#ed6d06",
+      },
+    },
+  },
+  variants: {
+    extend: {
+      // ...
+     inset: ['active', 'hover', 'focus'],
+    }
+  },
+  plugins: [],
 };

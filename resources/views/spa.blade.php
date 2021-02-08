@@ -16,17 +16,17 @@
             'name' => config('app.name')
         ]) !!};
     </script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Styles -->
+    <link href="{{ asset('fonts/stylesheet.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-
+    
 </head>
 
 <body className="font-sans h-full text-grey-darkest">
     <div id="app" className="flex flex-col">
     </div>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 
 </html>

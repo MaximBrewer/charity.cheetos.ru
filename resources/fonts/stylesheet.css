@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'rotondac';
+    src: url('rotondac_bold.eot');
+    src: url('rotondac_bold.eot?#iefix') format('embedded-opentype'),
+         url('rotondac_bold.woff2') format('woff2'),
+         url('rotondac_bold.woff') format('woff'),
+         url('rotondac_bold.ttf') format('truetype'),
+         url('rotondac_bold.svg#rotondacbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rotondac';
+    src: url('rotondac.eot');
+    src: url('rotondac.eot?#iefix') format('embedded-opentype'),
+         url('rotondac.woff2') format('woff2'),
+         url('rotondac.woff') format('woff'),
+         url('rotondac.ttf') format('truetype'),
+         url('rotondac.svg#rotondacregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

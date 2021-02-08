@@ -1,73 +1,75 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FooterLogoImage from "../../images/logo-black.png";
-import MiniForm from "../components/Mini";
-
-import { InstagramLogo } from "../Icons";
+import LogoImg from "../../images/logo.png";
+import ChestorImg from "../../images/chestor.png";
+import { InstagramIcon, VkIcon, TikTokIcon } from "../Icons";
+import StepsImg from "../../images/steps.png";
 
 function Footer() {
-    return (
-        <section id="footer" className="bg-orange-500 pt-14 pb-16">
-            <div className="container mx-auto px-4 sm:px-0">
-                <div className="flex justify-between flex-col sm:flex-row">
-                    <div className="pr-24">
-                        <Link
-                            to="/"
-                            className="transform-gpu transition-transform hover:scale-110 block mb-6 bg-center bg-no-repeat bg-contain w-14 h-14"
-                            style={{
-                                backgroundImage: `url(${FooterLogoImage})`
-                            }}
-                        ></Link>
-                        <p className="text-sm text-gray-700 hidden sm:block">
-                            All rights reserved.
-                            <br />© 2021 kuba.digital{" "}
-                        </p>
-                    </div>
-                    <div className="pr-24 sm:w-2/5">
-                        <h4 className="text-lg font-semibold mb-6">
-                            Как с вами связаться?
-                        </h4>
-                        {/* <dl className="flex text-sm mb-3">
-                                <dt>Phone:</dt>
-                                <dd></dd>
-                            </dl> */}
-                        <dl className="flex text-sm mb-3">
-                            <dt className="whitespace-nowrap mr-2">Email:</dt>
-                            <dd className="whitespace-nowrap">
-                                <a
-                                    className="text-yellow-900 hover:underline"
-                                    href="mailto:hello@kuba.digital"
-                                >
-                                    hello@kuba.digital
-                                </a>
-                            </dd>
-                        </dl>
-                        {/* <dl className="flex text-sm mb-3">
-                                <dt>Telegram:</dt>
-                                <dd></dd>
-                            </dl> */}
-                        <dl className="flex text-sm mb-3">
-                            <dd className="whitespace-nowrap">
-                                {" "}
-                                <a
-                                    className="text-yellow-900 hover:underline"
-                                    href="https://instagram.com/kuba.digital?igshid=hjubezg39pb7"
-                                >
-                                    <InstagramLogo className="w-12 h-12" />
-                                </a>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div className="pr-24 sm:w-2/5 hidden sm:block">
-                        <h4 className="text-lg font-semibold mb-6">
-                            Оставайтесь на связи
-                        </h4>
-                        <MiniForm />
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section id="footer">
+      <div className="container mx-auto px-4 sm:px-0 max-w-sm mb-16">
+        <div className="w-full h-full">
+          <div className="w-32 m-auto">
+            <Link
+              to="/"
+              className="block bg-center bg-no-repeat bg-contain w-full"
+              style={{
+                backgroundImage: `url(${LogoImg})`,
+                paddingTop: "59.83%",
+              }}
+            ></Link>
+          </div>
+        </div>
+        <div className="my-4">
+          <h4 className="my-4 text-center">Следите за нами в соц.сетях:</h4>
+          <ul className="flex items-center justify-center">
+            <li className="mx-4">
+              <a
+                href=""
+                className="rounded-full block w-12 h-12 flex items-center justify-center bg-orange-800 text-white"
+              >
+                <InstagramIcon className="w-8 h-8 fill-current" />
+              </a>
+            </li>
+            <li className="mx-4">
+              <a
+                href=""
+                className="rounded-full block w-12 h-12 flex items-center justify-center bg-orange-800 text-white"
+              >
+                <VkIcon className="w-7 h-7 fill-current" />
+              </a>
+            </li>
+            <li className="mx-4">
+              <a
+                href=""
+                className="rounded-full block w-12 h-12 flex items-center justify-center bg-orange-800 text-white"
+              >
+                <TikTokIcon className="w-7 h-7 fill-current" />
+              </a>
+            </li>
+          </ul>
+          <p className="mt-4 mb-8 text-center">
+            <a href="">Правила акции</a>
+            <br />
+            <a href="">Пользовательское соглашение</a>
+            <br /> © ВСЕ ПРАВА ЗАЩИЩЕНЫ
+          </p>
+        </div>
+      </div>
+      <div
+        className="px-10 bg-orange-900 shadow-lg bg-80 mt-16"
+        style={{ backgroundImage: `url(${StepsImg})` }}
+      >
+        <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+          <div className="pb-8">
+            <div className="w-full h-1"></div>
+            <img src={ChestorImg} alt="" title="" className="-mt-8" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Footer;
