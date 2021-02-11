@@ -83,3 +83,58 @@ export const CloseIcon = ({ className }) => {
     </svg>
   );
 };
+
+export const ArrowPrevIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 12 19"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 2L2 9.5L10 17"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const ArrowNextIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 12 19"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2 17L10 9.5L2 2"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const ArrowDownIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 17 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2 2L8.31546 8.5L14.6309 2"
+        stroke="black"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

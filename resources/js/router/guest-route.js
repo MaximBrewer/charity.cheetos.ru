@@ -1,5 +1,12 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import {
+  Route,
+  Redirect,
+  Link,
+  NavLink,
+  Switch,
+  useLocation,
+} from "react-router-dom";
 import PropTypes from "prop-types";
 import { useAuth } from "../context/auth";
 
@@ -10,6 +17,7 @@ function GuestRoute({ component: Component, title, ...rest }) {
   const [opened, setOpened] = React.useState(false);
   const toggleOpened = () => setOpened((prevState) => !prevState);
   let { authenticated } = useAuth();
+  let location = useLocation();
 
   //   if (authenticated)
   //     switch (Component.name) {
@@ -39,10 +47,30 @@ function GuestRoute({ component: Component, title, ...rest }) {
   //   else
   return (
     <div className="overflow-hidden relative flex flex-col min-h-screen">
-      <Header toggleOpened={toggleOpened} opened={opened} isHome={true} setOpened={setOpened}/>
+      <Header
+        toggleOpened={toggleOpened}
+        opened={opened}
+        isHome={true}
+        setOpened={setOpened}
+      />
       <div className="relative">
-        <div className={`fixed h-full w-full bg-black bg-opacity-90 top-0 ${opened ? `` : `hidden`}`}></div>
-        <Route {...rest} />
+        <div
+          className={`fixed h-full w-full bg-black bg-opacity-90 z-10 top-0 ${
+            opened ? `` : `hidden`
+          }`}
+          onClick={() => {
+            setOpened(false);
+          }}
+        ></div>
+        <div
+          className={`${location && location.pathname == "/" ? `pt-28 -mt-28` : ``} ${
+            location && location.pathname != "/faq" ? `bg-white` : ``
+          }`}
+        >
+          <div className="h-px"></div>
+          <Route {...rest} />
+          <div className="h-px"></div>
+        </div>
         <Footer />
       </div>
     </div>

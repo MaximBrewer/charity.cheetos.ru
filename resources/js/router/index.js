@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../pages/Home";
+import Rules from "../pages/Rules";
+import Faq from "../pages/Faq";
 import Login from "../pages/auth/login";
 import Register from "../pages/auth/register";
 import ForgotPassword from "../pages/auth/forgot-password";
@@ -10,6 +12,7 @@ import AuthRoute from "./auth-route";
 import GuestRoute from "./guest-route";
 import { useAuth } from "../context/auth";
 import FullPageSpinner from "../components/full-page-spinner";
+import StepsImg from "../../images/steps.png";
 
 function App() {
   let { initializing } = useAuth();
@@ -17,10 +20,19 @@ function App() {
     <FullPageSpinner />
   ) : (
     <Router>
-      <div className="flex flex-col min-h-screen font-rotonda">
+      <div
+        className="flex flex-col min-h-screen font-rotonda bg-orange-900 shadow-lg bg-80"
+        style={{ backgroundImage: `url(${StepsImg})` }}
+      >
         <Switch>
           <GuestRoute exact path="/">
             <Home />
+          </GuestRoute>
+          <GuestRoute exact path="/rules">
+            <Rules />
+          </GuestRoute>
+          <GuestRoute exact path="/faq">
+            <Faq />
           </GuestRoute>
           {/* <GuestRoute path="/register" component={Register}/>
             <GuestRoute path="/login" component={Login}/>
