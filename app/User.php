@@ -17,7 +17,7 @@ class User extends \TCG\Voyager\Models\User implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'email', 'password', 'name', 'lastname', 'surname', 'phone', 'company_id'
+        'email', 'password', 'name'
     ];
 
     /**
@@ -58,15 +58,5 @@ class User extends \TCG\Voyager\Models\User implements JWTSubject
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordNotification($token));
-    }
-
-    public function companies()
-    {
-        return $this->hasMany(Company::class);
-    }
-
-    public function company()
-    {
-        return $this->belongsTo(Company::class);
     }
 }

@@ -9,17 +9,16 @@ export default function FaqForm() {
   const alert = useAlert();
   let name = useInputValue("name");
   let email = useInputValue("email");
-  let phone = useInputValue("phone");
-  let text = useInputValue("text");
+  let question = useInputValue("question");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    client("/api/order", {
+    client("/api/faq", {
       body: {
         name: name.value ? name.value : "",
         email: email.value ? email.value : "",
-        text: text.value ? text.value : "",
+        question: question.value ? question.value : "",
       },
     })
       .then((data) => {
@@ -29,11 +28,11 @@ export default function FaqForm() {
         });
         name.setValue("");
         email.setValue("");
-        text.setValue("");
+        question.setValue("");
       })
       .catch((error) => {
         error.json().then(({ errors }) => {
-          [name, email].forEach(({ parseServerError }) =>
+          [name, email, question].forEach(({ parseServerError }) =>
             parseServerError(errors)
           );
         });
@@ -55,8 +54,8 @@ export default function FaqForm() {
             <div className={`md-input-box`}>
               <input
                 type="text"
-                className={`bg-white py-2 px-4 rounded-xl border-transparent bordered w-full ${
-                  name.error ? "border-red-200" : ""
+                className={`focus:outline-none bg-white py-2 px-4 rounded-xl border-transparent border w-full ${
+                  name.error ? "border-red-500" : ""
                 }`}
                 placeholder="Имя"
                 id="name"
@@ -66,7 +65,7 @@ export default function FaqForm() {
               />
             </div>
             {name.error && (
-              <p className="text-red-200 text-xs pt-2">{name.error}</p>
+              <p className="text-white text-xs">{name.error}</p>
             )}
           </div>
         </div>
@@ -75,8 +74,8 @@ export default function FaqForm() {
             <div className={`md-input-box`}>
               <input
                 type="email"
-                className={`bg-white py-2 px-4 rounded-xl border-transparent bordered w-full ${
-                  email.error ? "border-red-200" : ""
+                className={`focus:outline-none bg-white py-2 px-4 rounded-xl border-transparent border w-full ${
+                  email.error ? "border-red-500" : ""
                 }`}
                 placeholder="E-mail"
                 id="email"
@@ -86,7 +85,7 @@ export default function FaqForm() {
               />
             </div>
             {email.error && (
-              <p className="text-red-200 text-xs pt-2">{email.error}</p>
+              <p className="text-white text-xs">{email.error}</p>
             )}
           </div>
         </div>
@@ -94,22 +93,21 @@ export default function FaqForm() {
           <div className="w-full my-2">
             <div className={`md-input-box`}>
               <textarea
-                type="text"
-                className={`h-48 bg-white py-2 px-4 rounded-xl border-transparent bordered w-full ${
-                  text.error ? "border-red-200" : ""
+                className={`block focus:outline-none h-48 bg-white py-2 px-4 rounded-xl border-transparent border w-full ${
+                  question.error ? "border-red-500" : ""
                 }`}
                 placeholder=" "
-                id="text"
-                name="text"
+                id="question"
+                name="question"
                 required
-                value={text.bind.value}
+                value={question.bind.value}
                 onChange={(e) => {
-                  onTextAreaChange(e, text.bind.onChange);
+                  onTextAreaChange(e, question.bind.onChange);
                 }}
               />
             </div>
-            {text.error && (
-              <p className="text-red-200 text-xs pt-2">{text.error}</p>
+            {question.error && (
+              <p className="text-white text-xs">{question.error}</p>
             )}
           </div>
         </div>

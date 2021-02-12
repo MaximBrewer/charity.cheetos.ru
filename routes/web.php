@@ -17,6 +17,4 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/{uri?}', function () {
-    return view('spa');
-})->where('uri', '(.*)');
+Route::get('/{uri?}', '\App\Http\Controllers\SpaController@index')->where('uri', '(.*)');

@@ -16,17 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::name('api.')->namespace('Api')->group(function () {
     // Unprotected routes
 
-    Route::post('order', 'OrdersController@store')
+    Route::post('faq', 'FaqsController@store')
         // ->middleware('throttle:10,1')
-        ->name('order.store');
-
-    Route::post('email', 'EmailsController@store')
-        // ->middleware('throttle:10,1')
-        ->name('email.store');
-
-    Route::post('brief', 'BriefsController@store')
-        // ->middleware('throttle:10,1')
-        ->name('brief.store');
+        ->name('faq.store');
 
     Route::group(['middleware' => 'guest:api'], function () {
         Route::namespace('Auth')->group(function () {

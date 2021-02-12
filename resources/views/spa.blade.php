@@ -12,9 +12,7 @@
 
     <!-- Scripts -->
     <script>
-        window.App = {!! json_encode([
-            'name' => config('app.name')
-        ]) !!};
+        window.App = {!! json_encode($app); !!};
     </script>
 
     <!-- Styles -->

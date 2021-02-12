@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Email;
+use App\Models\Faq;
+use App\Http\Resources\Faq as FaqResource;
 
-class EmailsController extends Controller
+class FaqsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,17 +37,14 @@ class EmailsController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
-            'email' => 'required|email:rfc,dns'
+            'name' => 'required|min:3|regex:/^[a-zA-Zа-яА-ЯёЁ\s]+$/u|max:255',
+            'email' => 'required_without:phone|email:rfc,dns',
+            'question' => 'required|min:10'
         ]);
-        
-        if (Email::where('email', $request->email)->first())
-            return ['message' => 'Вы уже на связи :)'];
 
-        Email::create($request->all());
-
-        return ['message' => 'Теперь Вы на связи :)'];
+        Faq::create($request->all());
+        return ['message' => 'Мы получили Ваше сообщение, до скорейшей обратной связи!'];
     }
 
     /**
