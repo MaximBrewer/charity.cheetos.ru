@@ -1,15 +1,34 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import useInputValue from "./input-value";
 import client from "../api/client";
-import { useAlert } from "react-alert";
+import { useModal } from "../context/modal";
+import SuccessFaqModal from "../modals/SuccessFaq";
+import { buttonClass } from "../Classes";
 
 // components
 
 export default function FaqForm() {
-  const alert = useAlert();
+  let { setModalBody } = useModal();
+  const [category, setCategory] = useState("charity");
+
   let name = useInputValue("name");
   let email = useInputValue("email");
   let question = useInputValue("question");
+
+  let location = useLocation();
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/faq/note":
+        setCategory("note");
+        break;
+      case "/faq/stock":
+        setCategory("stock");
+        break;
+      default:
+        setCategory("charity");
+    }
+  }, [location]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,20 +36,20 @@ export default function FaqForm() {
     client("/api/faq", {
       body: {
         name: name.value ? name.value : "",
+        category: category,
         email: email.value ? email.value : "",
         question: question.value ? question.value : "",
       },
     })
       .then((data) => {
-        alert.show(data.message, {
-          timeout: 3000,
-          type: "success",
-        });
         name.setValue("");
         email.setValue("");
         question.setValue("");
+        document.documentElement.scrollTop = 0;
+        setModalBody(<SuccessFaqModal />);
       })
       .catch((error) => {
+        console.log(error);
         error.json().then(({ errors }) => {
           [name, email, question].forEach(({ parseServerError }) =>
             parseServerError(errors)
@@ -40,21 +59,18 @@ export default function FaqForm() {
   };
 
   const onTextAreaChange = (e, func) => {
-    e.target.style.height = "auto";
-    e.target.style.overflow = "hidden";
-    e.target.style.height = e.target.scrollHeight + "px";
     func(e);
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="w-4/5 m-auto">
+      <form onSubmit={handleSubmit}>
         <div className="flex flex-wrap flex-col">
           <div className="w-full my-2">
             <div className={`md-input-box`}>
               <input
                 type="text"
-                className={`focus:outline-none bg-white py-2 px-4 rounded-xl border-transparent border w-full ${
+                className={`focus:outline-none shadow-lg bg-white py-2 px-4 rounded-2xl border-transparent border w-full ${
                   name.error ? "border-red-500" : ""
                 }`}
                 placeholder="Имя"
@@ -64,9 +80,7 @@ export default function FaqForm() {
                 {...name.bind}
               />
             </div>
-            {name.error && (
-              <p className="text-white text-xs">{name.error}</p>
-            )}
+            {name.error && <p className="text-white text-xs">{name.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
@@ -74,7 +88,7 @@ export default function FaqForm() {
             <div className={`md-input-box`}>
               <input
                 type="email"
-                className={`focus:outline-none bg-white py-2 px-4 rounded-xl border-transparent border w-full ${
+                className={`focus:outline-none shadow-lg bg-white py-2 px-4 rounded-2xl border-transparent border w-full ${
                   email.error ? "border-red-500" : ""
                 }`}
                 placeholder="E-mail"
@@ -84,19 +98,17 @@ export default function FaqForm() {
                 {...email.bind}
               />
             </div>
-            {email.error && (
-              <p className="text-white text-xs">{email.error}</p>
-            )}
+            {email.error && <p className="text-white text-xs">{email.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
           <div className="w-full my-2">
             <div className={`md-input-box`}>
               <textarea
-                className={`block focus:outline-none h-48 bg-white py-2 px-4 rounded-xl border-transparent border w-full ${
+                className={`block shadow-lg focus:outline-none h-48 bg-white py-2 px-4 rounded-2xl border-transparent border w-full ${
                   question.error ? "border-red-500" : ""
                 }`}
-                placeholder=" "
+                placeholder="Не нашли ответ на свой вопрос? Задайте вопрос и мы оперативно ответим"
                 id="question"
                 name="question"
                 required
@@ -113,7 +125,7 @@ export default function FaqForm() {
         </div>
         <div className="my-6 flex items-center justify-center">
           <button
-            className="w-64 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
+            className={buttonClass() + " text-xl w-64"}
             type="button"
             onClick={handleSubmit}
           >

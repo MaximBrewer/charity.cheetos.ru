@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import LogoImg from "../../images/logo.png";
 import ChestorImg from "../../images/chestor.png";
 import { InstagramIcon, VkIcon, TikTokIcon } from "../Icons";
-import StepsImg from "../../images/steps.png";
 
 function Footer() {
   return (
@@ -31,7 +30,8 @@ function Footer() {
             <ul className="flex items-center justify-center">
               <li className="mx-4">
                 <a
-                  href=""
+                  href={window.App.data.instagram}
+                  target="_blank"
                   className="rounded-full block w-12 h-12 flex items-center justify-center bg-orange-800 text-white"
                 >
                   <InstagramIcon className="w-8 h-8 fill-current" />
@@ -39,7 +39,8 @@ function Footer() {
               </li>
               <li className="mx-4">
                 <a
-                  href=""
+                  href={window.App.data.vk}
+                  target="_blank"
                   className="rounded-full block w-12 h-12 flex items-center justify-center bg-orange-800 text-white"
                 >
                   <VkIcon className="w-7 h-7 fill-current" />
@@ -47,7 +48,8 @@ function Footer() {
               </li>
               <li className="mx-4">
                 <a
-                  href=""
+                  href={window.App.data.tiktok}
+                  target="_blank"
                   className="rounded-full block w-12 h-12 flex items-center justify-center bg-orange-800 text-white"
                 >
                   <TikTokIcon className="w-7 h-7 fill-current" />
@@ -55,9 +57,9 @@ function Footer() {
               </li>
             </ul>
             <p className="mt-4 mb-8 text-center">
-              <a href="">Правила акции</a>
+              <Link to="/rules" className="hover:underline">Правила акции</Link>
               <br />
-              <a href="">Пользовательское соглашение</a>
+              <Link to="/agreement" className="hover:underline">Пользовательское соглашение</Link>
               <br /> © ВСЕ ПРАВА ЗАЩИЩЕНЫ
             </p>
           </div>

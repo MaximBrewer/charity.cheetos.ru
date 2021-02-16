@@ -1,90 +1,32 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import DogImg from "../../images/dgo.png";
-import PartnerImg from "../../images/partner.png";
 import StepsImg from "../../images/steps.png";
-import Slider from "react-slick";
-import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
 
-function Home({ toggleOpened, opened }) {
-  const settingsNews = {
-    arrows: false,
-    infinite: true,
-    dots: false,
-    speed: 300,
-    auto: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+import PartnersSlider from "../components/PartnersSlider";
+import NewsSlider from "../components/NewsSlider";
 
-  const refNews = useRef(null);
+import { DoubleButton, OfficialVideo } from "../Helpers";
+import { buttonClass } from "../Classes";
 
-  const newsArray = [
-    {
-      src: DogImg,
-    },
-    {
-      src: DogImg,
-    },
-    {
-      src: DogImg,
-    },
-    {
-      src: DogImg,
-    },
-    {
-      src: DogImg,
-    },
-  ];
-  const settingsPartners = {
-    arrows: false,
-    infinite: true,
-    dots: false,
-    speed: 300,
-    auto: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
-  const refPartners = useRef(null);
-
-  const partnersArray = [
-    {
-      src: PartnerImg,
-      text: 'Благотворительный фонд помощи бездомным животным "НИКА"',
-    },
-    {
-      src: PartnerImg,
-      text: 'Благотворительный фонд помощи бездомным животным "НИКА"',
-    },
-    {
-      src: PartnerImg,
-      text: 'Благотворительный фонд помощи бездомным животным "НИКА"',
-    },
-    {
-      src: PartnerImg,
-      text: 'Благотворительный фонд помощи бездомным животным "НИКА"',
-    },
-    {
-      src: PartnerImg,
-      text: 'Благотворительный фонд помощи бездомным животным "НИКА"',
-    },
-  ];
-
+function Home() {
   return (
-    <section id="home">
+    <section id="home" className="bg-white mt-52">
       <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+        <div className="w-full h-px"></div>
+        <div className="-mt-52">
+          <h2 className="text-white pt-6 pb-4 text-3xl sm:text-4xl font-bold text-center">
+            Протяни лапу дружбы
+          </h2>
+          <OfficialVideo />
+        </div>
         <p className="text-xl">
           Покупай специальные упаковки Cheetos “Лапы” и 1 рубль, с каждой
           проданной пачки будет переведён в фонды помощи бездомным животным
         </p>
-        <div className="my-6 flex items-center justify-center">
-          <button className="w-64 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none">
-            Удвоить помощь!
-          </button>
-        </div>
+        <DoubleButton />
         <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8">
-          Стать хоязином:
+          Стать хозяином:
         </h2>
         <div className="my-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
           <div
@@ -117,16 +59,16 @@ function Home({ toggleOpened, opened }) {
             </div>
             <span className="w-full">
               Пройди обучение в <br />
-              <Link to="/" className="font-bold underline">
+              <Link to="/school" className="font-bold underline">
                 школе будущих хозяев
               </Link>
             </span>
           </li>
         </ul>
         <div className="my-6 flex items-center justify-center">
-          <button className="w-64 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none">
+          <Link to="/getpet" className={buttonClass() + " w-64 text-xl"}>
             Стать хозяином
-          </button>
+          </Link>
         </div>
         <h2 className="text-2xl text-center uppercase font-bold mt-8 mb-4">
           ШКОЛА БУДУЩИХ ХОЗЯЕВ
@@ -138,20 +80,20 @@ function Home({ toggleOpened, opened }) {
         </p>
       </div>
       <div
-        className="mt-28 bg-orange-900 bg-80 z-20 relative"
+        className="mt-28 bg-orange-900 bg-80 relative"
         style={{ backgroundImage: `url(${StepsImg})` }}
       >
         <div className="container mx-auto px-4 sm:px-0 max-w-sm">
           <div className="h-px w-full"></div>
           <div className="-mt-28">
-            <div className="my-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
+            <div className="my-4 border-7 border-yellow-900 rounded-3xl overflow-hidden bg-darkOrange-900">
               <div
                 id="responsiveVideoWrapper"
                 className="relative h-0 pb-fluid-video"
               >
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/zihoyz0u_cs"
+                  src={`https://www.youtube.com/embed/${window.App.data.youtubeSchool}`}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   autoPlay
@@ -160,96 +102,35 @@ function Home({ toggleOpened, opened }) {
             </div>
           </div>
           <div className="my-6 flex items-center justify-center">
-            <button className="w-64 text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 font-bold text-center focus:outline-none">
+            <Link
+              to="/school"
+              className="w-64 text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 font-bold text-center focus:outline-none"
+            >
               Узнать больше
-            </button>
+            </Link>
           </div>
           <div className="h-px w-full"></div>
         </div>
       </div>
       <div className="container mx-auto px-4 sm:px-0 max-w-sm">
         <h2 className="text-2xl text-center font-bold mt-8 mb-4">Новости:</h2>
-        <div className="relative overflow-hidden mb-6">
-          <Slider {...settingsNews} ref={refNews}>
-            {newsArray.map((item, index) => (
-              <div key={index}>
-                <div
-                  className="border-7 border-yellow-900 rounded-3xl relative bg-center bg-no-repeat bg-cover w-full pb-100% -mb-2"
-                  style={{ backgroundImage: `url(${item.src})` }}
-                >
-                </div>
-                <p className="text-xl my-4">
-                  Dream Team House — тиктокерский дом вместе с брендом Сheetos
-                  съездил в приют Ромашка
-                </p>
-                <div className="mb-6 flex items-center justify-center">
-                  <button className="w-64 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none">
-                    Подробнее
-                  </button>
-                </div>
-              </div>
-            ))}
-          </Slider>
-          <a
-            className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/3 left-0 -mt-6"
-            onClick={() => {
-              refNews.current.slickPrev();
-            }}
-          >
-            <ArrowPrevIcon className="w-4 h-6 stroke-current" />
-          </a>
-          <a
-            className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/3 right-0 -mt-6"
-            onClick={() => {
-              refNews.current.slickNext();
-            }}
-          >
-            <ArrowNextIcon className="w-4 h-6 stroke-current" />
-          </a>
-        </div>
+        <NewsSlider />
       </div>
       <div className="container mx-auto px-4 sm:px-0 max-w-sm">
         <h2 className="text-2xl text-center font-bold mt-8 mb-4">
           Партнеры проекта:
         </h2>
-        <div className="relative overflow-hidden mb-6 px-10">
-          <Slider {...settingsPartners} ref={refPartners}>
-            {partnersArray.map((item, index) => (
-              <div key={index}>
-                <div className="w-1/2 m-auto mb-4">
-                  <div
-                    className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
-                    style={{ backgroundImage: `url(${item.src})` }}
-                  >
-                  </div>
-                </div>
-                <p className="text-center mb-4">{item.text}</p>
-                <div className="mb-6 flex items-center justify-center">
-                  <button className="w-48 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none">
-                    Подробнее
-                  </button>
-                </div>
-              </div>
-            ))}
-          </Slider>
-          <a
-            className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 left-0 -mt-6"
-            onClick={() => {
-              refPartners.current.slickPrev();
-            }}
+        <PartnersSlider />
+        <div className="mb-6 flex items-center justify-center">
+          <Link
+            to="/partners"
+            className="w-48 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
           >
-            <ArrowPrevIcon className="w-4 h-6 stroke-current" />
-          </a>
-          <a
-            className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 right-0 -mt-6"
-            onClick={() => {
-              refPartners.current.slickNext();
-            }}
-          >
-            <ArrowNextIcon className="w-4 h-6 stroke-current" />
-          </a>
+            Подробнее
+          </Link>
         </div>
       </div>
+      <div className="w-full h-px"></div>
     </section>
   );
 }

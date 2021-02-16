@@ -3,30 +3,40 @@ import { Link, NavLink, Switch, useLocation } from "react-router-dom";
 import { BurgerIcon, CloseIcon } from "../Icons";
 import StepsImg from "../../images/steps.png";
 import LogoImg from "../../images/logo.png";
+import FaqModal from "../modals/Faq";
+import { useModal } from "../context/modal";
 
-function Header({ isHome = false, toggleOpened, opened, setOpened }) {
+function Header({ opened, setOpened }) {
+  let { setModalBody, setShowModal, showModal } = useModal();
   let location = useLocation();
   useEffect(() => {
     setOpened(false);
+    setShowModal(false);
+    document.documentElement.scrollTop = 0;
   }, [location]);
+
   return (
     <section
       id="header"
       className={`${
-        opened ? `bg-orange-900 shadow-lg bg-80` : ``
+        opened || showModal ? `bg-orange-900 shadow-lg bg-80` : ``
       }  z-20 relative`}
-      style={opened ? { backgroundImage: `url(${StepsImg})` } : {}}
+      style={opened || showModal ? { backgroundImage: `url(${StepsImg})` } : {}}
     >
       <div className="container mx-auto px-4 sm:px-0 max-w-sm">
         <nav className="text-white">
           <div className="flex justify-between items-center h-16 py-2 z-30 relative">
             <div className="">
-              <Link
-                to="/faq"
+              <a
+                onClick={() => {
+                  setOpened(false);
+                  setModalBody(<FaqModal />);
+                  setShowModal(true);
+                }}
                 className="cursor-pointer border-3 flex items-center justify-center w-10 h-10 rounded-full text-xl font-bold border-white text-white"
               >
                 ?
-              </Link>
+              </a>
             </div>
             <div className="w-full h-full">
               <div className="w-32 m-auto">
@@ -44,7 +54,10 @@ function Header({ isHome = false, toggleOpened, opened, setOpened }) {
               <button
                 className="inline-flex items-center justify-center text-white hover:text-white outline-none focus:outline-none"
                 aria-expanded="false"
-                onClick={() => toggleOpened()}
+                onClick={() => {
+                  setOpened(true);
+                  setShowModal(false);
+                }}
               >
                 <span className="sr-only">Open main menu</span>
                 <BurgerIcon className="w-10 h-5" />
@@ -72,7 +85,7 @@ function Header({ isHome = false, toggleOpened, opened, setOpened }) {
               <li className="py-1">
                 <NavLink
                   activeClassName="active"
-                  to="/"
+                  to="/about"
                   onClick={() => {
                     setOpened(false);
                   }}
@@ -83,7 +96,7 @@ function Header({ isHome = false, toggleOpened, opened, setOpened }) {
               <li className="py-1">
                 <NavLink
                   activeClassName="active"
-                  to="/"
+                  to="/news"
                   onClick={() => {
                     setOpened(false);
                   }}
@@ -92,20 +105,20 @@ function Header({ isHome = false, toggleOpened, opened, setOpened }) {
                 </NavLink>
               </li>
               <li className="py-1">
-                <NavLink
-                  activeClassName="active"
-                  to="/"
+                <a
+                  target="_blank"
+                  href={window.App.data.doubleLink}
                   onClick={() => {
                     setOpened(false);
                   }}
                 >
                   Удвоить помощь в Магнит
-                </NavLink>
+                </a>
               </li>
               <li className="py-1">
                 <NavLink
                   activeClassName="active"
-                  to="/"
+                  to="/school"
                   onClick={() => {
                     setOpened(false);
                   }}
@@ -116,7 +129,7 @@ function Header({ isHome = false, toggleOpened, opened, setOpened }) {
               <li className="py-1">
                 <NavLink
                   activeClassName="active"
-                  to="/"
+                  to="/partners"
                   onClick={() => {
                     setOpened(false);
                   }}
@@ -136,41 +149,19 @@ function Header({ isHome = false, toggleOpened, opened, setOpened }) {
                 </NavLink>
               </li>
               <li className="py-1">
-                <NavLink
-                  activeClassName="active"
-                  to="/faq"
+                <a
+                  className="cursor-pointer"
                   onClick={() => {
                     setOpened(false);
+                    setModalBody(<FaqModal />);
+                    setShowModal(true);
                   }}
                 >
                   FAQ
-                </NavLink>
+                </a>
               </li>
             </ul>
           </div>
-          {location && location.pathname == "/" ? (
-            <div>
-              <h2 className="pt-6 pb-4 text-3xl sm:text-4xl font-bold text-center">
-                Протяни лапу дружбы
-              </h2>
-              <div className="my-4 border-7 border-yellow-900 rounded-3xl overflow-hidden bg-darkOrange-900">
-                <div
-                  id="responsiveVideoWrapper"
-                  className="relative h-0 pb-fluid-video"
-                >
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/zihoyz0u_cs"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    autoPlay
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          ) : (
-            ``
-          )}
         </nav>
       </div>
     </section>

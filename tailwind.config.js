@@ -1,6 +1,20 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
   theme: {
+    fontSize: {
+      xs: ".75rem",
+      sm: ".875rem",
+      tiny: ".875rem",
+      base: "1rem",
+      lg: "1.125rem",
+      xl: "1.25rem",
+      "2xl": "1.625rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "4rem",
+      "7xl": "5rem",
+    },
     fontFamily: {
       rotonda: ["RotondaC", "Arial", "Helvetica", "sans-serif"],
     },
@@ -11,6 +25,9 @@ module.exports = {
       xl: "1140px",
     },
     extend: {
+      zIndex: {
+       '5': '5',
+      },
       spacing: {
         "72": "18rem",
         "84": "21rem",
@@ -32,6 +49,7 @@ module.exports = {
       current: "currentColor",
       black: colors.black,
       white: colors.white,
+      green: colors.green,
       gray: colors.trueGray,
       indigo: colors.indigo,
       red: colors.rose,
@@ -76,8 +94,8 @@ module.exports = {
   variants: {
     extend: {
       // ...
-     inset: ['active', 'hover', 'focus'],
-    }
+      inset: ["active", "hover", "focus"],
+    },
   },
   plugins: [],
 };

@@ -1,19 +1,21 @@
-import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
-import DogImg from "../../images/dgo.png";
-import PartnerImg from "../../images/partner.png";
-import StepsImg from "../../images/steps.png";
-import Slider from "react-slick";
-import { ArrowNextIcon, ArrowPrevIcon, ArrowDownIcon } from "../Icons";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { ArrowDownIcon } from "../Icons";
 import Parser from "html-react-parser";
 import FaqForm from "../components/FaqForm";
 
-function Rules({ toggleOpened, opened }) {
-  const [faq, setFaq] = useState(window.App.data.faqs);
+function Faq({ category = "charity" }) {
+  const [faq, setFaq] = useState(window.App.data.faqs[category]);
+
+  let location = useLocation();
+  useEffect(() => {
+    setFaq(window.App.data.faqs[category]);
+  }, [location]);
+
   return (
     <section id="faq">
       <div className="container mx-auto px-4 sm:px-0 max-w-sm">
-        <h2 className="text-2xl text-center uppercase font-bold mb-6 mt-12">
+        <h2 className="text-2xl text-center uppercase font-bold mb-6 mt-12 text-white">
           FAQ
         </h2>
         <div className="mb-10 text-justify">
@@ -34,11 +36,13 @@ function Rules({ toggleOpened, opened }) {
                 }}
               >
                 <div
-                  className={`flex justify-between items-center text-sm sm:text-lg font-bold text-left py-2 px-6 ${
+                  className={`flex justify-between items-center text-sm sm:text-lg font-bold text-left py-3 px-4 ${
                     item.o ? `bg-yellow-900` : `bg-white`
                   }`}
                 >
-                  <span className="block mr-2">Вопрос №{index*1 + 1}: {item.q}</span>
+                  <span className="block mr-2">
+                    Вопрос №{index * 1 + 1}: {item.q}
+                  </span>
                   <span className="text-black">
                     <ArrowDownIcon className="stroke-current w-6 h-4" />
                   </span>
@@ -56,15 +60,17 @@ function Rules({ toggleOpened, opened }) {
         </div>
       </div>
       <div className="container mx-auto px-4 sm:px-0 max-w-sm">
-        <h2 className="text-2xl text-center font-bold mb-6 mt-12">
+        <h2 className="text-2xl text-center font-bold mb-6 mt-12 text-white">
           У меня есть вопрос:
         </h2>
         <div className="mb-10 text-justify">
-          <FaqForm />
+          <div className="w-4/5 m-auto">
+            <FaqForm category={category} />
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-export default Rules;
+export default Faq;

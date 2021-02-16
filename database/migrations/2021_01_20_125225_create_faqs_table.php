@@ -19,6 +19,7 @@ class CreateFaqsTable extends Migration
             $table->string('email')->nullable();
             $table->text('question')->nullable();
             $table->text('answer')->nullable();
+            $table->enum('category', ['charity', 'note', 'stock'])->default('charity');
             $table->enum('status', ['new', 'confirmed'])->default('new');
             $table->timestamps();
         });

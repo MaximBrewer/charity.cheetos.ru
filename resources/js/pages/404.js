@@ -1,18 +1,18 @@
-import React from 'react';
-import GuestNav from '../components/guest-nav';
-import { useAuth } from '../context/auth';
+import React from "react";
 
-function NotFound () {
-  let { authenticated } = useAuth();
-
+function NotFound() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <GuestNav />
-      <div className="flex flex-col flex-1 items-center">
-        <h1 className="py-8">Страницы не найдена.</h1>
+    <section id="about" className="bg-white">
+      <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+        <div className="flex flex-col flex-1 items-center">
+          <h1 className="py-8 text-3xl sm:text-4xl font-bold">
+            Страница не найдена.
+          </h1>
+        </div>
       </div>
-    </div>
+      <div className="w-full h-px"></div>
+    </section>
   );
-};
+}
 
 export default NotFound;
