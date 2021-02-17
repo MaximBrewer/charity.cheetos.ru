@@ -22,9 +22,11 @@ class CreatePetsTable extends Migration
             $table->string('image')->nullable();
             $table->string('images')->nullable();
             $table->unsignedBigInteger('city_id');
+            $table->unsignedBigInteger('partner_id');
             $table->timestamps();
 
             $table->foreign('city_id')->references('id')->on('cities');
+            $table->foreign('partner_id')->references('id')->on('partners');
         });
     }
 

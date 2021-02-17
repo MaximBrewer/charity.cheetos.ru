@@ -59,7 +59,7 @@ function School() {
                             ...i,
                             o: !i.o && k == index,
                             y:
-                              k == index ? (
+                              k == index && !i.o ? (
                                 <div className="my-4 rounded-3xl overflow-hidden bg-gray-300">
                                   <div
                                     id="responsiveVideoWrapper"
@@ -93,7 +93,7 @@ function School() {
                     </div>
                     <div
                       className={`text-sm sm:text-base bg-white ${
-                        item.o ? `h-auto pt-4` : `h-0`
+                        item.o ? `h-auto pt-4` : `h-0 hidden`
                       }`}
                     >
                       <div className="px-6">
@@ -122,7 +122,7 @@ function School() {
         <div className="container mx-auto max-w-sm">
           <div>
             <h2 className="text-3xl font-bold text-center">
-              Какое У вас животное
+              Какое у вас животное
             </h2>
             <p className="text-sm text-center mb-4">будущее или настоящее</p>
             <div className="mb-2 justify-center items-center flex">
@@ -183,7 +183,7 @@ function School() {
                           ...i,
                           o: !i.o && k == index,
                           y:
-                            k == index ? (
+                            k == index && !i.o ? (
                               <div className="my-4 rounded-3xl overflow-hidden bg-gray-300">
                                 <div
                                   id="responsiveVideoWrapper"
@@ -219,7 +219,7 @@ function School() {
                   </div>
                   <div
                     className={`text-sm sm:text-base bg-white ${
-                      item.o ? `h-auto pt-4` : `h-0`
+                      item.o ? `h-auto pt-4` : `h-0 hidden`
                     }`}
                   >
                     <div className="px-6">

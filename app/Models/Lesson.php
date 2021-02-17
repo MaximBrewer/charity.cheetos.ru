@@ -10,4 +10,14 @@ class Lesson extends Model
 {
     use HasFactory;
     use Resizable;
+
+    public function scopeDogs($query)
+    {
+        return $query->where('kind', 'dog');
+    }
+
+    public function scopeCats($query)
+    {
+        return $query->where('kind', 'cat');
+    }
 }
