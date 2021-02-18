@@ -19,8 +19,11 @@ export default function FaqForm() {
   let location = useLocation();
   useEffect(() => {
     switch (location.pathname) {
-      case "/faq/note":
-        setCategory("note");
+      case "/faq/dog":
+        setCategory("dog");
+        break;
+      case "/faq/cat":
+        setCategory("cat");
         break;
       case "/faq/stock":
         setCategory("stock");

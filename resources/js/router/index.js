@@ -47,8 +47,11 @@ function App() {
             <GuestRoute exact path="/faq/charity">
               <Faq category="charity" />
             </GuestRoute>
-            <GuestRoute exact path="/faq/note">
-              <Faq category="note" />
+            <GuestRoute exact path="/faq/dog">
+              <Faq category="dog" />
+            </GuestRoute>
+            <GuestRoute exact path="/faq/cat">
+              <Faq category="cat" />
             </GuestRoute>
             <GuestRoute exact path="/faq/stock">
               <Faq category="stock" />
