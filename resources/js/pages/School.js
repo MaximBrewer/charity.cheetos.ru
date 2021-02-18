@@ -48,7 +48,7 @@ function School() {
           <div className="px-4 sm:px-0">
             <div className="mb-4 text-justify">
               {lessons.map((item, index) => {
-                return item.number <= 2 && item.kind == kind ? (
+                return item.kind == 'common' ? (
                   <div
                     key={index}
                     className={`rounded-xl sm:rounded-2xl overflow-hidden mb-4 border-7 border-white cursor-pointer border-yellow-800`}
@@ -170,7 +170,7 @@ function School() {
           </div>
           <div className="mb-10 text-justify">
             {lessons.map((item, index) => {
-              return item.number > 2 && item.kind == kind ? (
+              return item.kind == kind ? (
                 <div
                   key={index}
                   className={`rounded-xl sm:rounded-2xl overflow-hidden mb-4 border-7 border-white cursor-pointer ${
