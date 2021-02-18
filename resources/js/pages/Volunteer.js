@@ -118,12 +118,13 @@ function Volunteer() {
           </div>
         </>
         <div className="mb-6 flex items-center justify-center">
-          <Link
-            to="/partners"
+          <a
+            href={window.App.data.partners[getIndex()].site}
+            target="_blank"
             className="w-64 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white text-center focus:outline-none"
           >
             Стать волонтером
-          </Link>
+          </a>
         </div>
         <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8">
           Поездка в приют
@@ -141,7 +142,7 @@ function Volunteer() {
         <div ref={formRef}>
           <p className="mb-4 font-bold text-xl text-center">Поехать в приют!</p>
           <div className="mb-4 w-84 m-auto">
-            <ShelterForm />
+            <ShelterForm partner_id={id} />
           </div>
         </div>
       </div>

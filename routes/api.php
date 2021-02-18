@@ -24,6 +24,10 @@ Route::name('api.')->namespace('Api')->group(function () {
         // ->middleware('throttle:10,1')
         ->name('order.store');
 
+    Route::post('trip', 'TripsController@store')
+        // ->middleware('throttle:10,1')
+        ->name('trip.store');
+
     // Route::post('faq', 'FaqsController@store')
     //     // ->middleware('throttle:10,1')
     //     ->name('faq.store');

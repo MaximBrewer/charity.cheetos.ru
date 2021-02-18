@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import client from "../api/client";
 import useInputValue from "./input-value";
 import { useModal } from "../context/modal";
-import SuccessFaqModal from "../modals/SuccessFaq";
+import SuccessShelterModal from "../modals/SuccessShelter";
 import { buttonClass } from "../Classes";
 
 // components
 
-export default function ShelterForm() {
-  let { setModalBody } = useModal();
+export default function ShelterForm({partner_id}) {
+  let { setModalBody, setShowModal } = useModal();
 
   let city = useInputValue("city");
   let email = useInputValue("email");
@@ -17,9 +17,10 @@ export default function ShelterForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    client("/api/chelter", {
+    client("/api/trip", {
       body: {
         city: city.value ? city.value : "",
+        partner_id: partner_id,
         email: email.value ? email.value : "",
         quantity: quantity.value ? quantity.value : "",
       },
@@ -28,8 +29,9 @@ export default function ShelterForm() {
         city.setValue("");
         email.setValue("");
         quantity.setValue("");
+        setModalBody(<SuccessShelterModal />);
+        setShowModal(true);
         document.documentElement.scrollTop = 0;
-        setModalBody(<SuccessFaqModal />);
       })
       .catch((error) => {
         console.log(error);
@@ -59,14 +61,14 @@ export default function ShelterForm() {
                 {...city.bind}
               />
             </div>
-            {city.error && <p className="text-white text-xs">{city.error}</p>}
+            {city.error && <p className="text-red-500 text-xs">{city.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
           <div className="w-full my-2">
             <div className={`md-input-box`}>
               <input
-                type="text"
+                type="number"
                 className={`focus:outline-none text-xl text-center placeholder-current bg-yellow-900 py-3 px-4 rounded-2xl border-transparent border w-full ${
                   quantity.error ? "border-red-500" : ""
                 }`}
@@ -77,7 +79,7 @@ export default function ShelterForm() {
                 {...quantity.bind}
               />
             </div>
-            {quantity.error && <p className="text-white text-xs">{quantity.error}</p>}
+            {quantity.error && <p className="text-red-500 text-xs">{quantity.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
@@ -95,7 +97,7 @@ export default function ShelterForm() {
                 {...email.bind}
               />
             </div>
-            {email.error && <p className="text-white text-xs">{email.error}</p>}
+            {email.error && <p className="text-red-500 text-xs">{email.error}</p>}
           </div>
         </div>
         <div className="my-6 flex items-center justify-center">

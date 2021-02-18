@@ -172,6 +172,7 @@ return [
         'email'                 => 'E-Mail адрес',
         'first_name'            => 'Имя',
         'last_name'             => 'Фамилия',
+        'quantity'             => 'Количество',
         'password'              => 'Пароль',
         'password_confirmation' => 'Подтверждение пароля',
         'city'                  => 'Город',
