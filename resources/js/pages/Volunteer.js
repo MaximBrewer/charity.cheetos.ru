@@ -7,13 +7,21 @@ import PartnersSlider from "../components/PartnersSlider";
 import LoveImg from "../../images/love.jpeg";
 import { buttonClass } from "../Classes";
 import ShelterForm from "../components/ShelterForm";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory, useParams, useLocation } from "react-router-dom";
 import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
 
 function Volunteer() {
   const { id } = useParams();
   let history = useHistory();
+  let location = useLocation();
 
+  React.useEffect(() => {
+    if (location.hash == "#form") {
+      formRef.current.scrollIntoView();
+    }
+  }, [location]);
+
+  const formRef = useRef(null);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -130,9 +138,11 @@ function Volunteer() {
           Для того, чтобы познакомиться с животными поближе, ты можешь съездить
           в приют в своем городе
         </p>
-        <p className="mb-4 font-bold text-xl text-center">Поехать в приют!</p>
-        <div className="mb-4 w-84 m-auto" id="form">
-          <ShelterForm />
+        <div ref={formRef}>
+          <p className="mb-4 font-bold text-xl text-center">Поехать в приют!</p>
+          <div className="mb-4 w-84 m-auto">
+            <ShelterForm />
+          </div>
         </div>
       </div>
       <div className="w-full h-px"></div>
