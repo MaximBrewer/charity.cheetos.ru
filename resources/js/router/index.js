@@ -59,7 +59,7 @@ function App() {
             <GuestRoute exact path="/school">
               <School />
             </GuestRoute>
-            <GuestRoute exact path="/volunteer">
+            <GuestRoute exact path="/volunteer/:id">
               <Volunteer />
             </GuestRoute>
             <GuestRoute exact path="/news">

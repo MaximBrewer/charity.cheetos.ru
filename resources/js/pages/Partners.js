@@ -80,19 +80,19 @@ function Partners() {
             <div className="my-6 text-xl">{Parser(item.body)}</div>
             <div className="my-6 flex items-center justify-center">
               <Link
-                to="/volunteer"
+                to={`/volunteer/${item.id}`}
                 className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
               >
                 Стать волонтером
               </Link>
             </div>
             <div className="my-6 flex items-center justify-center">
-              <button
-                to="/school"
+              <Link
+                to={`/volunteer/${item.id}#form`}
                 className="text-lg bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
               >
                 Заявка на поездку в приют
-              </button>
+              </Link>
             </div>
           </div>
         ))}

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import Slider from "react-slick";
 import Parser from "html-react-parser";
 import { Link } from "react-router-dom";
 import { InstagramIcon, VkIcon, TikTokIcon, SiteIcon } from "../Icons";
@@ -6,8 +7,53 @@ import PartnersSlider from "../components/PartnersSlider";
 import LoveImg from "../../images/love.jpeg";
 import { buttonClass } from "../Classes";
 import ShelterForm from "../components/ShelterForm";
+import { useHistory, useParams } from "react-router-dom";
+import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
 
 function Volunteer() {
+  const { id } = useParams();
+  let history = useHistory();
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    ref.current.slickGoTo(getIndex());
+  }, [id]);
+
+  const getIndex = () => {
+    for (let i in window.App.data.partners) {
+      if (window.App.data.partners[i].id == id) return i;
+    }
+  };
+
+  const prevId = () => {
+    let index = 0;
+    for (let i in window.App.data.partners) {
+      if (window.App.data.partners[i].id == id) index = i * 1 - 1;
+    }
+    index = index < 0 ? window.App.data.partners.length - 1 : index;
+    return window.App.data.partners[index].id;
+  };
+
+  const nextId = () => {
+    let index = 0;
+    for (let i in window.App.data.partners) {
+      if (window.App.data.partners[i].id == id) index = i * 1 + 1;
+    }
+    index = window.App.data.partners.length == index ? 0 : index;
+    return window.App.data.partners[index].id;
+  };
+
+  const settings = {
+    arrows: false,
+    infinite: true,
+    dots: false,
+    speed: 300,
+    auto: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <section id="volunteer" className="bg-white">
       <div className="w-full h-px"></div>
@@ -28,7 +74,41 @@ function Volunteer() {
         <h2 className="text-2xl text-center font-bold mt-8 mb-4">
           Стать волонтером в фонде:
         </h2>
-        <PartnersSlider />
+        <>
+          <div className="relative overflow-hidden px-10">
+            <Slider {...settings} ref={ref}>
+              {window.App.data.partners.map((item, index) => (
+                <div key={index}>
+                  <div className="w-1/2 m-auto mb-4">
+                    <div
+                      className="relative bg-center bg-no-repeat bg-contain w-full pb-100%"
+                      style={{ backgroundImage: `url(${item.image})` }}
+                    ></div>
+                  </div>
+                  <p className="text-center mb-4">{item.excerpt}</p>
+                </div>
+              ))}
+            </Slider>
+            <a
+              className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 left-0 -mt-6"
+              onClick={() => {
+                window.skipScroll = true;
+                history.replace("/volunteer/" + prevId());
+              }}
+            >
+              <ArrowPrevIcon className="w-4 h-6 stroke-current" />
+            </a>
+            <a
+              className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 right-0 -mt-6"
+              onClick={() => {
+                window.skipScroll = true;
+                history.replace("/volunteer/" + nextId());
+              }}
+            >
+              <ArrowNextIcon className="w-4 h-6 stroke-current" />
+            </a>
+          </div>
+        </>
         <div className="mb-6 flex items-center justify-center">
           <Link
             to="/partners"
@@ -51,7 +131,7 @@ function Volunteer() {
           в приют в своем городе
         </p>
         <p className="mb-4 font-bold text-xl text-center">Поехать в приют!</p>
-        <div className="mb-4 w-84 m-auto">
+        <div className="mb-4 w-84 m-auto" id="form">
           <ShelterForm />
         </div>
       </div>
