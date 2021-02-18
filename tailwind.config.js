@@ -26,7 +26,8 @@ module.exports = {
     },
     extend: {
       zIndex: {
-       '5': '5',
+        '5': '5',
+        '1': '1',
       },
       spacing: {
         "72": "18rem",

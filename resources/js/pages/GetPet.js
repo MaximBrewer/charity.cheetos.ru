@@ -139,7 +139,7 @@ function GetPet() {
                   name="dog-switch"
                   id="dog-switch"
                   checked={dogChecked}
-                  className="toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
+                  className="z-1 toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
                 />
                 <label
                   htmlFor="dog-switch"
@@ -158,7 +158,7 @@ function GetPet() {
                   name="cat-switch"
                   id="cat-switch"
                   checked={catChecked}
-                  className="toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
+                  className="z-1 toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
                 />
                 <label
                   htmlFor="cat-switch"
