@@ -13,11 +13,16 @@ class Lesson extends Model
 
     public function scopeDogs($query)
     {
-        return $query->where('kind', 'dog');
+        return $query->where('kind', 'dog')->orderBy('number', 'asc');
     }
 
     public function scopeCats($query)
     {
-        return $query->where('kind', 'cat');
+        return $query->where('kind', 'cat')->orderBy('number', 'asc');
+    }
+
+    public function scopeAll($query)
+    {
+        return $query->orderBy('number', 'asc');
     }
 }
