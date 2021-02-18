@@ -141,7 +141,7 @@ function Volunteer() {
         </p>
         <div ref={formRef}>
           <p className="mb-4 font-bold text-xl text-center">Поехать в приют!</p>
-          <div className="mb-4 w-84 m-auto">
+          <div className="mb-4 w-72 m-auto">
             <ShelterForm partner_id={id} />
           </div>
         </div>

@@ -69,7 +69,6 @@ export default function ShelterForm({ partner_id }) {
               <div className="mt-1 relative" ref={cityEl}>
                 <div
                   onClick={() => setCitySelectOpen(true)}
-                  type="button"
                   aria-haspopup="listbox"
                   aria-expanded="true"
                   aria-labelledby="listbox-label"
