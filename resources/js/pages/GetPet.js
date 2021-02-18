@@ -1,17 +1,32 @@
-import React, { useState, useRef } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import PartnersSlider from "../components/PartnersSlider";
 import { buttonClass } from "../Classes";
-import DogImg from "../../images/dog.png";
 import SweetImg from "../../images/sweet.jpeg";
 import LoveImg from "../../images/love.jpeg";
+import PetsSlider from "../components/PetsSlider";
 
 function GetPet() {
-  let history = useHistory();
+  const [dogChecked, setDogChecked] = useState(false);
+  const [catChecked, setCatChecked] = useState(false);
+  const [pets, setPets] = useState(window.App.data.pets);
   const [city, setCity] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const dogRef = useRef(null);
-  const catRef = useRef(null);
+
+  useEffect(() => {
+    setPets(
+      window.App.data.pets.filter(function(item) {
+        console.log(item, city, dogChecked, catChecked);
+        return (
+          (!city || item.city_id == city.id) &&
+          ((dogChecked && item.kind == "dog") ||
+            (catChecked && item.kind == "cat") ||
+            (!dogChecked && !catChecked))
+        );
+      })
+    );
+  }, [city, dogChecked, catChecked]);
+
   return (
     <section id="about">
       <div className="bg-white">
@@ -119,10 +134,11 @@ function GetPet() {
             <div className="mb-2">
               <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
                 <input
-                  ref={dogRef}
+                  onChange={(event) => setDogChecked(event.target.checked)}
                   type="checkbox"
                   name="dog-switch"
                   id="dog-switch"
+                  checked={dogChecked}
                   className="toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
                 />
                 <label
@@ -137,10 +153,11 @@ function GetPet() {
             <div className="mb-2">
               <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
                 <input
-                  ref={catRef}
+                  onChange={(event) => setCatChecked(event.target.checked)}
                   type="checkbox"
                   name="cat-switch"
                   id="cat-switch"
+                  checked={catChecked}
                   className="toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
                 />
                 <label
@@ -157,11 +174,11 @@ function GetPet() {
         </div>
       </div>
       <div className="bg-white mb-84">
+        <div className="w-full h-px "></div>
         <div className="container mx-auto max-w-sm">
-          <div className="px-4 sm:px-0">
-            <div className="w-full h-px "></div>
-          </div>
           <div className="px-4 sm:px-0 pb-4 -mb-84">
+            {pets && pets.length ? <PetsSlider pets={pets} /> : ``}
+            {/* 
             <div className="mt-6 mb-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
               <div
                 className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
@@ -181,6 +198,7 @@ function GetPet() {
                 Смотреть всех
               </a>
             </div>
+           */}
           </div>
         </div>
         <div className="w-full h-px "></div>

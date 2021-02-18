@@ -26,9 +26,11 @@ class Pet extends JsonResource
             'kind' => $this->kind,
             'excerpt' => $this->excerpt,
             'body' => $this->body,
-            'image' => Voyager::image($this->thumbnail('small')),
+            'city_id' => $this->city_id,
+            'partner_id' => $this->partner_id,
+            'image' => Voyager::image($this->thumbnail('medium')),
             'images' => array_map(function ($image) {
-                return Voyager::image($this->getThumbnail($image, 'small'));
+                return Voyager::image($this->getThumbnail($image, 'medium'));
             }, json_decode($this->images))
         ];
     }

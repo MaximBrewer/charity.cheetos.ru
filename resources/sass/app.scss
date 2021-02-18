@@ -78,6 +78,12 @@
   div {
     outline: none !important;
   }
+  & > div {
+    display: block !important;
+    & > div {
+      display: block !important;
+    }
+  }
   img {
     display: block;
   }
@@ -111,10 +117,8 @@
 
 .toggle-checkbox:checked {
   @apply right-0;
-  
 }
 .toggle-checkbox:checked + .toggle-label {
-  
 }
 
 .p-mb-4 p {

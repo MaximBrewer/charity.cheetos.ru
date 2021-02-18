@@ -27,7 +27,7 @@
 </head>
 
 <body className="font-sans h-full text-grey-darkest">
-    <div id="app" className="flex flex-col">
+    <div id="app" class="flex flex-col select-none">
     </div>
     <script src="{{ asset('js/app.js?v1.1') }}" defer></script>
 </body>

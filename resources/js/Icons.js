@@ -155,3 +155,129 @@ export const SiteIcon = ({ className }) => {
     </svg>
   );
 };
+
+export const GalleryPrevIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 61 73"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_d)">
+        <path
+          d="M36.3157 17L24.6629 32.2942"
+          stroke="white"
+          strokeWidth="8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M24.6843 32.2942L36.3371 47.5884"
+          stroke="white"
+          strokeWidth="8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d"
+          x="0.510498"
+          y="0.510559"
+          width="59.9789"
+          height="71.5673"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="7.5" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.49 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+};
+
+export const GalleryNextIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 61 73"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_d)">
+        <path
+          d="M24.6843 17L36.3371 32.2942"
+          stroke="white"
+          strokeWidth="8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M36.3157 32.2942L24.6629 47.5884"
+          stroke="white"
+          strokeWidth="8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d"
+          x="0.510498"
+          y="0.510559"
+          width="59.9789"
+          height="71.5673"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="7.5" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.49 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+};

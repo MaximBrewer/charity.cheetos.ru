@@ -21,7 +21,9 @@ class CreateOrdersTable extends Migration
             $table->string('city')->nullable();
             $table->string('email');
             $table->text('body')->nullable();
+            $table->unsignedBigInteger('pet_id');
             $table->timestamps();
+            $table->foreign('pet_id')->references('id')->on('pets');
         });
     }
 

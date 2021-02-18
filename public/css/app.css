@@ -38462,6 +38462,14 @@ video {
   outline: none !important;
 }
 
+.slick-slide > div {
+  display: block !important;
+}
+
+.slick-slide > div > div {
+  display: block !important;
+}
+
 .slick-slide img {
   display: block;
 }

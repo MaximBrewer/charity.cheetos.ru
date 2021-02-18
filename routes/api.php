@@ -20,6 +20,14 @@ Route::name('api.')->namespace('Api')->group(function () {
         // ->middleware('throttle:10,1')
         ->name('faq.store');
 
+    Route::post('order', 'OrdersController@store')
+        // ->middleware('throttle:10,1')
+        ->name('order.store');
+
+    // Route::post('faq', 'FaqsController@store')
+    //     // ->middleware('throttle:10,1')
+    //     ->name('faq.store');
+
     Route::group(['middleware' => 'guest:api'], function () {
         Route::namespace('Auth')->group(function () {
             // Route::post('login', 'LoginController')->name('login');

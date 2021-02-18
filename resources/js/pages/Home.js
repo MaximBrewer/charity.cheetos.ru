@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import DogImg from "../../images/dgo.png";
 import StepsImg from "../../images/steps.png";
 
 import PartnersSlider from "../components/PartnersSlider";
 import NewsSlider from "../components/NewsSlider";
 
-import { DoubleButton, OfficialVideo } from "../Helpers";
+import { DoubleButton, OfficialVideo, SchoolVideo } from "../Helpers";
 import { buttonClass } from "../Classes";
 
 function Home() {
@@ -86,20 +87,7 @@ function Home() {
         <div className="container mx-auto px-4 sm:px-0 max-w-sm">
           <div className="h-px w-full"></div>
           <div className="-mt-28">
-            <div className="my-4 border-7 border-yellow-900 rounded-3xl overflow-hidden bg-darkOrange-900">
-              <div
-                id="responsiveVideoWrapper"
-                className="relative h-0 pb-fluid-video"
-              >
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src={`https://www.youtube.com/embed/${window.App.data.youtubeSchool}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  autoPlay
-                ></iframe>
-              </div>
-            </div>
+            <SchoolVideo />
           </div>
           <div className="my-6 flex items-center justify-center">
             <Link

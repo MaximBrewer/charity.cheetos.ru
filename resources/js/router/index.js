@@ -5,6 +5,7 @@ import Rules from "../pages/Rules";
 import Faq from "../pages/Faq";
 import About from "../pages/About";
 import GetPet from "../pages/GetPet";
+import Pet from "../pages/Pet";
 import School from "../pages/School";
 import Partners from "../pages/Partners";
 import Volunteer from "../pages/Volunteer";
@@ -33,6 +34,9 @@ function App() {
             </GuestRoute>
             <GuestRoute exact path="/getpet">
               <GetPet />
+            </GuestRoute>
+            <GuestRoute exact path="/pet/:id">
+              <Pet />
             </GuestRoute>
             <GuestRoute exact path="/rules">
               <Rules />
