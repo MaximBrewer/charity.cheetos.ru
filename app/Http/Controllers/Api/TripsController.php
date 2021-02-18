@@ -39,7 +39,7 @@ class TripsController extends Controller
         $request->validate([
             'quantity' => 'required|numeric|max:100',
             'email' => 'required|email:rfc,dns',
-            'city' => 'required|min:3|regex:/^[a-zA-Zа-яА-ЯёЁ\s]+$/u|max:255',
+            'city_id' => 'required',
             // 'partner_id' => 'required|min:10'
         ]);
 

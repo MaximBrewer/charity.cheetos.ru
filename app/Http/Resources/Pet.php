@@ -16,10 +16,6 @@ class Pet extends JsonResource
      */
     public function toArray($request)
     {
-        // $images = [];
-        // foreach ($this->images as $image) {
-        //     $images[] = Voyager::image($this->getThumbnail($image, 'small'));
-        // }
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -31,7 +27,7 @@ class Pet extends JsonResource
             'image' => Voyager::image($this->thumbnail('medium')),
             'images' => array_map(function ($image) {
                 return Voyager::image($this->getThumbnail($image, 'medium'));
-            }, json_decode($this->images))
+            }, json_decode($this->images) && is_array(json_decode($this->images)) ? json_decode($this->images) : [])
         ];
     }
 }
