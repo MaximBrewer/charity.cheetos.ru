@@ -178,27 +178,6 @@ function GetPet() {
         <div className="container mx-auto max-w-sm">
           <div className="px-4 sm:px-0 pb-4 -mb-84">
             {pets && pets.length ? <PetsSlider pets={pets} /> : ``}
-            {/* 
-            <div className="mt-6 mb-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
-              <div
-                className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
-                style={{ backgroundImage: `url(${DogImg})` }}
-              ></div>
-            </div>
-            <div className="font-bold text-xl text-center text-white">
-              Хвостатый мячегрыз!
-            </div>
-            <div className="mt-4 mb-6 flex items-center justify-center">
-              <a
-                className="cursor-pointer w-64 m-auto text-2xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
-                onClick={() => {
-                  history.push(`/getpet/${city.slug}`);
-                }}
-              >
-                Смотреть всех
-              </a>
-            </div>
-           */}
           </div>
         </div>
         <div className="w-full h-px "></div>

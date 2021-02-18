@@ -30,6 +30,11 @@ export default function PetsSlider({ pets }) {
 
   const ref = useRef(null);
 
+  useEffect(() => {
+    setTitle(pets[0].name);
+    setLink("/pet/" + pets[0].id);
+  }, pets);
+
   return (
     <div className="select-none">
       <div className="border-7 border-yellow-900 rounded-3xl relative overflow-hidden">
