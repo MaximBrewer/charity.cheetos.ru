@@ -38527,6 +38527,86 @@ video {
   -moz-transform: translate3d(0, 0, 0);
 }
 
+.markdown {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.markdown > * + *, .markdown li + li, .markdown li > p + p {
+  margin-top: 0.5rem;
+}
+
+.markdown strong, .markdown b {
+  font-weight: 700;
+}
+
+.markdown a {
+  font-weight: 600;
+}
+
+.markdown strong a {
+  font-weight: 700;
+}
+
+.markdown h2 {
+  line-height: 1.25;
+  font-size: 1.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.markdown h3 {
+  line-height: 1.25;
+  font-size: 1.125rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+}
+
+.markdown code {
+  font-size: .875rem;
+  display: inline;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.markdown pre code {
+  display: block;
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.markdown blockquote {
+  border-left-width: 4px;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.markdown ul, .markdown ol {
+  padding-left: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .markdown ul, .markdown ol {
+    padding-left: 1rem;
+  }
+}
+
+.markdown ul {
+  list-style: disc;
+}
+
+.markdown ol {
+  list-style: decimal;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

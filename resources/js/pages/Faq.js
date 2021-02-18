@@ -48,7 +48,7 @@ function Faq({ category = "charity" }) {
                   </span>
                 </div>
                 <div
-                  className={`text-sm sm:text-base bg-white px-6 ${
+                  className={`markdown text-sm sm:text-base bg-white px-6 ${
                     item.o ? `h-auto pt-4 pb-6` : `h-0`
                   }`}
                 >
