@@ -23,6 +23,6 @@ class Partner extends Model
      */
     public function scopePublished(Builder $query)
     {
-        return $query->where('status', '=', static::PUBLISHED);
+        return $query->where('status', '=', static::PUBLISHED)->orderBy('sort', 'asc');
     }
 }
