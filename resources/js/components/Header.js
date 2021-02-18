@@ -130,6 +130,17 @@ function Header({ opened, setOpened }) {
               <li className="py-1">
                 <NavLink
                   activeClassName="active"
+                  to="/getpet"
+                  onClick={() => {
+                    setOpened(false);
+                  }}
+                >
+                  Стать хозяином
+                </NavLink>
+              </li>
+              <li className="py-1">
+                <NavLink
+                  activeClassName="active"
                   to="/partners"
                   onClick={() => {
                     setOpened(false);
@@ -149,6 +160,7 @@ function Header({ opened, setOpened }) {
                   Правила акции
                 </NavLink>
               </li>
+              
               <li className="py-1">
                 <a
                   className="cursor-pointer"
