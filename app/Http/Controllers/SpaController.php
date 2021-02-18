@@ -30,7 +30,8 @@ class SpaController extends Controller
 
         $app['data']['faqs'] = [
             'charity' => FaqResource::collection(Faq::where('status', 'confirmed')->where('category', 'charity')->get()),
-            'note' => FaqResource::collection(Faq::where('status', 'confirmed')->where('category', 'note')->get()),
+            'dog' => FaqResource::collection(Faq::where('status', 'confirmed')->where('category', 'dog')->get()),
+            'cat' => FaqResource::collection(Faq::where('status', 'confirmed')->where('category', 'cat')->get()),
             'stock' => FaqResource::collection(Faq::where('status', 'confirmed')->where('category', 'stock')->get()),
         ];
 
