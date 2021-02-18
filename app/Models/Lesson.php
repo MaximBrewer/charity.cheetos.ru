@@ -20,4 +20,9 @@ class Lesson extends Model
     {
         return $query->where('kind', 'cat')->orderBy('number', 'asc');
     }
+
+    public function scopeCommon($query)
+    {
+        return $query->where('kind', 'common')->orderBy('number', 'asc');
+    }
 }

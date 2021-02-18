@@ -22,7 +22,7 @@ class CreateLessonsTable extends Migration
             $table->string('video')->nullable();
             $table->string('image')->nullable();
             $table->text('prologue')->nullable();
-            $table->enum('kind', ['dog', 'cat'])->nullable();
+            $table->enum('kind', ['dog', 'cat', 'common']);
             $table->timestamps();
         });
     }

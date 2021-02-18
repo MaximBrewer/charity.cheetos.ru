@@ -62,6 +62,20 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('dog-lessons/relation', \Voyager\DogLessonsController::class . '@relation')->name('voyager.dog-lessons.relation');
         Route::post('dog-lessons/remove', \Voyager\DogLessonsController::class . '@remove_media')->name('voyager.dog-lessons.media.remove');
 
+        Route::get('common-lessons', \Voyager\CommonLessonsController::class . '@index')->name('voyager.common-lessons.index');
+        Route::get('common-lessons/create', \Voyager\CommonLessonsController::class . '@create')->name('voyager.common-lessons.create');
+        Route::post('common-lessons', \Voyager\CommonLessonsController::class . '@store')->name('voyager.common-lessons.store');
+        Route::get('common-lessons/{id}', \Voyager\CommonLessonsController::class . '@show')->name('voyager.common-lessons.show');
+        Route::get('common-lessons/{id}/edit', \Voyager\CommonLessonsController::class . '@edit')->name('voyager.common-lessons.edit');
+        Route::put('common-lessons/{id}', \Voyager\CommonLessonsController::class . '@update')->name('voyager.common-lessons.update');
+        Route::delete('common-lessons/{id}', \Voyager\CommonLessonsController::class . '@destroy')->name('voyager.common-lessons.destroy');
+        Route::get('common-lessons/order', \Voyager\CommonLessonsController::class . '@order')->name('voyager.common-lessons.order');
+        Route::post('common-lessons/action', \Voyager\CommonLessonsController::class . '@action')->name('voyager.common-lessons.action');
+        Route::post('common-lessons/order', \Voyager\CommonLessonsController::class . '@update_order')->name('voyager.common-lessons.update_order');
+        Route::get('common-lessons/{id}/restore', \Voyager\CommonLessonsController::class . '@restore')->name('voyager.common-lessons.restore');
+        Route::get('common-lessons/relation', \Voyager\CommonLessonsController::class . '@relation')->name('voyager.common-lessons.relation');
+        Route::post('common-lessons/remove', \Voyager\CommonLessonsController::class . '@remove_media')->name('voyager.common-lessons.media.remove');
+
         event(new RoutingAdminAfter());
     });
 });
