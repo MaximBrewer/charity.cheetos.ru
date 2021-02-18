@@ -11,10 +11,10 @@ export default function Modal() {
           Благотворительная программа
         </Link>
         <Link to="/faq/dog" className={buttonClass() + " text-base"}>
-          Памятка для влыдельцев собак
+          Памятка для владельцев собак
         </Link>
         <Link to="/faq/cat" className={buttonClass() + " text-base"}>
-          Памятка для влыдельцев кошек
+          Памятка для владельцев кошек
         </Link>
         <Link to="/faq/stock" className={buttonClass() + " text-base"}>
           Акция в магнит
