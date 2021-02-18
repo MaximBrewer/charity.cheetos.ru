@@ -12,7 +12,8 @@ function Header({ opened, setOpened }) {
   useEffect(() => {
     setOpened(false);
     setShowModal(false);
-    document.documentElement.scrollTop = 0;
+    if (!window.skipScroll) document.documentElement.scrollTop = 0;
+    window.skipScroll = false;
   }, [location]);
 
   return (
