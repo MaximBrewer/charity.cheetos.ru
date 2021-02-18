@@ -119,23 +119,23 @@ function Header({ opened, setOpened }) {
               <li className="py-1">
                 <NavLink
                   activeClassName="active"
-                  to="/school"
-                  onClick={() => {
-                    setOpened(false);
-                  }}
-                >
-                  Школа будущих хозяев
-                </NavLink>
-              </li>
-              <li className="py-1">
-                <NavLink
-                  activeClassName="active"
                   to="/getpet"
                   onClick={() => {
                     setOpened(false);
                   }}
                 >
                   Стать хозяином
+                </NavLink>
+              </li>
+              <li className="py-1">
+                <NavLink
+                  activeClassName="active"
+                  to="/school"
+                  onClick={() => {
+                    setOpened(false);
+                  }}
+                >
+                  Школа будущих хозяев
                 </NavLink>
               </li>
               <li className="py-1">
