@@ -53,7 +53,7 @@ class SpaController extends Controller
 
         $app['data']['cities'] = CityResource::collection(City::all());
         $app['data']['pets'] = PetResource::collection(Pet::all());
-        $app['data']['lessons'] = LessonResource::collection(Lesson::all());
+        $app['data']['lessons'] = LessonResource::collection(Lesson::orderBy('number', 'asc')->get());
 
         return view('spa', [
             'app' => $app

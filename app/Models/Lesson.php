@@ -20,9 +20,4 @@ class Lesson extends Model
     {
         return $query->where('kind', 'cat')->orderBy('number', 'asc');
     }
-
-    public function scopeAll($query)
-    {
-        return $query->orderBy('number', 'asc');
-    }
 }
