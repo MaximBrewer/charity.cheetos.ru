@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import DogImg from "../../images/dgo.png";
+import DogImg from "../../images/dog.png";
 import StepsImg from "../../images/steps.png";
 
 import PartnersSlider from "../components/PartnersSlider";
