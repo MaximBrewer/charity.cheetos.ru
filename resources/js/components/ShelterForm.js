@@ -95,7 +95,7 @@ export default function ShelterForm({ partner_id }) {
                     role="listbox"
                     aria-labelledby="listbox-label"
                     aria-activedescendant="listbox-item-3"
-                    className="max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+                    className="max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none xl:text-sm"
                   >
                     {window.App.data.cities.map((item, index) => {
                       return (

@@ -23,7 +23,7 @@ function ForgotPassword () {
     <div className="flex justify-center items-center w-full py-4 flex-col min-h-screen bg-gray-200">
       {
         resetFeedback && (
-          <div className="bg-white border-l-4 border-blue text-sm text-grey-darker p-4 mb-4 w-3/4 sm:w-1/2 lg:w-2/5 xl:w-1/3" role="alert">
+          <div className="bg-white border-l-4 border-blue text-sm text-grey-darker p-4 mb-4 w-3/4 xl:w-1/2 xl:w-2/5 xl:w-1/3" role="alert">
             <p> {resetFeedback}</p>
           </div>)
       }
@@ -33,7 +33,7 @@ function ForgotPassword () {
               Не можете войти?
         </div>
       </div>
-      <div className="border rounded shadow bg-white border-grey-light w-3/4 sm:w-1/2 lg:w-2/5 xl:w-1/3 px-8 py-4">
+      <div className="border rounded shadow bg-white border-grey-light w-3/4 xl:w-1/2 xl:w-2/5 xl:w-1/3 px-8 py-4">
         <form
           onSubmit={handleSubmit}
           method="POST"

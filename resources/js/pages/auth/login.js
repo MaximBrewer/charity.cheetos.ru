@@ -36,7 +36,7 @@ function Login () {
         </div>
       </div>
 
-      <div className="border rounded bg-white border-gray-300 w-3/4 sm:w-1/2 lg:w-2/5 xl:w-1/4 px-8 py-4 shadow">
+      <div className="border rounded bg-white border-gray-300 w-3/4 xl:w-1/2 xl:w-2/5 xl:w-1/4 px-8 py-4 shadow">
         <form onSubmit={handleSubmit}
           method="POST">
           <div className="mb-4 mt-4">

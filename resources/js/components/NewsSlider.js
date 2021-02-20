@@ -24,11 +24,28 @@ export default function NewsSlider() {
         <Slider {...settings} ref={ref}>
           {window.App.data.news.map((item, index) => (
             <div key={index}>
-              <div
-                className="border-7 border-yellow-900 rounded-3xl relative bg-center bg-no-repeat bg-cover w-full pb-100% -mb-2"
-                style={{ backgroundImage: `url(${item.image})` }}
-              ></div>
-              <p className="text-xl my-4">{item.excerpt}</p>
+              <div className="xl:flex xl:px-32 xl:text-black items-center justify-between">
+                <div className="xl:w-1/2 xl:mr-16 xl:mb-8">
+                  <div
+                    className="border-7 border-yellow-900 rounded-3xl relative bg-darkOrange-900 bg-center bg-no-repeat bg-cover w-full pb-100% -mb-2"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  ></div>
+                </div>
+                <div className="xl:w-1/2">
+                  <h4 className="hidden xl:block text-2xl font-bold mb-8">
+                    {item.title}
+                  </h4>
+                  <p className="text-xl my-4 xl:mb-16 xl:mt-8">{item.excerpt}</p>
+                  <div className="mb-6 flex items-center justify-center hidden xl:block ">
+                    <Link
+                      to="/news"
+                      className="text-2xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-3 px-12 text-white font-bold text-center focus:outline-none"
+                    >
+                      Подробнее
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </Slider>
@@ -49,7 +66,7 @@ export default function NewsSlider() {
           <ArrowNextIcon className="w-4 h-6 stroke-current" />
         </a>
       </div>
-      <div className="mb-6 flex items-center justify-center">
+      <div className="mb-6 flex items-center justify-center xl:hidden">
         <Link
           to="/news"
           className="w-48 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"

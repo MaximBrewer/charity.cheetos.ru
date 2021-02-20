@@ -19,15 +19,12 @@ module.exports = {
       rotonda: ["RotondaC", "Arial", "Helvetica", "sans-serif"],
     },
     screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1140px",
+      xl: "1280px",
     },
     extend: {
       zIndex: {
-        '5': '5',
-        '1': '1',
+        "5": "5",
+        "1": "1",
       },
       spacing: {
         "72": "18rem",
@@ -38,6 +35,7 @@ module.exports = {
         "100%": "100%",
         "40": "10rem",
         "80": "20rem",
+        "160": "40rem",
       },
       borderWidth: {
         "3": "3px",

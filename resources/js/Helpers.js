@@ -2,13 +2,13 @@ import React from "react";
 import YouTube from "react-youtube";
 import { buttonClass } from "./Classes";
 
-export function DoubleButton() {
+export function DoubleButton({ xlYellow = false }) {
   return (
-    <div className="my-6 flex items-center justify-center">
+    <div className="my-6 flex items-center justify-center xl:justify-start">
       <a
         href={window.App.data.doubleLink}
         target="_blank"
-        className={buttonClass() +  ` w-64 text-xl`}
+        className={buttonClass() + ` w-64 xl:w-auto xl:px-12 text-xl xl:text-2xl ${xlYellow ? `xl:bg-yellow-800 xl:hover:bg-yellow-600 xl:text-darkOrange-900` : ``}`}
       >
         Удвоить помощь!
       </a>

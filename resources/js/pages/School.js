@@ -28,7 +28,7 @@ function School() {
     <section id="school">
       <div className="bg-white">
         <div className="w-full h-px "></div>
-        <div className="container mx-auto px-4 pt-8 sm:px-0 max-w-sm">
+        <div className="container mx-auto px-4 pt-8 xl:px-0 max-w-sm">
           <h2 className="pb-3 text-3xl font-bold text-center">
             Протяни лапу дружбы
           </h2>
@@ -45,13 +45,13 @@ function School() {
       <div className="bg-white">
         <div className="w-full h-px "></div>
         <div className="container mx-auto max-w-sm">
-          <div className="px-4 sm:px-0">
+          <div className="px-4 xl:px-0">
             <div className="mb-4 text-justify">
               {lessons.map((item, index) => {
                 return item.kind == 'common' ? (
                   <div
                     key={index}
-                    className={`rounded-xl sm:rounded-2xl overflow-hidden mb-4 border-7 border-white cursor-pointer border-yellow-800`}
+                    className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 border-7 border-white cursor-pointer border-yellow-800`}
                     onClick={() => {
                       setLessons((prevState) => {
                         return prevState.map((i, k) => {
@@ -81,7 +81,7 @@ function School() {
                     }}
                   >
                     <div
-                      className={`flex justify-between items-center text-sm sm:text-lg text-left py-2 px-2 bg-yellow-800`}
+                      className={`flex justify-between items-center text-sm xl:text-lg text-left py-2 px-2 bg-yellow-800`}
                     >
                       <span className="block mr-2">
                         <span className="font-bold">Урок №{item.number}:</span>{" "}
@@ -92,7 +92,7 @@ function School() {
                       </span>
                     </div>
                     <div
-                      className={`text-sm sm:text-base bg-white ${
+                      className={`text-sm xl:text-base bg-white ${
                         item.o ? `h-auto pt-4` : `h-0 hidden`
                       }`}
                     >
@@ -161,7 +161,7 @@ function School() {
         <div className="w-full h-px "></div>
       </div>
       <div className="container mx-auto max-w-sm">
-        <div className="px-4 sm:px-0 pb-4">
+        <div className="px-4 xl:px-0 pb-4">
           <div className="mt-6 mb-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
             <div
               className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
@@ -173,7 +173,7 @@ function School() {
               return item.kind == kind ? (
                 <div
                   key={index}
-                  className={`rounded-xl sm:rounded-2xl overflow-hidden mb-4 border-7 border-white cursor-pointer ${
+                  className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 border-7 border-white cursor-pointer ${
                     item.o ? `border-yellow-800` : ``
                   }`}
                   onClick={() => {
@@ -205,7 +205,7 @@ function School() {
                   }}
                 >
                   <div
-                    className={`flex justify-between items-center text-sm sm:text-lg text-left py-2 px-2 ${
+                    className={`flex justify-between items-center text-sm xl:text-lg text-left py-2 px-2 ${
                       item.o ? `bg-yellow-800` : `bg-white`
                     }`}
                   >
@@ -218,7 +218,7 @@ function School() {
                     </span>
                   </div>
                   <div
-                    className={`text-sm sm:text-base bg-white ${
+                    className={`text-sm xl:text-base bg-white ${
                       item.o ? `h-auto pt-4` : `h-0 hidden`
                     }`}
                   >
@@ -243,7 +243,7 @@ function School() {
         <div className="w-full h-px "></div>
       </div>
       <div className="bg-white">
-        <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+        <div className="container mx-auto px-4 xl:px-0 max-w-sm">
           <div className="w-full h-px "></div>
           <h2 className="text-2xl text-center font-bold mt-8 mb-4">
             Партнеры проекта:

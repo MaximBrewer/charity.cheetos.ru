@@ -43,7 +43,7 @@ function Register () {
         </div>
       </div>
 
-      <div className="bg-white border rounded border-grey-light w-3/4 sm:w-1/2 lg:w-2/5 xl:w-1/4 px-8 py-4 shadow">
+      <div className="bg-white border rounded border-grey-light w-3/4 xl:w-1/2 xl:w-2/5 xl:w-1/4 px-8 py-4 shadow">
         <form onSubmit={handleSubmit}
           method="POST"
         >

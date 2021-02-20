@@ -34,7 +34,7 @@ function ResetPassword () {
   return (
     <div className="flex justify-center items-center w-full py-4 flex-col min-h-screen bg-gray-200">
       { passwordResetFeedback !== '' && (
-        <div className="bg-white border-l-4 border-blue text-sm text-grey-darker p-4 mb-4 w-3/4 sm:w-1/2 lg:w-2/5 xl:w-1/3" role="alert">
+        <div className="bg-white border-l-4 border-blue text-sm text-grey-darker p-4 mb-4 w-3/4 xl:w-1/2 xl:w-2/5 xl:w-1/3" role="alert">
           <p> {passwordResetFeedback}
             <span className="pl-2"> Можете
               <Link to="/login" className="no-underline text-grey-darker font-bold"> войти </Link>
@@ -47,7 +47,7 @@ function ResetPassword () {
       <form
         onSubmit={handleSubmit}
         method="POST"
-        className="border rounded bg-white border-grey-light w-3/4 sm:w-1/2 lg:w-2/5 xl:w-1/3 px-8 py-4">
+        className="border rounded bg-white border-grey-light w-3/4 xl:w-1/2 xl:w-2/5 xl:w-1/3 px-8 py-4">
         <h2 className="text-center mb-4 text-grey-darker">Сбросить пароль</h2>
         <div className="mb-4">
           <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="email"> Введите Ваш E-mail </label>

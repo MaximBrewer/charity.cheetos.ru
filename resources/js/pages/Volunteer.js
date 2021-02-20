@@ -65,7 +65,7 @@ function Volunteer() {
   return (
     <section id="volunteer" className="bg-white">
       <div className="w-full h-px"></div>
-      <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+      <div className="container mx-auto px-4 xl:px-0 max-w-sm">
         <h2 className={`text-2xl font-bold text-center mt-10`}>
           Протяни лапу дружбы
         </h2>
@@ -78,7 +78,7 @@ function Volunteer() {
           сопровождение официальных представителей.
         </p>
       </div>
-      <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+      <div className="container mx-auto px-4 xl:px-0 max-w-sm">
         <h2 className="text-2xl text-center font-bold mt-8 mb-4">
           Стать волонтером в фонде:
         </h2>

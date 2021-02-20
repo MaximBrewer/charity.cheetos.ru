@@ -48,7 +48,7 @@ function Pet() {
 
   return (
     <section id="pet" className="bg-white mt-80">
-      <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+      <div className="container mx-auto px-4 xl:px-0 max-w-sm">
         <div className="w-full h-px"></div>
         <div className="-mt-80">
           <h2 className="text-white pt-6 pb-4 text-3xl font-bold text-center">
@@ -115,7 +115,7 @@ function Pet() {
           )}
         </div>
       </div>
-      <div className="container mx-auto px-4 sm:px-0 max-w-sm mb-16">
+      <div className="container mx-auto px-4 xl:px-0 max-w-sm mb-16">
         <h2 className="text-2xl text-center font-bold mt-8 mb-8">
           Партнеры проекта:
         </h2>

@@ -24,7 +24,7 @@ function App() {
   ) : (
     <Router>
       <div
-        className="flex flex-col min-h-screen font-rotonda bg-orange-900 shadow-lg bg-80"
+        className="flex flex-col min-h-screen font-rotonda bg-orange-900 shadow-lg bg-80 xl:bg-160"
         style={{ backgroundImage: `url(${StepsImg})` }}
       >
         <ModalProvider>

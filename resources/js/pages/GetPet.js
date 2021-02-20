@@ -30,7 +30,7 @@ function GetPet() {
   return (
     <section id="about">
       <div className="bg-white">
-        <div className="container mx-auto px-4 pt-8 sm:px-0 max-w-sm">
+        <div className="container mx-auto px-4 pt-8 xl:px-0 max-w-sm">
           <h2 className="pb-3 text-3xl font-bold text-center">
             Протяни лапу дружбы
           </h2>
@@ -176,7 +176,7 @@ function GetPet() {
       <div className="bg-white mb-84">
         <div className="w-full h-px "></div>
         <div className="container mx-auto max-w-sm">
-          <div className="px-4 sm:px-0 pb-4 -mb-84">
+          <div className="px-4 xl:px-0 pb-4 -mb-84">
             {pets && pets.length ? <PetsSlider pets={pets} /> : ``}
           </div>
         </div>
@@ -184,7 +184,7 @@ function GetPet() {
       </div>
       <div className="bg-white mb-72">
         <div className="container mx-auto max-w-sm">
-          <div className="px-4 sm:px-0">
+          <div className="px-4 xl:px-0">
             <div className="w-full h-px "></div>
             <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8">
               школа будущих хозяев
@@ -195,7 +195,7 @@ function GetPet() {
               перед будущими и настоящими хозяевами лохматых друзей
             </p>
           </div>
-          <div className="px-4 sm:px-0 pb-4 -mb-72">
+          <div className="px-4 xl:px-0 pb-4 -mb-72">
             <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden">
               <div
                 className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
@@ -215,7 +215,7 @@ function GetPet() {
         <div className="w-full h-px "></div>
       </div>
       <div className="bg-white">
-        <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+        <div className="container mx-auto px-4 xl:px-0 max-w-sm">
           <div className="w-full h-px "></div>
           <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8">
             В гости! В приют!
@@ -237,7 +237,7 @@ function GetPet() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+        <div className="container mx-auto px-4 xl:px-0 max-w-sm">
           <div className="w-full h-px "></div>
           <h2 className="text-2xl text-center font-bold mt-8 mb-4">
             Партнеры проекта:

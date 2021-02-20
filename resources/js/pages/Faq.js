@@ -14,7 +14,7 @@ function Faq({ category = "charity" }) {
 
   return (
     <section id="faq">
-      <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+      <div className="container mx-auto px-4 xl:px-0 max-w-sm">
         <h2 className="text-2xl text-center uppercase font-bold mb-6 mt-12 text-white">
           FAQ
         </h2>
@@ -23,7 +23,7 @@ function Faq({ category = "charity" }) {
             return (
               <div
                 key={index}
-                className={`rounded-xl sm:rounded-2xl overflow-hidden mb-4 cursor-pointer`}
+                className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 cursor-pointer`}
                 onClick={() => {
                   setFaq((prevState) => {
                     return prevState.map((i, k) => {
@@ -36,7 +36,7 @@ function Faq({ category = "charity" }) {
                 }}
               >
                 <div
-                  className={`flex justify-between items-center text-sm sm:text-lg font-bold text-left py-3 px-4 ${
+                  className={`flex justify-between items-center text-sm xl:text-lg font-bold text-left py-3 px-4 ${
                     item.o ? `bg-yellow-900` : `bg-white`
                   }`}
                 >
@@ -48,7 +48,7 @@ function Faq({ category = "charity" }) {
                   </span>
                 </div>
                 <div
-                  className={`markdown text-sm sm:text-base bg-white px-6 ${
+                  className={`markdown text-sm xl:text-base bg-white px-6 ${
                     item.o ? `h-auto pt-4 pb-6` : `h-0`
                   }`}
                 >
@@ -59,7 +59,7 @@ function Faq({ category = "charity" }) {
           })}
         </div>
       </div>
-      <div className="container mx-auto px-4 sm:px-0 max-w-sm">
+      <div className="container mx-auto px-4 xl:px-0 max-w-sm">
         <h2 className="text-2xl text-center font-bold mb-6 mt-12 text-white">
           У меня есть вопрос:
         </h2>

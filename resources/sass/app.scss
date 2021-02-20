@@ -185,7 +185,7 @@
   & ul,
   & ol {
     @apply pl-3;
-    @screen sm {
+    @screen xl {
       @apply pl-4;
     }
   }
