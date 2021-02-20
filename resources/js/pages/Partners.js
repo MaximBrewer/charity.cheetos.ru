@@ -21,7 +21,7 @@ function Partners() {
               className={`my-12 xl:flex justify-between items-center`}
             >
               <div className={`xl:w-2/5 xl:order-1 xl:mr-24`}>
-                <div className="my-4 w-40 m-auto xl:w-full">
+                <div className="my-4 w-40 m-auto xl:w-84">
                   <div
                     className="relative bg-center bg-no-repeat bg-contain w-full pb-100%"
                     style={{ backgroundImage: `url(${item.image})` }}
@@ -93,7 +93,7 @@ function Partners() {
                   <div className="my-6 flex items-center justify-center ">
                     <Link
                       to={`/volunteer/${item.id}`}
-                      className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8"
+                      className="text-xl xl:text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8"
                     >
                       Стать волонтером
                     </Link>
@@ -101,7 +101,7 @@ function Partners() {
                   <div className="my-6 flex items-center justify-center">
                     <Link
                       to={`/volunteer/${item.id}#form`}
-                      className="text-lg bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
+                      className="text-lg xl:text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
                     >
                       Заявка на поездку в приют
                     </Link>
