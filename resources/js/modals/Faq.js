@@ -24,7 +24,7 @@ export default function Modal() {
         У меня есть вопрос:
       </h2>
       <div className="mb-10 text-justify">
-        <FaqForm />
+        <FaqForm modal={true} />
       </div>
     </>
   );

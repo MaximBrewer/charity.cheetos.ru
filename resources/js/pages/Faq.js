@@ -69,7 +69,7 @@ function Faq({ category = "charity" }) {
             У меня есть вопрос:
           </h2>
           <div className="mb-10 text-justify">
-            <div className="w-4/5 m-auto">
+            <div className="w-4/5 xl:w-2/3 m-auto">
               <FaqForm category={category} />
             </div>
           </div>

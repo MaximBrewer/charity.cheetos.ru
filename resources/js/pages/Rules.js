@@ -7,7 +7,7 @@ function Rules() {
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto px-4">
-          <h2 className="text-xl xl:text-2xl text-center uppercase font-bold mb-6 mt-12">
+          <h2 className="text-xl xl:text-2xl text-center font-bold mb-6 mt-12">
             Правила проведения благотворительной акции «Cheetos»
             <br />
             «Протяни лапу дружбы»<br />(далее – «Акция»)
