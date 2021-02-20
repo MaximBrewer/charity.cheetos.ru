@@ -201,61 +201,103 @@ function GetPet() {
         </div>
         <div className="w-full h-px "></div>
       </div>
-      <div className="bg-white mb-72">
-        <div className="container mx-auto max-w-sm">
-          <div className="px-4 xl:px-0">
-            <div className="w-full h-px "></div>
-            <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8">
-              школа будущих хозяев
-            </h2>
-            <p className="mb-4 text-xl text-justify">
-              К новой жизни нужно готовитьне только животных, но и будущих
-              хозяев. Узнайте, ответы на самые актуальные вопросы, встающие
-              перед будущими и настоящими хозяевами лохматых друзей
-            </p>
-          </div>
-          <div className="px-4 xl:px-0 pb-4 -mb-72">
-            <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden">
-              <div
-                className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
-                style={{ backgroundImage: `url(${SweetImg})` }}
-              ></div>
-            </div>
-            <div className="my-6 flex items-center justify-center">
-              <Link
-                className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
-                to="/school"
-              >
-                Стать ответственным хозяином
-              </Link>
+
+      <div className="bg-white mb-72 xl:mb-0 xl:pt-20 xl:pb-10">
+        <div className="w-full h-px "></div>
+        <div className="-mb-72 max-w-sm xl:max-w-full xl:mb-0 mx-auto">
+          <div className="container mx-auto px-4">
+            <div className="xl:flex justify-between items-center">
+              <div className={`xl:mt-0 xl:w-3/5 xl:order-1`}>
+                <h2 className="text-2xl xl:text-3xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
+                  школа будущих хозяев
+                </h2>
+                <p className="mb-4 text-xl text-justify xl:text-2xl">
+                  К новой жизни нужно готовитьне только животных, но и будущих
+                  хозяев. Узнайте, ответы на самые актуальные вопросы, встающие
+                  перед будущими и настоящими хозяевами лохматых друзей
+                </p>
+                <div className="my-6 hidden xl:block">
+                  <Link
+                    className={`${buttonClass()} w-96 text-xl`}
+                    to="/school"
+                  >
+                    Стать ответственным хозяином
+                  </Link>
+                </div>
+              </div>
+              <div className={`xl:w-2/5 xl:pl-24 xl:order-2`}>
+                <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden">
+                  <div
+                    className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                    style={{ backgroundImage: `url(${SweetImg})` }}
+                  ></div>
+                </div>
+                <div className="my-6 flex items-center justify-center xl:hidden">
+                  <Link
+                    className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
+                    to="/school"
+                  >
+                    Стать ответственным хозяином
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div className="w-full h-px "></div>
       </div>
-      <div className="bg-white">
-        <div className="container mx-auto px-4 xl:px-0 max-w-sm">
-          <div className="w-full h-px "></div>
-          <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8">
-            В гости! В приют!
-          </h2>
-          <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden">
-            <div
-              className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
-              style={{ backgroundImage: `url(${LoveImg})` }}
-            ></div>
+
+      <div className="bg-white xl:mb-0 xl:pt-0 xl:pb-20">
+        <div className="w-full h-px "></div>
+        <div className="max-w-sm xl:max-w-full mx-auto">
+          <div className="container mx-auto px-4">
+            <div className="xl:flex justify-between items-center">
+              <div className={`xl:mt-0 xl:w-3/5 xl:order-2`}>
+                <h2 className="text-2xl xl:text-3xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
+                  В гости! В приют!
+                </h2>
+                <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden xl:hidden">
+                  <div
+                    className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                    style={{ backgroundImage: `url(${LoveImg})` }}
+                  ></div>
+                </div>
+                <p className="mb-4 text-xl text-justify xl:text-2xl">
+                  Для того, чтобы познакомиться с животными поближе, ты можешь
+                  съездить в приют в своем городе
+                </p>
+                <div className="my-6 hidden xl:block">
+                  <Link
+                    to="/getpet"
+                    className={buttonClass() + " w-72 text-xl"}
+                  >
+                    Поехать в приют!
+                  </Link>
+                </div>
+              </div>
+              <div className={`xl:w-2/5 xl:pr-24 xl:order-1`}>
+                <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden hidden xl:block">
+                  <div
+                    className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                    style={{ backgroundImage: `url(${LoveImg})` }}
+                  ></div>
+                </div>
+                <div className="my-6 flex items-center justify-center xl:hidden">
+                  <Link
+                    className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
+                    to="/school"
+                  >
+                    Стать ответственным хозяином
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-          <p className="mb-4 text-xl text-justify">
-            Для того, чтобы познакомиться с животными поближе, ты можешь
-            съездить в приют в своем городе
-          </p>
-          <Link to="/getpet" className={buttonClass() + " m-auto w-64 text-xl"}>
-            Поехать в приют!
-          </Link>
-          <div className="w-full h-px "></div>
         </div>
+        <div className="w-full h-px "></div>
       </div>
-      <div className="xl:pb-16 xl:text-black bg-white ">
+
+      <div className="xl:text-black bg-white">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto px-4">

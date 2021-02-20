@@ -24,7 +24,7 @@ export default function PartnersSlider(props) {
         <Slider {...settings} ref={ref}>
           {window.App.data.partners.map((item, index) => (
             <div key={index}>
-              <div className="xl:flex flex-col justify-between items-center">
+              <div className="xl:flex flex-col justify-between items-center px-6">
                 <div className="w-full">
                   <div className="w-1/2 m-auto mb-4">
                     <div

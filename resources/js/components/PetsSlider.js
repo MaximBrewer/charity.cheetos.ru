@@ -21,7 +21,7 @@ export default function PetsSlider({ pets }) {
     arrows: false,
     infinite: true,
     dots: false,
-    centerMode: true,
+    centerMode: !isMobile,
     centerPadding: "0",
     speed: 300,
     auto: true,
@@ -50,11 +50,11 @@ export default function PetsSlider({ pets }) {
 
   return (
     <div className="select-none">
-      <div className="border-7 border-yellow-900 xl:border-0 rounded-3xl xl:rounded-none relative overflow-hidden px-12">
+      <div className="border-7 border-yellow-900 xl:border-0 rounded-3xl xl:rounded-none relative overflow-hidden xl:px-12">
         <Slider {...settings} ref={ref}>
           {pets.map((item, index) => (
             <div key={index}>
-              <div className="w-full px-6">
+              <div className="w-full xl:px-6">
                 <div
                   className="relative bg-center bg-no-repeat bg-cover w-full pb-100% xl:rounded-3xl xl:border-7 xl:border-yellow-900 overflow-hidden"
                   style={{ backgroundImage: `url(${item.image})` }}
