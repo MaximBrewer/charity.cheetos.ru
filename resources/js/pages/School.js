@@ -51,7 +51,7 @@ function School() {
                 return item.kind == 'common' ? (
                   <div
                     key={index}
-                    className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 border-7 border-white cursor-pointer border-yellow-800`}
+                    className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 border-7 cursor-pointer border-yellow-800`}
                     onClick={() => {
                       setLessons((prevState) => {
                         return prevState.map((i, k) => {

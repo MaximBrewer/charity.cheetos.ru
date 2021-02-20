@@ -73,7 +73,7 @@ export default function FaqForm() {
             <div className={`md-input-box`}>
               <input
                 type="text"
-                className={`focus:outline-none shadow-lg bg-white py-2 px-4 rounded-2xl border-transparent border w-full ${
+                className={`focus:outline-none shadow-lg bg-white xl:bg-yellow-800 py-2 px-4 rounded-2xl border-transparent border w-full ${
                   name.error ? "border-red-500" : ""
                 }`}
                 placeholder="Имя"
@@ -83,7 +83,7 @@ export default function FaqForm() {
                 {...name.bind}
               />
             </div>
-            {name.error && <p className="text-white text-xs">{name.error}</p>}
+            {name.error && <p className="text-white xl:text-red-500 text-xs xl:text-sm xl:mt-1">{name.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
@@ -91,7 +91,7 @@ export default function FaqForm() {
             <div className={`md-input-box`}>
               <input
                 type="email"
-                className={`focus:outline-none shadow-lg bg-white py-2 px-4 rounded-2xl border-transparent border w-full ${
+                className={`focus:outline-none shadow-lg bg-white xl:bg-yellow-800 py-2 px-4 rounded-2xl border-transparent border w-full ${
                   email.error ? "border-red-500" : ""
                 }`}
                 placeholder="E-mail"
@@ -101,14 +101,14 @@ export default function FaqForm() {
                 {...email.bind}
               />
             </div>
-            {email.error && <p className="text-white text-xs">{email.error}</p>}
+            {email.error && <p className="text-white xl:text-red-500 text-xs xl:text-sm xl:mt-1">{email.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
           <div className="w-full my-2">
             <div className={`md-input-box`}>
               <textarea
-                className={`block shadow-lg focus:outline-none h-48 bg-white py-2 px-4 rounded-2xl border-transparent border w-full ${
+                className={`block shadow-lg focus:outline-none h-48 bg-white border-4 xl:border-yellow-800 py-2 px-4 rounded-2xl border-transparent w-full ${
                   question.error ? "border-red-500" : ""
                 }`}
                 placeholder="Не нашли ответ на свой вопрос? Задайте вопрос и мы оперативно ответим"
@@ -122,7 +122,7 @@ export default function FaqForm() {
               />
             </div>
             {question.error && (
-              <p className="text-white text-xs">{question.error}</p>
+              <p className="text-white xl:text-red-500 text-xs xl:text-sm xl:mt-1">{question.error}</p>
             )}
           </div>
         </div>
