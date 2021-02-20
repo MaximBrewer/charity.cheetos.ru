@@ -120,13 +120,12 @@ export default function FaqForm({ modal = false }) {
           <div className="w-full my-2">
             <div className={`md-input-box`}>
               <textarea
-                className={`block shadow-lg focus:outline-none h-48 bg-white border ${
-                  modal ? `` : `xl:border-4`
-                } ${
-                  modal ? `` : `xl:bg-yellow-800`
-                } py-2 px-4 rounded-2xl border-transparent w-full ${
-                  question.error ? "border-red-500" : ""
-                }`}
+                className={`block shadow-lg focus:outline-none h-48 bg-white  border ${
+                  modal || question.error ? `` : `xl:border-4 xl:border-yellow-800`
+                }
+                 py-2 px-4 rounded-2xl border-transparent w-full ${
+                   question.error ? "border-red-500" : ""
+                 }`}
                 placeholder="Не нашли ответ на свой вопрос? Задайте вопрос и мы оперативно ответим"
                 id="question"
                 name="question"

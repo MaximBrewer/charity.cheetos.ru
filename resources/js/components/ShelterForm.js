@@ -20,7 +20,6 @@ export default function ShelterForm({ partner_id }) {
   const [city, setCity] = useState(null);
 
   const handleClickOutside = (e) => {
-    console.log(1);
     if (cityEl.current && !cityEl.current.contains(event.target)) {
       alert("You clicked outside of me!");
     }
