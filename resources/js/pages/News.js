@@ -11,7 +11,7 @@ function News() {
           key={index}
         >
           <div className="max-w-sm xl:max-w-full mx-auto">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto">
               <div className="flex flex-col xl:flex-row justify-between items-center">
                 <div
                   className={`xl:mt-0 xl:w-3/5 order-2 xl:order-${

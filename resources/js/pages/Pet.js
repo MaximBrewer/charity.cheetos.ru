@@ -52,7 +52,7 @@ function Pet() {
       <div className="bg-white mt-80 xl:mb-0 xl:mt-0">
         <div className="w-full h-px "></div>
         <div className="-mt-80 max-w-sm xl:max-w-full xl:mb-16 mx-auto xl:mt-0">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="text-white xl:text-black pt-6 xl:pt-10 pb-4 xl:pb-10 text-3xl xl:text-5xl font-bold text-center">
               Протяни лапу дружбы
             </h2>
@@ -129,7 +129,7 @@ function Pet() {
       <div className="xl:text-black bg-white">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="text-2xl xl:text-3xl text-center font-bold mt-16 xl:mt-0 mb-6">
               Партнеры проекта:
             </h2>

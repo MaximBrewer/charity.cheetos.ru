@@ -6,7 +6,7 @@ function Rules() {
     <section id="rules" className="bg-white">
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <h2 className="text-xl xl:text-2xl text-center font-bold mb-6 mt-12">
             Правила проведения благотворительной акции «Cheetos»
             <br />

@@ -16,7 +16,7 @@ function Faq({ category = "charity" }) {
     <section id="faq" className="xl:bg-white">
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <h2 className="text-2xl xl:text-3xl text-center xl:text-left font-bold mb-6 mt-12 text-white xl:text-black">
             <span className="uppercase">FAQ</span>
             <span className="hidden xl:inline">: Как взять животное?</span>
@@ -64,7 +64,7 @@ function Faq({ category = "charity" }) {
         </div>
       </div>
       <div className="max-w-sm xl:max-w-full mx-auto">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <h2 className="text-2xl text-center font-bold mb-6 mt-12 text-white">
             У меня есть вопрос:
           </h2>

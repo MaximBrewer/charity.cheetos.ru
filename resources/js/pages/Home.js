@@ -18,7 +18,7 @@ function Home() {
       className="bg-white xl:bg-transparent mt-52 xl:mt-0 xl:text-white"
     >
       <div className="max-w-sm xl:max-w-full mx-auto">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="w-full h-px"></div>
           <div className="xl:flex xl:py-16 justify-between items-center">
             <div className="-mt-52 xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
@@ -40,7 +40,7 @@ function Home() {
       </div>
       <div className="xl:bg-white xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="xl:flex xl:py-16 justify-between items-center">
               <div className="xl:w-1/3">
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:hidden">
@@ -105,7 +105,7 @@ function Home() {
       </div>
       <div className="xl:py-16">
         <div className="max-w-sm xl:max-w-full mx-auto xl:text-black">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="xl:flex items-center justify-between">
               <div className="xl:w-1/2">
                 <h2 className="text-2xl xl:text-4xl text-center xl:text-left uppercase font-bold mt-8 mb-4">
@@ -136,7 +136,7 @@ function Home() {
           style={{ backgroundImage: `url(${StepsImg})` }}
         >
           <div className="max-w-sm xl:max-w-full mx-auto">
-            <div className="container mx-auto px-4 xl:px-0 max-w-sm">
+            <div className="container mx-auto">
               <div className="h-px w-full"></div>
               <div className="-mt-28">
                 <SchoolVideo />
@@ -156,7 +156,7 @@ function Home() {
       </div>
       <div className="xl:bg-white xl:py-16">
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="text-2xl text-center font-bold mt-8 mb-4 xl:mt-0">
               Новости:
             </h2>
@@ -167,7 +167,7 @@ function Home() {
       </div>
       <div className="xl:bg-white xl:pb-16 xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="text-2xl xl:text-4xl text-center font-bold mt-8 xl:mt-0 mb-4">
               Партнеры проекта:
             </h2>

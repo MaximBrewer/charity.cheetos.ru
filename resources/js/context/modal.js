@@ -25,7 +25,7 @@ function ModalProvider({ children }) {
       {children}
       {showModal ? (
         <div className="z-30 absolute top-24 w-full">
-          <div className="container mx-auto px-4 max-w-lg">
+          <div className="container mx-auto max-w-lg">
             <div
               className="pt-4 bg-yellow-800 rounded-3xl shadow-lg relative flex flex-col bg-80 outline-none focus:outline-none"
               style={{ backgroundImage: `url(${StepsImg})` }}

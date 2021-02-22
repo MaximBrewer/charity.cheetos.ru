@@ -17,7 +17,7 @@ function Header({ opened, setOpened }) {
   }, [location]);
 
   const menuItems = [
-    { props: { to: "/about" }, text: "О проекте" },
+    { props: { to: "/about" }, text: <span>О&nbsp;проекте</span> },
     { props: { to: "/news" }, text: "Новости" },
     { props: { to: "/partners" }, text: "Фонды" },
     { props: { to: "/rules" }, text: "Правила акции" },
@@ -30,7 +30,7 @@ function Header({ opened, setOpened }) {
           setOpened(false);
         },
       },
-      text: "Удвоить помощь в Магнит",
+      text: <span>Удвоить помощь в&nbsp;Магнит</span>,
     },
     { props: { to: "/getpet" }, text: "Стать хозяином" },
     {
@@ -55,7 +55,7 @@ function Header({ opened, setOpened }) {
       style={opened || showModal ? { backgroundImage: `url(${StepsImg})` } : {}}
     >
       <div className="max-w-sm xl:max-w-full mx-auto">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <nav className="text-white">
             <div className="flex justify-between items-center h-16 py-2 z-30 relative">
               <div className="xl:hidden">
@@ -82,19 +82,19 @@ function Header({ opened, setOpened }) {
                   ></Link>
                 </div>
               </div>
-              <div className="items-center hidden xl:block text-base font-bold w-full">
-                <ul className="pl-8 pt-2 pb-3 xl:pt-6 flex items-center justify-between w-full">
+              <div className="items-center hidden xl:block text-sm font-bold w-full">
+                <ul className="text-center pl-8 flex items-center justify-between w-full">
                   {menuItems.map((item, index) => (
                     <li
-                      className="block py-1 px-1 xl:py-3 xl:px-2 whitespace-nowrap uppercase"
+                      className="block py-1 px-1 xl:py-3 xl:px-2 uppercase"
                       key={index}
                     >
                       {item.props.to ? (
-                        <NavLink {...item.props} activeClassName="active">
+                        <NavLink {...item.props} activeClassName="active" className="block">
                           {item.text}
                         </NavLink>
                       ) : (
-                        <a {...item.props}>{item.text}</a>
+                        <a {...item.props} className="block">{item.text}</a>
                       )}
                     </li>
                   ))}

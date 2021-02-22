@@ -31,7 +31,7 @@ function GetPet() {
     <section id="about">
       <div className="bg-white xl:bg-transparent">
         <div className="max-w-sm xl:max-w-full mx-auto xl:bg-white">
-          <div className="container mx-auto px-4 pt-8">
+          <div className="container mx-auto pt-8">
             <h2 className="mb-3 text-3xl xl:text-4xl xl:mb-6 font-bold text-center">
               Протяни лапу дружбы
             </h2>
@@ -193,7 +193,7 @@ function GetPet() {
       <div className="bg-white xl:bg-transparent mb-84 xl:mb-0">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4 pt-8 xl:py-16">
+          <div className="container mx-auto pt-8 xl:py-16">
             <div className="px-4 xl:px-0 pb-4 -mb-84 xl:mb-0 xl:pb-0">
               {pets && pets.length ? <PetsSlider pets={pets} /> : ``}
             </div>
@@ -205,7 +205,7 @@ function GetPet() {
       <div className="bg-white mb-72 xl:mb-0 xl:pt-20 xl:pb-10">
         <div className="w-full h-px "></div>
         <div className="-mb-72 max-w-sm xl:max-w-full xl:mb-0 mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="xl:flex justify-between items-center">
               <div className={`xl:mt-0 xl:w-3/5 xl:order-1`}>
                 <h2 className="text-2xl xl:text-3xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
@@ -250,7 +250,7 @@ function GetPet() {
       <div className="bg-white xl:mb-0 xl:pt-0 xl:pb-20">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="xl:flex justify-between items-center">
               <div className={`xl:mt-0 xl:w-3/5 xl:order-2`}>
                 <h2 className="text-2xl xl:text-3xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
@@ -300,7 +300,7 @@ function GetPet() {
       <div className="xl:text-black bg-white">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="text-2xl xl:text-3xl text-center font-bold mt-16 xl:mt-0 mb-6">
               Партнеры проекта:
             </h2>

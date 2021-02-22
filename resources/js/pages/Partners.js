@@ -8,7 +8,7 @@ function Partners() {
     <section id="partners" className="bg-white">
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <h2
             className={`text-2xl font-bold text-center mt-10 xl:text-3xl xl:text-left xl:mt-16`}
           >

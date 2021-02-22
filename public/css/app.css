@@ -548,11 +548,15 @@ video {
 
 .container {
   width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
+    padding-right: 5rem;
+    padding-left: 5rem;
   }
 }
 
@@ -38584,11 +38588,15 @@ video {
 @media (min-width: 1280px) {
   .xl\:container {
     width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   @media (min-width: 1280px) {
     .xl\:container {
       max-width: 1280px;
+      padding-right: 5rem;
+      padding-left: 5rem;
     }
   }
 

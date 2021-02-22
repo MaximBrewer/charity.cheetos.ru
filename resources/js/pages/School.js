@@ -33,7 +33,7 @@ function School() {
       <div className="bg-white xl:bg-transparent">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2
               className={`text-2xl font-bold text-center mt-10 xl:text-3xl xl:text-left xl:mt-16`}
             >
@@ -53,7 +53,7 @@ function School() {
           <div className="w-full h-px "></div>
         </div>
         <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="px-4 xl:px-0">
               <div className="mb-4 text-justify">
                 {lessons.map((item, index) => {
@@ -134,7 +134,7 @@ function School() {
       <div className="bg-white xl:bg-transparent">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center xl:text-left">
               Какое у вас животное
             </h2>
@@ -204,7 +204,7 @@ function School() {
           <div className="w-full h-px "></div>
         </div>
         <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto xl:hidden">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="px-4 xl:px-0 pb-4">
               <div className="mt-6 mb-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
                 <div
@@ -221,7 +221,7 @@ function School() {
         </div>
       </div>
       <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="mb-10 text-justify">
             {lessons.map((item, index) => {
               return item.kind == kind ? (
@@ -299,7 +299,7 @@ function School() {
       <div className="xl:text-black bg-white">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="text-2xl xl:text-3xl text-center font-bold mt-16 xl:mt-0 mb-6">
               Партнеры проекта:
             </h2>

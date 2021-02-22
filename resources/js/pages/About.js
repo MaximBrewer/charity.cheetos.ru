@@ -11,7 +11,7 @@ function About() {
     <section id="about" className="bg-white">
       <div className="xl:pb-16 xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="pt-6 xl:pt-12 pb-4 text-3xl xl:text-4xl font-bold text-center">
               Протяни лапу дружбы
             </h2>
@@ -32,7 +32,7 @@ function About() {
 
       <div className="xl:pb-16 xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <h2 className="text-2xl text-center font-bold mt-16 xl:mt-0 mb-6">
               Партнеры проекта:
             </h2>

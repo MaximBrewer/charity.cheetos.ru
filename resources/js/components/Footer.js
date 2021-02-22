@@ -75,7 +75,7 @@ function Footer() {
     <section id="footer">
       <div className="w-full bg-white hidden xl:block h-36"></div>
       <div
-        className={`hidden xl:flex container mx-auto justify-between items-center px-4 pb-12`}
+        className={`hidden xl:flex container mx-auto justify-between items-center pb-12`}
       >
         <div className="w-96">
           <Logo className="w-72" />
@@ -97,7 +97,7 @@ function Footer() {
           location && location.pathname != "/faq" ? `bg-white` : ``
         }`}
       >
-        <div className={`container mx-auto px-4 xl:px-0 max-w-sm py-4`}>
+        <div className={`container mx-auto py-4`}>
           <div className="w-full h-full">
             <div className="w-32 m-auto">
               <Logo className="w-full" />
@@ -110,10 +110,10 @@ function Footer() {
         </div>
       </div>
       <div
-        className={`xl:hidden container mx-auto px-4 xl:px-0 max-w-sm mb-12 py-4`}
+        className={`xl:hidden container mx-auto mb-12 py-4`}
       >
         <div className="px-10">
-          <div className="container mx-auto px-4 xl:px-0 max-w-sm">
+          <div className="container mx-auto">
             <div className="pb-8">
               <div className="w-full h-1"></div>
               <img src={ChestorImg} alt="" title="" className="-mt-8" />
