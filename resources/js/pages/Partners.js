@@ -24,7 +24,7 @@ function Partners() {
               {index ? <hr className="hidden xl:block w-full" /> : ``}
               <div className={`my-12 xl:flex justify-between items-center`}>
                 <div className={`xl:w-2/5 xl:order-1 xl:mr-24`}>
-                  <div className="my-4 w-40 m-auto xl:w-84">
+                  <div className="my-4 w-40 m-auto xl:w-72">
                     <div
                       className="relative bg-center bg-no-repeat bg-contain w-full pb-100%"
                       style={{ backgroundImage: `url(${item.image})` }}
@@ -32,10 +32,10 @@ function Partners() {
                   </div>
                 </div>
                 <div className={`xl:w-3/5 xl:order-2 xl:flex flex-col`}>
-                  <div className="my-6 text-xl text-center xl:text-left xl:order-1 xl:text-2xl xl:w-2/3">
+                  <div className="my-6 xl:my-3 text-xl text-center xl:text-left xl:order-1 xl:font-semibold xl:w-2/3">
                     {Parser(item.excerpt)}
                   </div>
-                  <ul className="my-6 flex items-center justify-between xl:justify-start xl:order-5">
+                  <ul className="my-6 xl:my-3 flex items-center justify-between xl:justify-start xl:order-5">
                     {item.site ? (
                       <li className="mx-4">
                         <a
@@ -89,7 +89,7 @@ function Partners() {
                       ``
                     )}
                   </ul>
-                  <div className="my-6 text-xl xl:order-2">
+                  <div className="my-6 xl:my-3 text-lg xl:order-2">
                     {Parser(item.body)}
                   </div>
                   <div className="xl:order-3 xl:flex">
