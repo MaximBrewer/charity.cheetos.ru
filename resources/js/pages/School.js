@@ -135,7 +135,7 @@ function School() {
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-center xl:text-left">
+            <h2 className="text-2xl font-bold text-center xl:text-left">
               Какое у вас животное
             </h2>
             <p className="text-sm xl:text-lg text-center mb-4 xl:text-left">
