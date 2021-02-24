@@ -20,20 +20,31 @@ function Home() {
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
           <div className="w-full h-px"></div>
-          <div className="xl:flex xl:py-16 justify-between items-center">
+          <div className="xl:flex xl:pb-32 xl:pt-24 justify-between items-center">
             <div className="-mt-52 xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
-              <h2 className="text-white pt-6 pb-4 text-3xl xl:text-4xl font-bold text-center xl:hidden">
+              <h2 className="text-white pt-6 pb-4 text-2xl font-bold text-center xl:hidden">
                 Протяни лапу дружбы
               </h2>
               <OfficialVideo />
             </div>
             <div className="xl:w-1/2">
-              <p className="text-xl xl:text-3xl xl:order-1 xl:font-bold xl:mb-8">
+              <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8">
                 Покупай специальные упаковки Cheetos “Лапы” и 1 рубль, с каждой
                 проданной пачки будет переведён в фонды помощи бездомным
                 животным
               </p>
-              <DoubleButton xlYellow={true} />
+              <div className="my-6 xl:mt-6 xl:mb-0 flex items-center justify-center xl:justify-start">
+                <a
+                  href={window.App.data.doubleLink}
+                  target="_blank"
+                  className={
+                    buttonClass() +
+                    ` w-64 xl:mb-0 xl:w-auto xl:px-12 text-xl xl:bg-yellow-800 xl:hover:bg-yellow-600 xl:text-darkOrange-900`
+                  }
+                >
+                  Удвоить помощь!
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -42,7 +53,7 @@ function Home() {
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <div className="xl:flex xl:py-16 justify-between items-center">
-              <div className="xl:w-1/3">
+              <div className="xl:w-1/2 xl:pl-20 xl:pr-36">
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:hidden">
                   Стать хозяином:
                 </h2>
@@ -53,11 +64,11 @@ function Home() {
                   ></div>
                 </div>
               </div>
-              <div className="xl:w-2/3 xl:pl-20">
-                <h2 className="text-3xl uppercase font-bold mb-8 hidden xl:block">
+              <div className="xl:w-1/2 xl:pl-20">
+                <h2 className="text-2xl uppercase font-bold mb-8 hidden xl:block">
                   Стать хозяином:
                 </h2>
-                <ul className="text-xl mt-4 mb-6">
+                <ul className="text-lg mt-4 mb-6">
                   <li className="flex items-center justify-start mb-3">
                     <div>
                       <span className="font-bold w-7 h-7 text-white flex items-center justify-center mr-3 xl:mr-6 rounded-full bg-orange-800">
@@ -83,17 +94,17 @@ function Home() {
                       </span>
                     </div>
                     <span className="w-full">
-                      Пройди обучение в <br />
+                      Пройди обучение <br className="xl:hidden"/>
                       <Link to="/school" className="font-bold underline">
-                        школе будущих хозяев
+                        в&nbsp;школе будущих хозяев
                       </Link>
                     </span>
                   </li>
                 </ul>
-                <div className="my-6 xl:mt-16 flex items-center justify-center xl:justify-start">
+                <div className="my-6 xl:mt-b xl:mb-0 xl:mt-10 flex items-center justify-center xl:justify-start">
                   <Link
                     to="/getpet"
-                    className={buttonClass() + " w-64 text-xl xl:ml-14"}
+                    className={buttonClass() + " w-64 text-xl xl:ml-14 xl:mb-0"}
                   >
                     Стать хозяином
                   </Link>
@@ -108,18 +119,18 @@ function Home() {
           <div className="container mx-auto">
             <div className="xl:flex items-center justify-between">
               <div className="xl:w-1/2">
-                <h2 className="text-2xl xl:text-4xl text-center xl:text-left uppercase font-bold mt-8 mb-4">
+                <h2 className="text-2xl text-center xl:text-left uppercase font-bold mt-8 mb-4">
                   ШКОЛА БУДУЩИХ ХОЗЯЕВ
                 </h2>
-                <p className="text-xl mb-4 xl:text-3xl">
-                  К новой жизни нужно готовитьне только животных, но и будущих
+                <p className="text-xl mb-4">
+                  К новой жизни нужно готовить не только животных, но и будущих
                   хозяев. Узнайте, ответы на самые актуальные вопросы, встающие
                   перед будущими и настоящими хозяевами лохматых друзей
                 </p>
                 <div className="hidden my-6 xl:flex items-center justify-start">
                   <Link
                     to="/school"
-                    className="w-64 text-2xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 font-bold text-center focus:outline-none"
+                    className="w-64 text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 font-bold text-center focus:outline-none"
                   >
                     Узнать больше
                   </Link>
@@ -168,7 +179,7 @@ function Home() {
       <div className="xl:bg-white xl:pb-16 xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
-            <h2 className="text-2xl xl:text-4xl text-center font-bold mt-8 xl:mt-0 mb-4">
+            <h2 className="text-2xl text-center font-bold mt-8 xl:mt-0 mb-4">
               Партнеры проекта:
             </h2>
             <div className="hidden xl:block xl:mb-16s">

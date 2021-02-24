@@ -130,7 +130,7 @@ export default function ShelterForm({ partner_id }) {
           <div className="w-full my-2">
             <div className={`md-input-box`}>
               <input
-                type="number"
+                type="text"
                 className={`focus:outline-none text-xl text-center placeholder-current bg-yellow-900 py-3 px-4 rounded-2xl border-transparent border w-full ${
                   quantity.error ? "border-red-500" : ""
                 }`}

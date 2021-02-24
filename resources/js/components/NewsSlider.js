@@ -39,7 +39,7 @@ export default function NewsSlider() {
                   <div className="mb-6 flex items-center justify-center hidden xl:block ">
                     <Link
                       to="/news"
-                      className="text-2xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-3 px-12 text-white font-bold text-center focus:outline-none"
+                      className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-3 px-12 text-white font-bold text-center focus:outline-none"
                     >
                       Подробнее
                     </Link>

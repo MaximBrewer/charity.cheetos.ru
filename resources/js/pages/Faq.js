@@ -17,7 +17,7 @@ function Faq({ category = "charity" }) {
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
-          <h2 className="text-2xl xl:text-3xl text-center xl:text-left font-bold mb-6 mt-12 text-white xl:text-black">
+          <h2 className="text-2xl text-center xl:text-left font-bold mb-6 mt-12 text-white xl:text-black">
             <span className="uppercase">FAQ</span>
             <span className="hidden xl:inline">: Как взять животное?</span>
           </h2>

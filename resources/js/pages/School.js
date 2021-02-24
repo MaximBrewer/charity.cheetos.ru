@@ -32,19 +32,19 @@ function School() {
       <div className="w-full h-px "></div>
       <div className="bg-white xl:bg-transparent">
         <div className="w-full h-px "></div>
-        <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto">
+        <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto">
           <div className="container mx-auto">
             <h2
-              className={`text-2xl font-bold text-center mt-10 xl:text-3xl xl:text-left xl:mt-16`}
+              className={`text-2xl font-bold text-center mt-10 xl:text-left xl:mt-16`}
             >
               Протяни лапу дружбы
             </h2>
             <h2
-              className={`text-2xl font-bold text-center uppercase my-4 xl:mb-6 xl:text-3xl xl:text-left`}
+              className={`text-2xl font-bold text-center my-4 xl:mb-6 xl:text-left`}
             >
-              школа будущих хозяев
+              Школа будущих хозяев
             </h2>
-            <p className="text-xl mb-10 xl:text-3xl">
+            <p className="text-xl mb-10">
               К новой жизни нужно готовить не только животных, но и будущих
               хозяев. <br />
               Узнайте, ответы на самые актуальные вопросы!
@@ -52,7 +52,7 @@ function School() {
           </div>
           <div className="w-full h-px "></div>
         </div>
-        <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto">
+        <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto">
           <div className="container mx-auto">
             <div className="px-4 xl:px-0">
               <div className="mb-4 text-justify">
@@ -133,7 +133,7 @@ function School() {
       </div>
       <div className="bg-white xl:bg-transparent">
         <div className="w-full h-px "></div>
-        <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto">
+        <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center xl:text-left">
               Какое у вас животное
@@ -142,37 +142,37 @@ function School() {
               будущее или настоящее
             </p>
             <div className="xl:flex items-center">
-              <div className="xl:w-1/3">
-                <div className="mb-2 justify-center items-center flex xl:justify-start xl:uppercase">
+              <div className="xl:w-1/2">
+                <div className="mb-2 justify-center items-center flex xl:uppercase">
                   <div
-                    className="text-base xl:text-2xl cursor-pointer"
+                    className="text-base xl:text-xl cursor-pointer"
                     onClick={() => setKind("dog")}
                   >
                     Собака
                   </div>
-                  <div className="relative inline-block w-12 xl:w-24 mx-2 align-middle select-none transition duration-200 ease-in">
+                  <div className="relative inline-block w-12 mx-2 align-middle select-none transition duration-200 ease-in">
                     <input
                       type="checkbox"
                       name="cat-switch"
                       id="cat-switch"
                       onChange={handleChange}
                       checked={kind != "dog"}
-                      className="z-1 toggle-checkbox absolute block w-7 h-7 xl:w-12 xl:h-12 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
+                      className="z-1 toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
                     />
                     <label
                       htmlFor="cat-switch"
-                      className="toggle-label block overflow-hidden h-7 xl:h-12 rounded-full bg-darkOrange-900 cursor-pointer"
+                      className="toggle-label block overflow-hidden h-7 rounded-full bg-darkOrange-900 cursor-pointer"
                     ></label>
                   </div>
                   <div
-                    className="text-base xl:text-2xl cursor-pointer"
+                    className="text-base xl:text-xl cursor-pointer"
                     onClick={() => setKind("cat")}
                   >
                     Кошка
                   </div>
                 </div>
               </div>
-              <div className="hidden xl:flex xl:w-2/3">
+              <div className="hidden xl:flex xl:w-1/2">
                 <div className="w-1/2 pl-12">
                   <div className="mt-6 mb-4 border-7 border-yellow-800 bg-darkOrange-900 rounded-3xl overflow-hidden">
                     <div
@@ -203,7 +203,7 @@ function School() {
         <div className="pb-56 bg-white -mb-56 xl:hidden">
           <div className="w-full h-px "></div>
         </div>
-        <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto xl:hidden">
+        <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto xl:hidden">
           <div className="container mx-auto">
             <div className="px-4 xl:px-0 pb-4">
               <div className="mt-6 mb-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
@@ -220,7 +220,7 @@ function School() {
           </div>
         </div>
       </div>
-      <div className="max-w-sm xl:max-w-full xl:mb-16 mx-auto">
+      <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto">
         <div className="container mx-auto">
           <div className="mb-10 text-justify">
             {lessons.map((item, index) => {
@@ -300,7 +300,7 @@ function School() {
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
-            <h2 className="text-2xl xl:text-3xl text-center font-bold mt-16 xl:mt-0 mb-6">
+            <h2 className="text-2xl text-center font-bold mt-16 xl:mt-0 mb-6">
               Партнеры проекта:
             </h2>
             <div className="hidden xl:block">

@@ -51,9 +51,9 @@ function Pet() {
     <section id="pet">
       <div className="bg-white mt-80 xl:mb-0 xl:mt-0">
         <div className="w-full h-px "></div>
-        <div className="-mt-80 max-w-sm xl:max-w-full xl:mb-16 mx-auto xl:mt-0">
+        <div className="-mt-80 max-w-sm xl:max-w-full xl:mb-8 mx-auto xl:mt-0">
           <div className="container mx-auto">
-            <h2 className="text-white xl:text-black pt-6 xl:pt-10 pb-4 xl:pb-10 text-3xl xl:text-5xl font-bold text-center">
+            <h2 className="text-white xl:text-black pt-6 xl:pt-10 pb-4 xl:pb-10 text-2xl font-bold text-center">
               Протяни лапу дружбы
             </h2>
             {!pet || (
@@ -99,10 +99,10 @@ function Pet() {
                     </div>
                   </div>
                   <div className={`xl:w-2/3 xl:pl-24 xl:order-2`}>
-                    <h4 className="mb-4 xl:mb-6 text-xl text-center font-bold xl:text-2xl xl:text-left">
+                    <h4 className="mb-4 xl:mb-6 text-xl text-center font-bold xl:text-left">
                       {pet.excerpt}
                     </h4>
-                    <div className="mb-4 xl:mb-16 text-lg text-justify xl:text-xl xl:text-left">
+                    <div className="mb-4 xl:mb-16 text-lg text-justify xl:text-left">
                       {Parser(pet.body)}
                     </div>
                     <div className="my-6 flex items-center justify-center xl:justify-start">
@@ -130,7 +130,7 @@ function Pet() {
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
-            <h2 className="text-2xl xl:text-3xl text-center font-bold mt-16 xl:mt-0 mb-6">
+            <h2 className="text-2xl text-center font-bold mt-16 xl:mt-0 mb-6">
               Партнеры проекта:
             </h2>
             <div className="hidden xl:block">

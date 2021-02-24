@@ -40,7 +40,7 @@ function Header({ opened, setOpened }) {
           setModalBody(<FaqModal />);
           setShowModal(true);
         },
-        className: `cursor-pointer`,
+        className: `cursor-pointer block`,
       },
       text: "FAQ",
     },
@@ -86,15 +86,14 @@ function Header({ opened, setOpened }) {
                 <ul className="text-center pl-8 flex items-center justify-between w-full">
                   {menuItems.map((item, index) => (
                     <li
-                      className="block py-1 px-1 xl:py-3 xl:px-2 uppercase"
                       key={index}
                     >
                       {item.props.to ? (
-                        <NavLink {...item.props} activeClassName="active" className="block">
+                        <NavLink {...item.props} activeClassName="active" className="block py-1 px-1 xl:py-3 xl:px-2 uppercase">
                           {item.text}
                         </NavLink>
                       ) : (
-                        <a {...item.props} className="block">{item.text}</a>
+                        <a {...item.props} className={`block py-1 px-1 xl:py-3 xl:px-2 uppercase ${item.props.className}`}>{item.text}</a>
                       )}
                     </li>
                   ))}

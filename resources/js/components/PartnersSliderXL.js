@@ -32,7 +32,9 @@ export default function PartnersSlider(props) {
                       style={{ backgroundImage: `url(${item.image})` }}
                     ></div>
                   </div>
-                  <p className="text-center mb-4 xl:h-12 overflow-hidden">{item.excerpt}</p>
+                  <p className="text-center mb-4 xl:h-12 overflow-hidden">
+                    {item.excerpt}
+                  </p>
                 </div>
                 <div className="mb-6 flex items-center justify-center">
                   <Link
@@ -46,22 +48,28 @@ export default function PartnersSlider(props) {
             </div>
           ))}
         </Slider>
-        <a
-          className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 left-0 -mt-6"
-          onClick={() => {
-            ref.current.slickPrev();
-          }}
-        >
-          <ArrowPrevIcon className="w-8 h-12 stroke-current" />
-        </a>
-        <a
-          className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 right-0 -mt-6"
-          onClick={() => {
-            ref.current.slickNext();
-          }}
-        >
-          <ArrowNextIcon className="w-8 h-12 stroke-current" />
-        </a>
+        {window.App.data.partners.length > 3 ? (
+          <>
+            <a
+              className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 left-0 -mt-6"
+              onClick={() => {
+                ref.current.slickPrev();
+              }}
+            >
+              <ArrowPrevIcon className="w-8 h-12 stroke-current" />
+            </a>
+            <a
+              className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 right-0 -mt-6"
+              onClick={() => {
+                ref.current.slickNext();
+              }}
+            >
+              <ArrowNextIcon className="w-8 h-12 stroke-current" />
+            </a>
+          </>
+        ) : (
+          ``
+        )}
       </div>
     </>
   );

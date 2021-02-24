@@ -32,12 +32,12 @@ function GetPet() {
       <div className="bg-white xl:bg-transparent">
         <div className="max-w-sm xl:max-w-full mx-auto xl:bg-white">
           <div className="container mx-auto pt-8">
-            <h2 className="mb-3 text-3xl xl:text-4xl xl:mb-6 font-bold text-center">
+            <h2 className="mb-3 text-2xl xl:mb-6 font-bold text-center">
               Протяни лапу дружбы
             </h2>
             <div className="xl:flex xl:pt-6 pb-16 justify-center items-start">
               <div className="xl:w-1/2">
-                <h3 className="mb-3 xl:mb-6 text-2xl font-semibold uppercase text-center xl:text-left">
+                <h3 className="mb-3 xl:mb-6 text-2xl font-semibold text-center xl:text-left">
                   Стать хозяином
                 </h3>
                 <ul className="text-xl mt-4 mb-6">
@@ -208,11 +208,11 @@ function GetPet() {
           <div className="container mx-auto">
             <div className="xl:flex justify-between items-center">
               <div className={`xl:mt-0 xl:w-3/5 xl:order-1`}>
-                <h2 className="text-2xl xl:text-3xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
+                <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
                   школа будущих хозяев
                 </h2>
                 <p className="mb-4 text-xl text-justify xl:text-2xl">
-                  К новой жизни нужно готовитьне только животных, но и будущих
+                  К новой жизни нужно готовить не только животных, но и будущих
                   хозяев. Узнайте, ответы на самые актуальные вопросы, встающие
                   перед будущими и настоящими хозяевами лохматых друзей
                 </p>
@@ -253,7 +253,7 @@ function GetPet() {
           <div className="container mx-auto">
             <div className="xl:flex justify-between items-center">
               <div className={`xl:mt-0 xl:w-3/5 xl:order-2`}>
-                <h2 className="text-2xl xl:text-3xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
+                <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
                   В гости! В приют!
                 </h2>
                 <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden xl:hidden">
@@ -301,7 +301,7 @@ function GetPet() {
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
-            <h2 className="text-2xl xl:text-3xl text-center font-bold mt-16 xl:mt-0 mb-6">
+            <h2 className="text-2xl text-center font-bold mt-16 xl:mt-0 mb-6">
               Партнеры проекта:
             </h2>
             <div className="hidden xl:block">

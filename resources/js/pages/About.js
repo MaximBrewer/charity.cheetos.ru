@@ -12,7 +12,7 @@ function About() {
       <div className="xl:pb-16 xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
-            <h2 className="pt-6 xl:pt-12 pb-4 text-3xl xl:text-4xl font-bold text-center">
+            <h2 className="pt-6 xl:pt-12 pb-4 text-2xl font-bold text-center">
               Протяни лапу дружбы
             </h2>
             <div className="xl:flex justify-between items-center">

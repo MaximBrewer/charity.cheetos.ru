@@ -10,12 +10,12 @@ function Partners() {
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
           <h2
-            className={`text-2xl font-bold text-center mt-10 xl:text-3xl xl:text-left xl:mt-16`}
+            className={`text-2xl font-bold text-center mt-10 xl:text-left xl:mt-16`}
           >
             Протяни лапу дружбы
           </h2>
           <h2
-            className={`text-2xl font-bold text-center uppercase my-4 xl:mb-16 xl:text-3xl xl:text-left`}
+            className={`text-2xl font-bold text-center my-4 xl:mb-16 xl:text-left`}
           >
             Фонды партнеры акции:
           </h2>
