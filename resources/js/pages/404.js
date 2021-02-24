@@ -5,7 +5,7 @@ function NotFound() {
     <section id="about" className="bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col flex-1 items-center">
-          <h1 className="py-8 text-3xl xl:text-4xl font-bold">
+          <h1 className="py-8 text-5xl font-bold">
             Страница не найдена.
           </h1>
         </div>
