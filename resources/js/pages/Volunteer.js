@@ -73,10 +73,10 @@ function Volunteer() {
           <h2
             className={`text-2xl font-bold text-center my-4 xl:text-left xl:uppercase`}
           >
-            Стать волонтером
+            Стать волонтёром
           </h2>
           <p className="text-lg mb-4 xl:text-left xl:text-xl xl:w-2/3">
-            Волонтером может стать любой желающий. Для несовершеннолетних
+            Волонтёром может стать любой желающий. Для несовершеннолетних
             необходимо разрешение от родителей, а для тех, кто младше 14 лет —
             сопровождение официальных представителей.
           </p>
@@ -84,7 +84,7 @@ function Volunteer() {
         <div className="container mx-auto">
           <div className="">
             <h2 className="text-2xl text-center font-bold mt-8 mb-4 xl:uppercase xl:text-left xl:mb-12 xl:mt-16">
-              Стать волонтером в фонде
+              Стать волонтёром в фонде
             </h2>
             <div>
               <div className="relative px-10 w-full xl:px-0">
@@ -116,7 +116,7 @@ function Volunteer() {
                                     target={`_blank`}
                                     className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8"
                                   >
-                                    Стать волонтером
+                                    Стать волонтёром
                                   </a>
                                 </div>
                                 <div className="my-6 flex items-center justify-center">
@@ -217,7 +217,7 @@ function Volunteer() {
                 target="_blank"
                 className="w-64 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white text-center focus:outline-none"
               >
-                Стать волонтером
+                Стать волонтёром
               </a>
             </div>
           </div>

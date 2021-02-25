@@ -112,7 +112,7 @@ function Partners() {
                         target={`_blank`}
                         className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8"
                       >
-                        Стать волонтером
+                        Стать волонтёром
                       </a>
                     </div>
                     <div className="my-6 flex items-center justify-center">

@@ -57,7 +57,7 @@ function GetPet() {
                         2
                       </span>
                     </div>
-                    <span className="w-full">Дождись ответа от Фонда</span>
+                    <span className="w-full">Дождись ответа от фонда</span>
                   </li>
                   <li className="flex items-center justify-start mb-3">
                     <div>
