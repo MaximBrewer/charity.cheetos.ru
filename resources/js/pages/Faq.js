@@ -39,7 +39,7 @@ function Faq({ category = "charity" }) {
                   }}
                 >
                   <div
-                    className={`flex justify-between items-center text-sm xl:text-lg font-bold text-left py-3 pl-6 pr-4 xl:px-8 ${
+                    className={`flex justify-between items-center text-sm xl:text-lg font-bold text-left py-3 px-4 xl:px-8 ${
                       item.o ? `bg-yellow-800` : `bg-white xl:bg-yellow-800`
                     }`}
                   >
@@ -51,7 +51,7 @@ function Faq({ category = "charity" }) {
                     </span>
                   </div>
                   <div
-                    className={`markdown text-sm xl:text-base bg-white px-6 ${
+                    className={`markdown text-sm xl:text-base bg-white px-4 ${
                       item.o ? `h-auto pt-4 pb-6` : `hidden`
                     }`}
                   >
