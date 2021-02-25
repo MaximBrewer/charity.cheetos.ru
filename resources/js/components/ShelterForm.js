@@ -172,7 +172,7 @@ export default function ShelterForm({ partner_id }) {
             type="button"
             onClick={handleSubmit}
           >
-            Поехать в приют!
+            Поехать в приют
           </button>
         </div>
       </form>
