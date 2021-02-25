@@ -46,7 +46,7 @@ export default function PetsSlider({ pets }) {
   useEffect(() => {
     setTitle(pets[0].name);
     setLink("/pet/" + pets[0].id);
-  }, pets);
+  }, [pets]);
 
   return (
     <div className="select-none">
