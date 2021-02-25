@@ -92,7 +92,7 @@ function Volunteer() {
                   {window.App.data.partners.map((item, index) => (
                     <div key={index}>
                       <div className="xl:flex">
-                        <div className="xl:w-1/2 mb-4 xl:mb-0 xl:pr-24">
+                        <div className="xl:w-1/2 mb-4 xl:mb-0 xl:pr-32">
                           <div
                             className="relative bg-center bg-no-repeat bg-contain w-full pb-100%"
                             style={{ backgroundImage: `url(${item.image})` }}
@@ -104,7 +104,7 @@ function Volunteer() {
                               <div className="text-center mb-4 xl:mb-8 xl:text-xl xl:text-left">
                                 {item.excerpt}
                               </div>
-                              <div className="hidden xl:block xl:mb-8">
+                              <div className="hidden xl:block xl:mb-8 xl:text-xl">
                                 {Parser(item.body)}
                               </div>
                             </div>
@@ -226,7 +226,7 @@ function Volunteer() {
               Поездка в приют
             </h2>
             <div className="xl:flex">
-              <div className="xl:w-1/2 xl:pr-24">
+              <div className="xl:w-1/2 xl:pr-32">
                 <div className="my-6 xl:my-0 border-7 border-yellow-900 rounded-3xl overflow-hidden">
                   <div
                     className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
@@ -235,12 +235,12 @@ function Volunteer() {
                 </div>
               </div>
               <div className="xl:w-1/2">
-                <p className="mb-4 text-lg text-justify">
+                <p className="mb-4 text-lg text-justify xl:text-xl">
                   Для того, чтобы познакомиться с животными поближе, ты можешь
                   съездить в приют в своем городе
                 </p>
                 <div>
-                  <div className="mb-4 w-72 m-auto">
+                  <div className="mb-4 w-72 m-auto xl:m-0">
                     <ShelterForm partner_id={id} />
                   </div>
                 </div>
