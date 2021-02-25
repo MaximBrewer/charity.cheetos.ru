@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
+import FrameImg from "../../images/frame.png";
 
 // components
 
@@ -27,15 +28,22 @@ export default function NewsSlider() {
               <div className="xl:flex xl:px-32 xl:text-black items-center justify-between">
                 <div className="xl:w-1/2 xl:mr-16 xl:mb-8">
                   <div
-                    className="border-7 border-yellow-900 rounded-3xl relative bg-darkOrange-900 bg-center bg-no-repeat bg-cover w-full pb-100% -mb-2"
-                    style={{ backgroundImage: `url(${item.image})` }}
-                  ></div>
+                    className="my-4 p-3 bg-cover rounded-3xl overflow-hidden w-full -mb-2"
+                    style={{ backgroundImage: `url(${FrameImg})` }}
+                  >
+                    <div
+                      className="rounded-2xl relative bg-darkOrange-900 bg-center bg-no-repeat bg-cover pb-100%"
+                      style={{ backgroundImage: `url(${item.image})` }}
+                    ></div>
+                  </div>
                 </div>
                 <div className="xl:w-1/2">
                   <h4 className="hidden xl:block text-2xl font-bold mb-8">
                     {item.title}
                   </h4>
-                  <p className="text-xl my-4 xl:mb-16 xl:mt-8">{item.excerpt}</p>
+                  <p className="text-xl my-4 xl:mb-16 xl:mt-8">
+                    {item.excerpt}
+                  </p>
                   <div className="mb-6 flex items-center justify-center hidden xl:block ">
                     <Link
                       to="/news"
@@ -50,7 +58,7 @@ export default function NewsSlider() {
           ))}
         </Slider>
         <a
-          className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/2 left-0 -mt-16"
+          className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/2 left-3 -mt-16"
           onClick={() => {
             ref.current.slickPrev();
           }}
@@ -58,7 +66,7 @@ export default function NewsSlider() {
           <ArrowPrevIcon className="w-4 h-6 stroke-current" />
         </a>
         <a
-          className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/2 right-0 -mt-16"
+          className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/2 right-3 -mt-16"
           onClick={() => {
             ref.current.slickNext();
           }}

@@ -230,9 +230,9 @@ function GetPet() {
                 </div>
               </div>
               <div className={`xl:w-2/5 xl:pl-24 xl:order-2`}>
-                <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden">
+                <div className="my-6 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
                   <div
-                    className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                    className="relative bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden pb-100%"
                     style={{ backgroundImage: `url(${SweetImg})` }}
                   ></div>
                 </div>
@@ -260,9 +260,9 @@ function GetPet() {
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
                   В гости! В приют!
                 </h2>
-                <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden xl:hidden">
+                <div className="my-6 p-3 bg-frame bg-cover rounded-3xl overflow-hidden xl:hidden">
                   <div
-                    className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                    className="relative bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden pb-100%"
                     style={{ backgroundImage: `url(${LoveImg})` }}
                   ></div>
                 </div>
@@ -280,9 +280,9 @@ function GetPet() {
                 </div>
               </div>
               <div className={`xl:w-2/5 xl:pr-24 xl:order-1`}>
-                <div className="my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden hidden xl:block">
+                <div className="my-6 p-3 bg-frame bg-cover rounded-3xl overflow-hidden hidden xl:block">
                   <div
-                    className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                    className="relative bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden pb-100%"
                     style={{ backgroundImage: `url(${LoveImg})` }}
                   ></div>
                 </div>

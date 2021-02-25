@@ -37,9 +37,9 @@ function News() {
                   >
                     {item.title}
                   </h2>
-                  <div className="my-4">
+                  <div className="my-4 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
                     <div
-                      className="border-7 border-yellow-900 rounded-3xl overflow-hidden relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                      className="rounded-2xl overflow-hidden relative bg-center bg-no-repeat bg-cover w-full pb-100%"
                       style={{ backgroundImage: `url(${item.image})` }}
                     ></div>
                   </div>

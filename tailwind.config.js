@@ -23,11 +23,11 @@ module.exports = {
     },
     container: {
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
       },
     },
     extend: {
@@ -51,6 +51,9 @@ module.exports = {
         "7": "7px",
       },
       padding: { "fluid-video": "56.25%", "100%": "100%" },
+      backgroundImage: (theme) => ({
+        frame: "url('/images/frame.png')",
+      }),
     },
     colors: {
       transparent: "transparent",

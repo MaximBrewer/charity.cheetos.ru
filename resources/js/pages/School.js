@@ -174,25 +174,33 @@ function School() {
               </div>
               <div className="hidden xl:flex xl:w-1/2">
                 <div className="w-1/2 pl-12">
-                  <div className="mt-6 mb-4 border-7 border-yellow-800 bg-darkOrange-900 rounded-3xl overflow-hidden">
-                    <div
-                      className={`relative bg-center bg-no-repeat bg-cover w-full pb-100% ${kind == "dog" ? `opacity-70` : ``}`}
-                      style={{
-                        backgroundImage: `url(${SweetCat})`,
-                        filter: `blur(${kind == "dog" ? `2px` : `0`})`
-                      }}
-                    ></div>
+                  <div className="mt-6 mb-4 bg-frame p-2 bg-cover rounded-3xl overflow-hidden">
+                    <div className="rounded-2xl overflow-hidden">
+                      <div
+                        className={`relative bg-center bg-no-repeat bg-cover w-full pb-100% ${
+                          kind == "dog" ? `opacity-70` : ``
+                        }`}
+                        style={{
+                          backgroundImage: `url(${SweetCat})`,
+                          filter: `blur(${kind == "dog" ? `2px` : `0`})`,
+                        }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
                 <div className="w-1/2 pl-12">
-                  <div className="mt-6 mb-4 border-7 border-yellow-800 bg-darkOrange-900 rounded-3xl overflow-hidden">
-                    <div
-                      className={`relative bg-center bg-no-repeat bg-cover w-full pb-100% ${kind != "dog" ? `opacity-70` : ``}`}
-                      style={{
-                        backgroundImage: `url(${SweetImg})`,
-                        filter: `blur(${kind != "dog" ? `2px` : `0`})`
-                      }}
-                    ></div>
+                  <div className="mt-6 mb-4 bg-frame p-2 bg-cover rounded-3xl overflow-hidden">
+                    <div className="rounded-2xl overflow-hidden">
+                      <div
+                        className={` relative bg-center bg-no-repeat bg-cover w-full pb-100% ${
+                          kind != "dog" ? `opacity-70` : ``
+                        }`}
+                        style={{
+                          backgroundImage: `url(${SweetImg})`,
+                          filter: `blur(${kind != "dog" ? `2px` : `0`})`,
+                        }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -206,9 +214,9 @@ function School() {
         <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto xl:hidden">
           <div className="container mx-auto">
             <div className="px-4 xl:px-0 pb-4">
-              <div className="mt-6 mb-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
+              <div className="mt-6 mb-4 bg-frame p-3 bg-cover rounded-3xl overflow-hidden">
                 <div
-                  className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                  className="rounded-2xl overflow-hidden relative bg-center bg-no-repeat bg-cover w-full pb-100%"
                   style={{
                     backgroundImage: `url(${
                       kind != "dog" ? SweetCat : SweetImg
@@ -221,7 +229,7 @@ function School() {
         </div>
       </div>
       <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto">
-        <div className="container mx-auto">
+        <div className="container mx-auto pt-4">
           <div className="mb-10 text-justify">
             {lessons.map((item, index) => {
               return item.kind == kind ? (
@@ -313,7 +321,7 @@ function School() {
         </div>
         <div className="w-full h-px "></div>
       </div>
-      <div className="w-full h-px "></div>
+      <div className="w-full h-px hidden xl:block"></div>
     </section>
   );
 }

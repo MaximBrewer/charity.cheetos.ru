@@ -110,7 +110,7 @@ function Partners() {
                       <a
                         href={`${item.site}`}
                         target={`_blank`}
-                        className="text-xl xl:text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8"
+                        className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8"
                       >
                         Стать волонтером
                       </a>
@@ -118,7 +118,7 @@ function Partners() {
                     <div className="my-6 flex items-center justify-center">
                       <Link
                         to={`/volunteer/${item.id}#form`}
-                        className="text-lg xl:text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
+                        className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
                       >
                         Заявка на поездку в приют
                       </Link>

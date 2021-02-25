@@ -89,7 +89,7 @@ function Footer() {
           </div>
         </div>
         <div className="w-96">
-            <img src={ChestorImgXl} alt="" title="" className="-mt-16 w-full" />
+          <img src={ChestorImgXl} alt="" title="" className="-mt-16 w-full" />
         </div>
       </div>
       <div
@@ -109,14 +109,14 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div
-        className={`xl:hidden container mx-auto mb-12 py-4`}
-      >
-        <div className="px-10">
-          <div className="container mx-auto">
-            <div className="pb-8">
-              <div className="w-full h-1"></div>
-              <img src={ChestorImg} alt="" title="" className="-mt-8" />
+      <div className="max-w-sm xl:max-w-full mx-auto">
+        <div className="xl:hidden container mx-auto mb-12 py-4">
+          <div className="px-10">
+            <div className="container mx-auto">
+              <div className="pb-8">
+                <div className="w-full h-1"></div>
+                <img src={ChestorImg} alt="" title="" className="-mt-8" />
+              </div>
             </div>
           </div>
         </div>

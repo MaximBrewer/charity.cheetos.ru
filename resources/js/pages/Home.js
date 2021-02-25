@@ -8,6 +8,7 @@ import PartnersSlider from "../components/PartnersSlider";
 import PartnersSliderXL from "../components/PartnersSliderXL";
 import NewsSlider from "../components/NewsSlider";
 
+
 import { DoubleButton, OfficialVideo, SchoolVideo } from "../Helpers";
 import { buttonClass } from "../Classes";
 
@@ -57,9 +58,9 @@ function Home() {
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:hidden">
                   Стать хозяином:
                 </h2>
-                <div className="my-4 border-7 border-yellow-900 rounded-3xl overflow-hidden">
+                <div className="my-4 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
                   <div
-                    className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                    className="relative rounded-2xl overflow-hidden bg-center bg-no-repeat bg-cover w-full pb-100%"
                     style={{ backgroundImage: `url(${DogImg})` }}
                   ></div>
                 </div>

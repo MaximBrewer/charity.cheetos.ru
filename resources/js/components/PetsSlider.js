@@ -50,15 +50,17 @@ export default function PetsSlider({ pets }) {
 
   return (
     <div className="select-none">
-      <div className="border-7 border-yellow-900 xl:border-0 rounded-3xl xl:rounded-none relative overflow-hidden xl:px-12">
+      <div className="p-3 xl:py-0 bg-cover xl:border-0 rounded-3xl xl:rounded-none relative overflow-hidden xl:px-12 bg-frame xl:bg-none">
         <Slider {...settings} ref={ref}>
           {pets.map((item, index) => (
             <div key={index}>
               <div className="w-full xl:px-6">
-                <div
-                  className="relative bg-center bg-no-repeat bg-cover w-full pb-100% xl:rounded-3xl xl:border-7 xl:border-yellow-900 overflow-hidden"
-                  style={{ backgroundImage: `url(${item.image})` }}
-                ></div>
+                <div className="rounded-3xl bg-frame bg-cover xl:p-3">
+                  <div
+                    className="overflow-hidden relative bg-center bg-no-repeat bg-cover pb-100% rounded-2xl overflow-hidden"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  ></div>
+                </div>
                 <div className="hidden xl:block">
                   <p
                     className={`text-xl my-4 text-white font-bold text-center`}
@@ -79,7 +81,7 @@ export default function PetsSlider({ pets }) {
           ))}
         </Slider>
         <a
-          className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/2 xl:top-1/3 left-0 -mt-6 xl:-mt-4"
+          className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/2 xl:top-1/3 left-3 -mt-6 xl:-mt-4"
           onClick={() => {
             ref.current.slickPrev();
           }}
@@ -87,7 +89,7 @@ export default function PetsSlider({ pets }) {
           <ArrowPrevIcon className="w-4 h-6 stroke-current" />
         </a>
         <a
-          className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/2 xl:top-1/3 right-0 -mt-6 xl:-mt-4"
+          className="flex text-white cursor-pointer items-center justify-center absolute bg-yellow-900 rounded-full w-12 h-12 top-1/2 xl:top-1/3 right-3 -mt-6 xl:-mt-4"
           onClick={() => {
             ref.current.slickNext();
           }}

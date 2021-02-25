@@ -1,6 +1,7 @@
 import React from "react";
 import YouTube from "react-youtube";
 import { buttonClass } from "./Classes";
+import FrameImg from "../images/frame.png";
 
 export function DoubleButton({ xlYellow = false }) {
   return (
@@ -28,8 +29,8 @@ export function OfficialVideo() {
     event.target.playVideo();
   };
   return (
-    <div className="my-4 border-7 border-yellow-900 rounded-3xl overflow-hidden bg-darkOrange-900">
-      <div className="relative h-0 pb-fluid-video">
+    <div className="my-4 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
+      <div className="relative h-0 pb-fluid-video rounded-2xl overflow-hidden">
         <YouTube
           containerClassName="absolute w-full h-full"
           className="absolute w-full h-full"
@@ -54,8 +55,8 @@ export function SchoolVideo() {
     // event.target.playVideo();
   };
   return (
-    <div className="my-4 border-7 border-yellow-900 rounded-3xl overflow-hidden bg-darkOrange-900">
-      <div className="relative h-0 pb-fluid-video">
+    <div className="my-4 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
+      <div className="relative h-0 pb-fluid-video rounded-2xl overflow-hidden">
         <YouTube
           containerClassName="absolute w-full h-full"
           className="absolute w-full h-full"

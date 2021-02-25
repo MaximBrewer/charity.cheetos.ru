@@ -63,17 +63,19 @@ function Pet() {
                     <h3 className="text-white mb-4 text-xl text-center xl:hidden">
                       {pet.name}
                     </h3>
-                    <div className="mb-4 border-7 border-yellow-900 rounded-3xl relative overflow-hidden">
-                      <Slider {...settings} ref={ref}>
-                        {pet.images.map((item, index) => (
-                          <div key={index}>
-                            <div
-                              className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
-                              style={{ backgroundImage: `url(${item})` }}
-                            ></div>
-                          </div>
-                        ))}
-                      </Slider>
+                    <div className="mb-4 bg-frame bg-cover p-3 rounded-3xl relative overflow-hidden">
+                      <div className="rounded-2xl overflow-hidden">
+                        <Slider {...settings} ref={ref}>
+                          {pet.images.map((item, index) => (
+                            <div key={index}>
+                              <div
+                                className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                                style={{ backgroundImage: `url(${item})` }}
+                              ></div>
+                            </div>
+                          ))}
+                        </Slider>
+                      </div>
                       {pet.images.length > 1 ? (
                         <>
                           <a
