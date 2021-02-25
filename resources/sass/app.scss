@@ -133,8 +133,6 @@
 }
 
 .markdown {
-  @apply text-lg;
-  @apply leading-normal;
   & > * + *,
   & li + li,
   & li > p + p {
