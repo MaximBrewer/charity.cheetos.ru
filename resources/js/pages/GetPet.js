@@ -76,7 +76,7 @@ function GetPet() {
               </div>
               <div className="xl:w-1/2">
                 <h3 className="mb-6 xl:mb-6 text-2xl font-semibold text-center xl:text-left">
-                  Взять животное:
+                  ВЗЯТЬ ЖИВОТНОЕ
                 </h3>
                 <div className="xl:flex items-start justify-start">
                   <div className="mb-6 relative text-left w-64 mx-auto xl:mx-0 z-5 xl:order-2">
@@ -229,7 +229,7 @@ function GetPet() {
             <div className="xl:flex justify-between items-center">
               <div className={`xl:mt-0 xl:w-3/5 xl:order-1`}>
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
-                ШКОЛА БУДУЩИХ ХОЗЯЕВ
+                  ШКОЛА БУДУЩИХ ХОЗЯЕВ
                 </h2>
                 <p className="mb-4 text-xl text-justify xl:text-2xl">
                   К новой жизни нужно готовить не только животных, но и будущих
