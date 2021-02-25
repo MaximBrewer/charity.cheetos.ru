@@ -166,7 +166,7 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* <div className="xl:bg-white xl:py-16">
+      {/* <div className="xl:bg-white xl:pt-16">
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <h2 className="text-2xl text-center font-bold mt-8 mb-4 xl:mt-0">
@@ -177,7 +177,7 @@ function Home() {
         </div>
         <div className="w-full h-px bg-white"></div>
       </div> */}
-      <div className="xl:bg-white xl:pb-16 xl:text-black">
+      <div className="xl:bg-white xl:py-16 xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <h2 className="text-2xl text-center font-bold mt-8 xl:mt-0 mb-4">
