@@ -288,7 +288,7 @@ function GetPet() {
                 </p>
                 <div className="my-6 hidden xl:block">
                   <Link
-                    to={`/volunteer/7#form`}
+                    to={`/volunteer/${window.App.data.partners[0].id}#form`}
                     className={buttonClass() + " w-72 text-xl"}
                   >
                     Поехать в приют!
@@ -304,7 +304,7 @@ function GetPet() {
                 </div>
                 <div className="my-6 flex items-center justify-center xl:hidden">
                   <Link
-                    to={`/volunteer/7#form`}
+                    to={`/volunteer/${window.App.data.partners[0].id}#form`}
                     className={buttonClass() + " w-72 text-xl"}
                   >
                     Поехать в приют!
