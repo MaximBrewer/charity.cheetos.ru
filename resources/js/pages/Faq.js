@@ -39,7 +39,7 @@ function Faq({ category = "charity" }) {
                   }}
                 >
                   <div
-                    className={`flex justify-between items-center text-sm xl:text-lg font-bold text-left py-3 px-4 xl:px-8 ${
+                    className={`flex justify-between items-center text-sm xl:text-lg font-bold text-left py-3 pl-6 pr-4 xl:px-8 ${
                       item.o ? `bg-yellow-800` : `bg-white xl:bg-yellow-800`
                     }`}
                   >
