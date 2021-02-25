@@ -21,7 +21,7 @@ function Faq({ category = "charity" }) {
             <span className="uppercase">FAQ</span>
             <span className="hidden xl:inline">: Как взять животное?</span>
           </h2>
-          <div className="mb-10 text-justify">
+          <div className="mb-10">
             {faq.map((item, index) => {
               return (
                 <div
@@ -68,7 +68,7 @@ function Faq({ category = "charity" }) {
           <h2 className="text-2xl text-center font-bold mb-6 mt-12 text-white">
             У меня есть вопрос:
           </h2>
-          <div className="mb-10 text-justify">
+          <div className="mb-10">
             <div className="w-4/5 xl:w-2/3 m-auto">
               <FaqForm category={category} />
             </div>

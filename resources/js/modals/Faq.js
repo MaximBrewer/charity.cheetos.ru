@@ -17,7 +17,7 @@ export default function Modal() {
           Памятка для владельцев кошек
         </Link>
         <Link to="/faq/stock" className={buttonClass() + " text-base"}>
-          Акция в магнит
+          Акция в Магнит
         </Link>
       </div>
       <h2 className="text-2xl text-center font-bold mb-2 mt-6">

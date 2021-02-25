@@ -126,7 +126,7 @@ export default function FaqForm({ modal = false }) {
                  py-2 px-4 rounded-2xl border-transparent w-full ${
                    question.error ? "border-red-500" : ""
                  }`}
-                placeholder="Не нашли ответ на свой вопрос? Задайте вопрос и мы оперативно ответим"
+                placeholder="Не можешь найти ответ на свой вопрос? Напиши нам – мы всегда на связи!"
                 id="question"
                 name="question"
                 required

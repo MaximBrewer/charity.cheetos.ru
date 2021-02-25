@@ -151,11 +151,19 @@ function GetPet() {
                           name="dog-switch"
                           id="dog-switch"
                           checked={dogChecked}
-                          className={`z-1 toggle-checkbox absolute block w-7 h-7 rounded-full ${!catChecked || dogChecked ? `bg-yellow-800` : `bg-gray-300`} appearance-none cursor-pointer focus:outline-none`}
+                          className={`z-1 toggle-checkbox absolute block w-7 h-7 rounded-full ${
+                            !catChecked || dogChecked
+                              ? `bg-yellow-800`
+                              : `bg-gray-300`
+                          } appearance-none cursor-pointer focus:outline-none`}
                         />
                         <label
                           htmlFor="dog-switch"
-                          className={`toggle-label block overflow-hidden h-7 rounded-full ${!catChecked || dogChecked ? `bg-darkOrange-900` : `bg-gray-400`} cursor-pointer`}
+                          className={`toggle-label block overflow-hidden h-7 rounded-full ${
+                            !catChecked || dogChecked
+                              ? `bg-darkOrange-900`
+                              : `bg-gray-400`
+                          } cursor-pointer`}
                         ></label>
                       </div>
                       <label htmlFor="dog-switch" className="text-base">
@@ -174,11 +182,19 @@ function GetPet() {
                           name="cat-switch"
                           id="cat-switch"
                           checked={catChecked}
-                          className={`z-1 toggle-checkbox absolute block w-7 h-7 rounded-full ${catChecked || !dogChecked ? `bg-yellow-800` : `bg-gray-300`} appearance-none cursor-pointer focus:outline-none`}
+                          className={`z-1 toggle-checkbox absolute block w-7 h-7 rounded-full ${
+                            catChecked || !dogChecked
+                              ? `bg-yellow-800`
+                              : `bg-gray-300`
+                          } appearance-none cursor-pointer focus:outline-none`}
                         />
                         <label
                           htmlFor="cat-switch"
-                          className={`toggle-label block overflow-hidden h-7 rounded-full ${catChecked || !dogChecked ? `bg-darkOrange-900` : `bg-gray-400`} cursor-pointer`}
+                          className={`toggle-label block overflow-hidden h-7 rounded-full ${
+                            catChecked || !dogChecked
+                              ? `bg-darkOrange-900`
+                              : `bg-gray-400`
+                          } cursor-pointer`}
                         ></label>
                       </div>
                       <label htmlFor="cat-switch" className="text-base">
@@ -258,7 +274,7 @@ function GetPet() {
             <div className="xl:flex justify-between items-center">
               <div className={`xl:mt-0 xl:w-3/5 xl:order-2`}>
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
-                  В гости! В приют!
+                  В ГОСТИ – В ПРИЮТ!
                 </h2>
                 <div className="my-6 p-3 bg-frame bg-cover rounded-3xl overflow-hidden xl:hidden">
                   <div
@@ -267,8 +283,8 @@ function GetPet() {
                   ></div>
                 </div>
                 <p className="mb-4 text-xl text-justify xl:text-2xl">
-                  Для того, чтобы познакомиться с животными поближе, ты можешь
-                  съездить в приют в своем городе
+                  Чтобы познакомиться с животным и узнать его ближе, ты можешь
+                  посетить приют в своем городе.
                 </p>
                 <div className="my-6 hidden xl:block">
                   <Link
