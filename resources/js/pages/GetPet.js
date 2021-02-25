@@ -35,7 +35,7 @@ function GetPet() {
             <h2 className="mb-3 text-2xl xl:mb-6 font-bold text-center">
               ПРОТЯНИ ЛАПУ ДРУЖБЫ
             </h2>
-            <div className="xl:flex xl:pt-6 pb-16 justify-center items-start">
+            <div className="xl:flex xl:pt-6 xl:pb-16 justify-center items-start">
               <div className="xl:w-1/2">
                 <h3 className="mb-3 xl:mb-6 text-2xl font-semibold text-center xl:text-left">
                   СТАТЬ ХОЗЯИНОМ
