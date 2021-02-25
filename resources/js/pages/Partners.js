@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { useHistory, useParams, useLocation, Link } from "react-router-dom";
 import Parser from "html-react-parser";
-import { Link } from "react-router-dom";
 import { InstagramIcon, VkIcon, TikTokIcon, SiteIcon } from "../Icons";
 
 function Partners() {
+  let history = useHistory();
+  let location = useLocation();
+
+  let refs = useRef({});
+
+  window.App.data.partners.map(
+    (item) => (refs.current["#" + item.slug] = React.createRef())
+  );
+
+  React.useEffect(() => {
+    if (location.hash) refs.current[location.hash].current.scrollIntoView();
+  }, [location]);
+
   return (
     <section id="partners" className="bg-white">
       <div className="w-full h-px"></div>
@@ -20,7 +33,7 @@ function Partners() {
             Фонды партнеры акции:
           </h2>
           {window.App.data.partners.map((item, index) => (
-            <div key={index}>
+            <div key={index} ref={refs.current["#" + item.slug]}>
               {index ? <hr className="hidden xl:block w-full" /> : ``}
               <div className={`my-12 xl:flex justify-between items-center`}>
                 <div className={`xl:w-2/5 xl:order-1 xl:mr-24`}>
@@ -94,12 +107,13 @@ function Partners() {
                   </div>
                   <div className="xl:order-3 xl:flex">
                     <div className="my-6 flex items-center justify-center ">
-                      <Link
-                        to={`/volunteer/${item.id}`}
+                      <a
+                        href={`${item.site}`}
+                        target={`_blank`}
                         className="text-xl xl:text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8"
                       >
                         Стать волонтером
-                      </Link>
+                      </a>
                     </div>
                     <div className="my-6 flex items-center justify-center">
                       <Link

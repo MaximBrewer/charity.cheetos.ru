@@ -17,11 +17,18 @@ function Header({ opened, setOpened }) {
   }, [location]);
 
   const menuItems = [
-    { props: { to: "/about" }, text: <span>О&nbsp;проекте</span> },
-    { props: { to: "/news" }, text: "Новости" },
+    {
+      props: {
+        href: "https://promo.cheetos.ru",
+        target: "_blank",
+        onClick: () => {
+          setOpened(false);
+        },
+      },
+      text: "Главная",
+    },
+    { props: { to: "/getpet" }, text: "Стать хозяином" },
     { props: { to: "/partners" }, text: "Фонды" },
-    { props: { to: "/rules" }, text: "Правила акции" },
-    { props: { to: "/school" }, text: "Школа будущих хозяев" },
     {
       props: {
         href: window.App.data.doubleLink,
@@ -32,7 +39,9 @@ function Header({ opened, setOpened }) {
       },
       text: <span>Удвоить помощь в&nbsp;Магнит</span>,
     },
-    { props: { to: "/getpet" }, text: "Стать хозяином" },
+    { props: { to: "/school" }, text: "Школа будущих хозяев" },
+    { props: { to: "/rules" }, text: "Правила акции" },
+    // { props: { to: "/news" }, text: "Новости" },
     {
       props: {
         onClick: () => {

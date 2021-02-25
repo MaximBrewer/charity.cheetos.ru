@@ -42,7 +42,7 @@ function Home() {
                     ` w-64 xl:mb-0 xl:w-auto xl:px-12 text-xl xl:bg-yellow-800 xl:hover:bg-yellow-600 xl:text-darkOrange-900`
                   }
                 >
-                  Удвоить помощь!
+                  Удвоить помощь
                 </a>
               </div>
             </div>
@@ -187,14 +187,6 @@ function Home() {
             </div>
             <div className="xl:hidden">
               <PartnersSlider />
-              <div className="mb-6 flex items-center justify-center">
-                <Link
-                  to="/partners"
-                  className="w-48 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
-                >
-                  Подробнее
-                </Link>
-              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { useHistory, useParams, useLocation } from "react-router-dom";
 import Slider from "react-slick";
 import Parser from "html-react-parser";
 import { Link } from "react-router-dom";
@@ -7,7 +8,6 @@ import PartnersSlider from "../components/PartnersSlider";
 import LoveImg from "../../images/love.jpeg";
 import { buttonClass } from "../Classes";
 import ShelterForm from "../components/ShelterForm";
-import { useHistory, useParams, useLocation } from "react-router-dom";
 import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
 
 function Volunteer() {
@@ -65,90 +65,92 @@ function Volunteer() {
   return (
     <section id="volunteer" className="bg-white">
       <div className="w-full h-px"></div>
-      <div className="container mx-auto">
-        <h2 className={`text-2xl font-bold text-center mt-10`}>
-          Протяни лапу дружбы
-        </h2>
-        <h2 className={`text-2xl font-bold text-center my-4`}>
-          Стать волонтером
-        </h2>
-        <p className="text-lg mb-4 text-justify">
-          Волонтером может стать любой желающий. Для несовершеннолетних
-          необходимо разрешение от родителей, а для тех, кто младше 14 лет —
-          сопровождение официальных представителей.
-        </p>
-      </div>
-      <div className="container mx-auto">
-        <div className="xl:flex">
-          <div className="w-1/2 pr-16">
-            <h2 className="text-2xl text-center font-bold mt-8 mb-4">
-              Стать волонтером в фонде:
-            </h2>
-            <div>
-              <div className="relative overflow-hidden px-10 w-full">
-                <Slider {...settings} ref={ref}>
-                  {window.App.data.partners.map((item, index) => (
-                    <div key={index}>
-                      <div className="w-1/2 m-auto mb-4">
-                        <div
-                          className="relative bg-center bg-no-repeat bg-contain w-full pb-100%"
-                          style={{ backgroundImage: `url(${item.image})` }}
-                        ></div>
+      <div className="max-w-sm xl:max-w-full mx-auto">
+        <div className="container mx-auto">
+          <h2 className={`text-2xl font-bold text-center mt-10`}>
+            Протяни лапу дружбы
+          </h2>
+          <h2 className={`text-2xl font-bold text-center my-4`}>
+            Стать волонтером
+          </h2>
+          <p className="text-lg mb-4 text-justify">
+            Волонтером может стать любой желающий. Для несовершеннолетних
+            необходимо разрешение от родителей, а для тех, кто младше 14 лет —
+            сопровождение официальных представителей.
+          </p>
+        </div>
+        <div className="container mx-auto">
+          <div className="xl:flex">
+            <div className="xl:w-1/2 xl:pr-16">
+              <h2 className="text-2xl text-center font-bold mt-8 mb-4">
+                Стать волонтером в фонде:
+              </h2>
+              <div>
+                <div className="relative overflow-hidden px-10 w-full">
+                  <Slider {...settings} ref={ref}>
+                    {window.App.data.partners.map((item, index) => (
+                      <div key={index}>
+                        <div className="w-1/2 m-auto mb-4">
+                          <div
+                            className="relative bg-center bg-no-repeat bg-contain w-full pb-100%"
+                            style={{ backgroundImage: `url(${item.image})` }}
+                          ></div>
+                        </div>
+                        <p className="text-center mb-4">{item.excerpt}</p>
                       </div>
-                      <p className="text-center mb-4">{item.excerpt}</p>
-                    </div>
-                  ))}
-                </Slider>
+                    ))}
+                  </Slider>
+                  <a
+                    className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 left-0 -mt-6"
+                    onClick={() => {
+                      window.skipScroll = true;
+                      history.replace("/volunteer/" + prevId());
+                    }}
+                  >
+                    <ArrowPrevIcon className="w-4 h-6 stroke-current" />
+                  </a>
+                  <a
+                    className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 right-0 -mt-6"
+                    onClick={() => {
+                      window.skipScroll = true;
+                      history.replace("/volunteer/" + nextId());
+                    }}
+                  >
+                    <ArrowNextIcon className="w-4 h-6 stroke-current" />
+                  </a>
+                </div>
+              </div>
+              <div className="mb-6 flex items-center justify-center">
                 <a
-                  className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 left-0 -mt-6"
-                  onClick={() => {
-                    window.skipScroll = true;
-                    history.replace("/volunteer/" + prevId());
-                  }}
+                  href={window.App.data.partners[getIndex()].site}
+                  target="_blank"
+                  className="w-64 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white text-center focus:outline-none"
                 >
-                  <ArrowPrevIcon className="w-4 h-6 stroke-current" />
-                </a>
-                <a
-                  className="flex text-yellow-900 cursor-pointer items-center justify-center absolute w-12 h-12 top-1/3 right-0 -mt-6"
-                  onClick={() => {
-                    window.skipScroll = true;
-                    history.replace("/volunteer/" + nextId());
-                  }}
-                >
-                  <ArrowNextIcon className="w-4 h-6 stroke-current" />
+                  Стать волонтером
                 </a>
               </div>
             </div>
-            <div className="mb-6 flex items-center justify-center">
-              <a
-                href={window.App.data.partners[getIndex()].site}
-                target="_blank"
-                className="w-64 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white text-center focus:outline-none"
-              >
-                Стать волонтером
-              </a>
-            </div>
-          </div>
-          <div className="w-1/2">
-            <h2 className="text-2xl text-center font-bold mb-4 mt-8">
-              Поездка в приют
-            </h2>
-            <div className="xl:hidden my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden">
-              <div
-                className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
-                style={{ backgroundImage: `url(${LoveImg})` }}
-              ></div>
-            </div>
-            <p className="mb-4 text-lg text-justify">
-              Для того, чтобы познакомиться с животными поближе, ты можешь
-              съездить в приют в своем городе
-            </p>
-            <div ref={formRef}>
-              <p className="mb-4 font-bold text-xl text-center">
-                Поехать в приют!
+            <div className="xl:w-1/2" ref={formRef}>
+              <h2 className="text-2xl text-center font-bold mb-4 mt-8">
+                Поездка в приют
+              </h2>
+              <div className="xl:hidden my-6 border-7 border-yellow-900 rounded-3xl overflow-hidden">
+                <div
+                  className="relative bg-center bg-no-repeat bg-cover w-full pb-100%"
+                  style={{ backgroundImage: `url(${LoveImg})` }}
+                ></div>
+              </div>
+              <p className="mb-4 text-lg text-justify">
+                Для того, чтобы познакомиться с животными поближе, ты можешь
+                съездить в приют в своем городе
               </p>
-              <div className="mb-4 w-72 m-auto">
-                <ShelterForm partner_id={id} />
+              <div>
+                <p className="mb-4 font-bold text-xl text-center">
+                  Поехать в приют!
+                </p>
+                <div className="mb-4 w-72 m-auto">
+                  <ShelterForm partner_id={id} />
+                </div>
               </div>
             </div>
           </div>

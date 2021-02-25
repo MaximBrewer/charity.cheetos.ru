@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
 
 // components
@@ -13,7 +14,12 @@ export default function PartnersSlider(props) {
     auto: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    afterChange: (index) => {
+      setLink("/partners#" + window.App.data.partners[index].slug);
+    },
   };
+
+  const [link, setLink] = useState("/partners#" + window.App.data.partners[0].slug);
 
   const ref = useRef(null);
 
@@ -49,6 +55,14 @@ export default function PartnersSlider(props) {
         >
           <ArrowNextIcon className="w-4 h-6 stroke-current" />
         </a>
+      </div>
+      <div className="mb-6 flex items-center justify-center">
+        <Link
+          to={link}
+          className="w-48 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
+        >
+          Подробнее
+        </Link>
       </div>
     </>
   );

@@ -142,18 +142,20 @@ function GetPet() {
                     <div className="mb-2">
                       <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
                         <input
-                          onChange={(event) =>
-                            setDogChecked(event.target.checked)
-                          }
+                          onChange={(event) => {
+                            setDogChecked(event.target.checked);
+                            if (event.target.checked)
+                              setCatChecked(!event.target.checked);
+                          }}
                           type="checkbox"
                           name="dog-switch"
                           id="dog-switch"
                           checked={dogChecked}
-                          className="z-1 toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
+                          className={`z-1 toggle-checkbox absolute block w-7 h-7 rounded-full ${!catChecked || dogChecked ? `bg-yellow-800` : `bg-gray-300`} appearance-none cursor-pointer focus:outline-none`}
                         />
                         <label
                           htmlFor="dog-switch"
-                          className="toggle-label block overflow-hidden h-7 rounded-full bg-darkOrange-900 cursor-pointer"
+                          className={`toggle-label block overflow-hidden h-7 rounded-full ${!catChecked || dogChecked ? `bg-darkOrange-900` : `bg-gray-400`} cursor-pointer`}
                         ></label>
                       </div>
                       <label htmlFor="dog-switch" className="text-base">
@@ -163,18 +165,20 @@ function GetPet() {
                     <div className="mb-2">
                       <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
                         <input
-                          onChange={(event) =>
-                            setCatChecked(event.target.checked)
-                          }
+                          onChange={(event) => {
+                            setCatChecked(event.target.checked);
+                            if (event.target.checked)
+                              setDogChecked(!event.target.checked);
+                          }}
                           type="checkbox"
                           name="cat-switch"
                           id="cat-switch"
                           checked={catChecked}
-                          className="z-1 toggle-checkbox absolute block w-7 h-7 rounded-full bg-yellow-800 appearance-none cursor-pointer focus:outline-none"
+                          className={`z-1 toggle-checkbox absolute block w-7 h-7 rounded-full ${catChecked || !dogChecked ? `bg-yellow-800` : `bg-gray-300`} appearance-none cursor-pointer focus:outline-none`}
                         />
                         <label
                           htmlFor="cat-switch"
-                          className="toggle-label block overflow-hidden h-7 rounded-full bg-darkOrange-900 cursor-pointer"
+                          className={`toggle-label block overflow-hidden h-7 rounded-full ${catChecked || !dogChecked ? `bg-darkOrange-900` : `bg-gray-400`} cursor-pointer`}
                         ></label>
                       </div>
                       <label htmlFor="cat-switch" className="text-base">
@@ -309,14 +313,6 @@ function GetPet() {
             </div>
             <div className="xl:hidden">
               <PartnersSlider />
-              <div className="mb-6 flex items-center justify-center">
-                <Link
-                  to="/partners"
-                  className="w-48 text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
-                >
-                  Подробнее
-                </Link>
-              </div>
             </div>
           </div>
         </div>
