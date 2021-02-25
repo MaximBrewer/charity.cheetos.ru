@@ -35,7 +35,7 @@ function Social({ className = "" }) {
   return (
     <>
       <h4 className={`my-4 text-center ${className}`}>
-        Следите за нами в соц.сетях:
+        Мы в социальных сетях:
       </h4>
       <ul className={`flex items-center justify-center ${className}`}>
         <li className="mx-4">

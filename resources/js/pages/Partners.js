@@ -25,12 +25,12 @@ function Partners() {
           <h2
             className={`text-2xl font-bold text-center mt-10 xl:text-left xl:mt-16`}
           >
-            Протяни лапу дружбы
+            Протяни лапу дружбы!
           </h2>
           <h2
             className={`text-2xl font-bold text-center my-4 xl:mb-16 xl:text-left`}
           >
-            Фонды партнеры акции:
+            Фонды – партнеры акции:
           </h2>
           {window.App.data.partners.map((item, index) => (
             <div key={index} ref={refs.current["#" + item.slug]}>

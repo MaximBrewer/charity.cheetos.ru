@@ -8,7 +8,6 @@ import PartnersSlider from "../components/PartnersSlider";
 import PartnersSliderXL from "../components/PartnersSliderXL";
 import NewsSlider from "../components/NewsSlider";
 
-
 import { DoubleButton, OfficialVideo, SchoolVideo } from "../Helpers";
 import { buttonClass } from "../Classes";
 
@@ -30,9 +29,8 @@ function Home() {
             </div>
             <div className="xl:w-1/2">
               <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8">
-                Покупай специальные упаковки Cheetos “Лапы” и 1 рубль, с каждой
-                проданной пачки будет переведён в фонды помощи бездомным
-                животным
+                Покупай специальные пачки Cheetos “Лапы” – 1 рубль с каждой
+                будет переведен в фонды помощи бездомным животным.
               </p>
               <div className="my-6 xl:mt-6 xl:mb-0 flex items-center justify-center xl:justify-start">
                 <a
@@ -86,7 +84,7 @@ function Home() {
                         2
                       </span>
                     </div>
-                    <span className="w-full">Дождись ответа от Фонда</span>
+                    <span className="w-full">Дождись ответа от фонда</span>
                   </li>
                   <li className="flex items-center justify-start mb-3">
                     <div>
@@ -95,7 +93,7 @@ function Home() {
                       </span>
                     </div>
                     <span className="w-full">
-                      Пройди обучение <br className="xl:hidden"/>
+                      Пройди обучение <br className="xl:hidden" />
                       <Link to="/school" className="font-bold underline">
                         в&nbsp;школе будущих хозяев
                       </Link>
@@ -124,9 +122,9 @@ function Home() {
                   ШКОЛА БУДУЩИХ ХОЗЯЕВ
                 </h2>
                 <p className="text-xl mb-4">
-                  К новой жизни нужно готовить не только животных, но и будущих
-                  хозяев. Узнайте, ответы на самые актуальные вопросы, встающие
-                  перед будущими и настоящими хозяевами лохматых друзей
+                  К новой жизни надо подготовиться всем: и четвероногим друзьям,
+                  и их потенциальным владельцам. Узнайте ответы на актуальные
+                  вопросы, которые часто задают хозяева собак и кошек.
                 </p>
                 <div className="hidden my-6 xl:flex items-center justify-start">
                   <Link
