@@ -291,7 +291,7 @@ function GetPet() {
                     to={`/volunteer/${window.App.data.partners[0].id}#form`}
                     className={buttonClass() + " w-72 text-xl"}
                   >
-                    Поехать в приют!
+                    Поехать в приют
                   </Link>
                 </div>
               </div>
@@ -307,7 +307,7 @@ function GetPet() {
                     to={`/volunteer/${window.App.data.partners[0].id}#form`}
                     className={buttonClass() + " w-72 text-xl"}
                   >
-                    Поехать в приют!
+                    Поехать в приют
                   </Link>
                 </div>
               </div>
