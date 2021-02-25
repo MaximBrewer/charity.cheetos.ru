@@ -68,7 +68,7 @@ function Volunteer() {
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
           <h2 className={`text-2xl font-bold text-center mt-10`}>
-            Протяни лапу дружбы
+            ПРОТЯНИ ЛАПУ ДРУЖБЫ
           </h2>
           <h2 className={`text-2xl font-bold text-center my-4`}>
             Стать волонтером

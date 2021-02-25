@@ -25,7 +25,7 @@ function Partners() {
           <h2
             className={`text-2xl font-bold text-center mt-10 xl:text-left xl:mt-16`}
           >
-            Протяни лапу дружбы!
+            ПРОТЯНИ ЛАПУ ДРУЖБЫ
           </h2>
           <h2
             className={`text-2xl font-bold text-center my-4 xl:mb-16 xl:text-left`}

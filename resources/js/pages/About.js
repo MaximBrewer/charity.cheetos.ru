@@ -13,7 +13,7 @@ function About() {
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <h2 className="pt-6 xl:pt-12 pb-4 text-2xl font-bold text-center">
-              Протяни лапу дружбы
+              ПРОТЯНИ ЛАПУ ДРУЖБЫ
             </h2>
             <div className="xl:flex justify-between items-center">
               <div className="xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
@@ -34,7 +34,7 @@ function About() {
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <h2 className="text-2xl text-center font-bold mt-16 xl:mt-0 mb-6">
-              Партнеры проекта:
+              ПАРТНЕРЫ ПРОЕКТА
             </h2>
             <div className="hidden xl:block">
               <PartnersSliderXL />

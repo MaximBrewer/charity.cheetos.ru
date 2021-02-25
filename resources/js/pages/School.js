@@ -37,12 +37,12 @@ function School() {
             <h2
               className={`text-2xl font-bold text-center mt-10 xl:text-left xl:mt-16`}
             >
-              Протяни лапу дружбы
+              ПРОТЯНИ ЛАПУ ДРУЖБЫ
             </h2>
             <h2
               className={`text-2xl font-bold text-center my-4 xl:mb-6 xl:text-left`}
             >
-              Школа будущих хозяев
+              ШКОЛА БУДУЩИХ ХОЗЯЕВ
             </h2>
             <p className="text-xl mb-10">
               К новой жизни нужно готовить не только животных, но и будущих
@@ -309,7 +309,7 @@ function School() {
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <h2 className="text-2xl text-center font-bold mt-16 xl:mt-0 mb-6">
-              Партнеры проекта:
+              ПАРТНЕРЫ ПРОЕКТА
             </h2>
             <div className="hidden xl:block">
               <PartnersSliderXL />

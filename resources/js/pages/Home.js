@@ -23,7 +23,7 @@ function Home() {
           <div className="xl:flex xl:pb-32 xl:pt-24 justify-between items-center">
             <div className="-mt-52 xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
               <h2 className="text-white pt-6 pb-4 text-2xl font-bold text-center xl:hidden">
-                Протяни лапу дружбы
+                ПРОТЯНИ ЛАПУ ДРУЖБЫ
               </h2>
               <OfficialVideo />
             </div>
@@ -54,7 +54,7 @@ function Home() {
             <div className="xl:flex xl:py-16 justify-between items-center">
               <div className="xl:w-1/2 xl:pl-20 xl:pr-36">
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:hidden">
-                  Стать хозяином:
+                  СТАТЬ ХОЗЯИНОМ
                 </h2>
                 <div className="my-4 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
                   <div
@@ -65,7 +65,7 @@ function Home() {
               </div>
               <div className="xl:w-1/2 xl:pl-20">
                 <h2 className="text-2xl uppercase font-bold mb-8 hidden xl:block">
-                  Стать хозяином:
+                  СТАТЬ ХОЗЯИНОМ
                 </h2>
                 <ul className="text-lg mt-4 mb-6">
                   <li className="flex items-center justify-start mb-3">
@@ -179,7 +179,7 @@ function Home() {
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <h2 className="text-2xl text-center font-bold mt-8 xl:mt-0 mb-4">
-              Партнеры проекта:
+              ПАРТНЕРЫ ПРОЕКТА
             </h2>
             <div className="hidden xl:block xl:mb-16s">
               <PartnersSliderXL />
