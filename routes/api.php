@@ -42,6 +42,9 @@ Route::name('api.')->namespace('Api')->group(function () {
             // Route::post('password/reset', 'ResetPasswordController@reset');
         });
     });
+    
+
+    Route::post('/cities/search', 'CitiesController@search')->name('cities.search');
 
     // Protected routes
     Route::middleware('auth:api')->group(function () {

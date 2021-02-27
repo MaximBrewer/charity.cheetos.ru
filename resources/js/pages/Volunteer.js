@@ -67,13 +67,15 @@ function Volunteer() {
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
-          <h2 className={`text-2xl font-bold text-center mt-10 xl:text-left`}>
+          <h2
+            className={`text-2xl font-bold text-center mt-8`}
+          >
             ПРОТЯНИ ЛАПУ ДРУЖБЫ
           </h2>
           <h2
-            className={`text-2xl font-bold text-center my-4 xl:text-left xl:uppercase`}
+            className={`text-2xl font-bold text-center mb-4 xl:mb-8`}
           >
-            Стать волонтёром
+            СТАТЬ ВОЛОНТЁРОМ
           </h2>
           <p className="text-lg mb-4 xl:text-left xl:text-xl xl:w-2/3">
             Волонтёром может стать любой желающий. Для несовершеннолетних

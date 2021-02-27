@@ -39,7 +39,7 @@ function Header({ opened, setOpened }) {
       },
       text: <span>Удвоить помощь в&nbsp;Магнит</span>,
     },
-    { props: { to: "/school" }, text: "Школа будущих хозяев" },
+    // { props: { to: "/school" }, text: "Школа будущих хозяев" },
     { props: { to: "/rules" }, text: "Правила акции" },
     // { props: { to: "/news" }, text: "Новости" },
     {
@@ -92,7 +92,7 @@ function Header({ opened, setOpened }) {
                 </div>
               </div>
               <div className="items-center hidden xl:block text-sm font-bold w-full">
-                <ul className="text-center pl-8 flex items-center justify-between w-full">
+                <ul className="text-center pl-8 flex items-center justify-between w-full text-shadow-lg">
                   {menuItems.map((item, index) => (
                     <li
                       key={index}

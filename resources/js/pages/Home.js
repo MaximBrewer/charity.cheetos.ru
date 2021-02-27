@@ -10,8 +10,11 @@ import NewsSlider from "../components/NewsSlider";
 
 import { DoubleButton, OfficialVideo, SchoolVideo } from "../Helpers";
 import { buttonClass } from "../Classes";
+import SchoolModal from "../modals/School";
+import { useModal } from "../context/modal";
 
 function Home() {
+  let { setModalBody, setShowModal } = useModal();
   return (
     <section
       id="home"
@@ -20,7 +23,10 @@ function Home() {
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
           <div className="w-full h-px"></div>
-          <div className="xl:flex xl:pb-32 xl:pt-24 justify-between items-center">
+          <h2 className="text-white pt-6 pb-4 text-2xl font-bold text-center hidden xl:block text-shadow-xl">
+            ПРОТЯНИ ЛАПУ ДРУЖБЫ
+          </h2>
+          <div className="xl:flex xl:pb-32 xl:pt-12 justify-between items-start">
             <div className="-mt-52 xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
               <h2 className="text-white pt-6 pb-4 text-2xl font-bold text-center xl:hidden">
                 ПРОТЯНИ ЛАПУ ДРУЖБЫ
@@ -28,9 +34,9 @@ function Home() {
               <OfficialVideo />
             </div>
             <div className="xl:w-1/2">
-              <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8">
-                Покупай специальные пачки Cheetos “Лапы” – 1 рубль с каждой
-                будет переведен в фонды помощи бездомным животным.
+              <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8 xl:text-shadow-xl">
+                Покупай пачки Cheetos “Лапы” и 1 рубль с каждой будет переведен
+                в фонды помощи бездомным животным.
               </p>
               <div className="my-6 xl:mt-6 xl:mb-0 flex items-center justify-center xl:justify-start">
                 <a
@@ -51,12 +57,12 @@ function Home() {
       <div className="xl:bg-white xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
-            <div className="xl:flex xl:py-16 justify-between items-center">
+            <div className="xl:flex xl:py-16 justify-between items-start">
               <div className="xl:w-1/2 xl:pl-20 xl:pr-36">
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:hidden">
                   СТАТЬ ХОЗЯИНОМ
                 </h2>
-                <div className="my-4 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
+                <div className="my-4 xl:my-0 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
                   <div
                     className="relative rounded-2xl overflow-hidden bg-center bg-no-repeat bg-cover w-full pb-100%"
                     style={{ backgroundImage: `url(${DogImg})` }}
@@ -94,9 +100,23 @@ function Home() {
                     </div>
                     <span className="w-full">
                       Пройди обучение <br className="xl:hidden" />
-                      <Link to="/school" className="font-bold underline">
+                      <a
+                        className="font-bold underline cursor-pointer"
+                        onClick={() => {
+                          setModalBody(<SchoolModal />);
+                          setShowModal(true);
+                          document.documentElement.scrollTop = 0;
+                          return false;
+                        }}
+                      >
                         в&nbsp;школе будущих хозяев
-                      </Link>
+                      </a>
+                      {/* <Link
+                        to="/school"
+                        className="font-bold underline"
+                      >
+                        в&nbsp;школе будущих хозяев
+                      </Link> */}
                     </span>
                   </li>
                 </ul>
@@ -113,12 +133,12 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="xl:py-16">
-        <div className="max-w-sm xl:max-w-full mx-auto xl:text-black">
+      <div className="xl:py-0 sm:py-16 ">
+        {/* <div className="max-w-sm xl:max-w-full mx-auto xl:text-black">
           <div className="container mx-auto">
-            <div className="xl:flex items-center justify-between">
+            <div className="xl:flex items-start justify-between">
               <div className="xl:w-1/2">
-                <h2 className="text-2xl text-center xl:text-left uppercase font-bold mt-8 mb-4">
+                <h2 className="text-2xl text-center xl:text-left uppercase font-bold mt-8 mb-4 xl:mt-0">
                   ШКОЛА БУДУЩИХ ХОЗЯЕВ
                 </h2>
                 <p className="text-xl mb-4">
@@ -126,7 +146,7 @@ function Home() {
                   и их потенциальным владельцам. Узнайте ответы на актуальные
                   вопросы, которые часто задают хозяева собак и кошек.
                 </p>
-                <div className="hidden my-6 xl:flex items-center justify-start">
+                <div className="hidden my-6 xl:flex items-start justify-start">
                   <Link
                     to="/school"
                     className="w-64 text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 font-bold text-center focus:outline-none"
@@ -140,7 +160,7 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div
           className="xl:hidden mt-28 bg-orange-900 bg-80 relative"
           style={{ backgroundImage: `url(${StepsImg})` }}

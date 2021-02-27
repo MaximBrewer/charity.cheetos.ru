@@ -106,7 +106,10 @@ module.exports = {
     extend: {
       // ...
       inset: ["active", "hover", "focus"],
+      borderWidth: ['last'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow')
+  ],
 };

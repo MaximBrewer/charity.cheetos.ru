@@ -9898,6 +9898,146 @@ video {
   border-left-width: 1px;
 }
 
+.last\:border-0:last-child {
+  border-width: 0px;
+}
+
+.last\:border-2:last-child {
+  border-width: 2px;
+}
+
+.last\:border-3:last-child {
+  border-width: 3px;
+}
+
+.last\:border-4:last-child {
+  border-width: 4px;
+}
+
+.last\:border-7:last-child {
+  border-width: 7px;
+}
+
+.last\:border-8:last-child {
+  border-width: 8px;
+}
+
+.last\:border:last-child {
+  border-width: 1px;
+}
+
+.last\:border-t-0:last-child {
+  border-top-width: 0px;
+}
+
+.last\:border-r-0:last-child {
+  border-right-width: 0px;
+}
+
+.last\:border-b-0:last-child {
+  border-bottom-width: 0px;
+}
+
+.last\:border-l-0:last-child {
+  border-left-width: 0px;
+}
+
+.last\:border-t-2:last-child {
+  border-top-width: 2px;
+}
+
+.last\:border-r-2:last-child {
+  border-right-width: 2px;
+}
+
+.last\:border-b-2:last-child {
+  border-bottom-width: 2px;
+}
+
+.last\:border-l-2:last-child {
+  border-left-width: 2px;
+}
+
+.last\:border-t-3:last-child {
+  border-top-width: 3px;
+}
+
+.last\:border-r-3:last-child {
+  border-right-width: 3px;
+}
+
+.last\:border-b-3:last-child {
+  border-bottom-width: 3px;
+}
+
+.last\:border-l-3:last-child {
+  border-left-width: 3px;
+}
+
+.last\:border-t-4:last-child {
+  border-top-width: 4px;
+}
+
+.last\:border-r-4:last-child {
+  border-right-width: 4px;
+}
+
+.last\:border-b-4:last-child {
+  border-bottom-width: 4px;
+}
+
+.last\:border-l-4:last-child {
+  border-left-width: 4px;
+}
+
+.last\:border-t-7:last-child {
+  border-top-width: 7px;
+}
+
+.last\:border-r-7:last-child {
+  border-right-width: 7px;
+}
+
+.last\:border-b-7:last-child {
+  border-bottom-width: 7px;
+}
+
+.last\:border-l-7:last-child {
+  border-left-width: 7px;
+}
+
+.last\:border-t-8:last-child {
+  border-top-width: 8px;
+}
+
+.last\:border-r-8:last-child {
+  border-right-width: 8px;
+}
+
+.last\:border-b-8:last-child {
+  border-bottom-width: 8px;
+}
+
+.last\:border-l-8:last-child {
+  border-left-width: 8px;
+}
+
+.last\:border-t:last-child {
+  border-top-width: 1px;
+}
+
+.last\:border-r:last-child {
+  border-right-width: 1px;
+}
+
+.last\:border-b:last-child {
+  border-bottom-width: 1px;
+}
+
+.last\:border-l:last-child {
+  border-left-width: 1px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -38381,6 +38521,78 @@ video {
           animation: bounce 1s infinite;
 }
 
+.text-shadow {
+  text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
+}
+
+.text-shadow-sm {
+  text-shadow: 1px 1px 3px rgb(36 37 47 / 25%);
+}
+
+.text-shadow-md {
+  text-shadow: 0px 1px 2px rgb(30 29 39 / 19%), 1px 2px 4px rgb(54 64 147 / 18%);
+}
+
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgb(0 0 0 / 26%), 0 0 5px rgb(15 3 86 / 22%);
+}
+
+.text-shadow-xl {
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
+}
+
+.text-shadow-none {
+  text-shadow: none;
+}
+
+.hover\:text-shadow:hover {
+  text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
+}
+
+.hover\:text-shadow-sm:hover {
+  text-shadow: 1px 1px 3px rgb(36 37 47 / 25%);
+}
+
+.hover\:text-shadow-md:hover {
+  text-shadow: 0px 1px 2px rgb(30 29 39 / 19%), 1px 2px 4px rgb(54 64 147 / 18%);
+}
+
+.hover\:text-shadow-lg:hover {
+  text-shadow: 3px 3px 6px rgb(0 0 0 / 26%), 0 0 5px rgb(15 3 86 / 22%);
+}
+
+.hover\:text-shadow-xl:hover {
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
+}
+
+.hover\:text-shadow-none:hover {
+  text-shadow: none;
+}
+
+.focus\:text-shadow:focus {
+  text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
+}
+
+.focus\:text-shadow-sm:focus {
+  text-shadow: 1px 1px 3px rgb(36 37 47 / 25%);
+}
+
+.focus\:text-shadow-md:focus {
+  text-shadow: 0px 1px 2px rgb(30 29 39 / 19%), 1px 2px 4px rgb(54 64 147 / 18%);
+}
+
+.focus\:text-shadow-lg:focus {
+  text-shadow: 3px 3px 6px rgb(0 0 0 / 26%), 0 0 5px rgb(15 3 86 / 22%);
+}
+
+.focus\:text-shadow-xl:focus {
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
+}
+
+.focus\:text-shadow-none:focus {
+  text-shadow: none;
+}
+
 /* Slider */
 
 .slick-slider {
@@ -47934,6 +48146,146 @@ video {
   }
 
   .xl\:border-l {
+    border-left-width: 1px;
+  }
+
+  .xl\:last\:border-0:last-child {
+    border-width: 0px;
+  }
+
+  .xl\:last\:border-2:last-child {
+    border-width: 2px;
+  }
+
+  .xl\:last\:border-3:last-child {
+    border-width: 3px;
+  }
+
+  .xl\:last\:border-4:last-child {
+    border-width: 4px;
+  }
+
+  .xl\:last\:border-7:last-child {
+    border-width: 7px;
+  }
+
+  .xl\:last\:border-8:last-child {
+    border-width: 8px;
+  }
+
+  .xl\:last\:border:last-child {
+    border-width: 1px;
+  }
+
+  .xl\:last\:border-t-0:last-child {
+    border-top-width: 0px;
+  }
+
+  .xl\:last\:border-r-0:last-child {
+    border-right-width: 0px;
+  }
+
+  .xl\:last\:border-b-0:last-child {
+    border-bottom-width: 0px;
+  }
+
+  .xl\:last\:border-l-0:last-child {
+    border-left-width: 0px;
+  }
+
+  .xl\:last\:border-t-2:last-child {
+    border-top-width: 2px;
+  }
+
+  .xl\:last\:border-r-2:last-child {
+    border-right-width: 2px;
+  }
+
+  .xl\:last\:border-b-2:last-child {
+    border-bottom-width: 2px;
+  }
+
+  .xl\:last\:border-l-2:last-child {
+    border-left-width: 2px;
+  }
+
+  .xl\:last\:border-t-3:last-child {
+    border-top-width: 3px;
+  }
+
+  .xl\:last\:border-r-3:last-child {
+    border-right-width: 3px;
+  }
+
+  .xl\:last\:border-b-3:last-child {
+    border-bottom-width: 3px;
+  }
+
+  .xl\:last\:border-l-3:last-child {
+    border-left-width: 3px;
+  }
+
+  .xl\:last\:border-t-4:last-child {
+    border-top-width: 4px;
+  }
+
+  .xl\:last\:border-r-4:last-child {
+    border-right-width: 4px;
+  }
+
+  .xl\:last\:border-b-4:last-child {
+    border-bottom-width: 4px;
+  }
+
+  .xl\:last\:border-l-4:last-child {
+    border-left-width: 4px;
+  }
+
+  .xl\:last\:border-t-7:last-child {
+    border-top-width: 7px;
+  }
+
+  .xl\:last\:border-r-7:last-child {
+    border-right-width: 7px;
+  }
+
+  .xl\:last\:border-b-7:last-child {
+    border-bottom-width: 7px;
+  }
+
+  .xl\:last\:border-l-7:last-child {
+    border-left-width: 7px;
+  }
+
+  .xl\:last\:border-t-8:last-child {
+    border-top-width: 8px;
+  }
+
+  .xl\:last\:border-r-8:last-child {
+    border-right-width: 8px;
+  }
+
+  .xl\:last\:border-b-8:last-child {
+    border-bottom-width: 8px;
+  }
+
+  .xl\:last\:border-l-8:last-child {
+    border-left-width: 8px;
+  }
+
+  .xl\:last\:border-t:last-child {
+    border-top-width: 1px;
+  }
+
+  .xl\:last\:border-r:last-child {
+    border-right-width: 1px;
+  }
+
+  .xl\:last\:border-b:last-child {
+    border-bottom-width: 1px;
+  }
+
+  .xl\:last\:border-l:last-child {
     border-left-width: 1px;
   }
 
@@ -76339,5 +76691,77 @@ video {
   .xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .xl\:text-shadow {
+    text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
+  }
+
+  .xl\:text-shadow-sm {
+    text-shadow: 1px 1px 3px rgb(36 37 47 / 25%);
+  }
+
+  .xl\:text-shadow-md {
+    text-shadow: 0px 1px 2px rgb(30 29 39 / 19%), 1px 2px 4px rgb(54 64 147 / 18%);
+  }
+
+  .xl\:text-shadow-lg {
+    text-shadow: 3px 3px 6px rgb(0 0 0 / 26%), 0 0 5px rgb(15 3 86 / 22%);
+  }
+
+  .xl\:text-shadow-xl {
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
+  }
+
+  .xl\:text-shadow-none {
+    text-shadow: none;
+  }
+
+  .xl\:hover\:text-shadow:hover {
+    text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
+  }
+
+  .xl\:hover\:text-shadow-sm:hover {
+    text-shadow: 1px 1px 3px rgb(36 37 47 / 25%);
+  }
+
+  .xl\:hover\:text-shadow-md:hover {
+    text-shadow: 0px 1px 2px rgb(30 29 39 / 19%), 1px 2px 4px rgb(54 64 147 / 18%);
+  }
+
+  .xl\:hover\:text-shadow-lg:hover {
+    text-shadow: 3px 3px 6px rgb(0 0 0 / 26%), 0 0 5px rgb(15 3 86 / 22%);
+  }
+
+  .xl\:hover\:text-shadow-xl:hover {
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
+  }
+
+  .xl\:hover\:text-shadow-none:hover {
+    text-shadow: none;
+  }
+
+  .xl\:focus\:text-shadow:focus {
+    text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
+  }
+
+  .xl\:focus\:text-shadow-sm:focus {
+    text-shadow: 1px 1px 3px rgb(36 37 47 / 25%);
+  }
+
+  .xl\:focus\:text-shadow-md:focus {
+    text-shadow: 0px 1px 2px rgb(30 29 39 / 19%), 1px 2px 4px rgb(54 64 147 / 18%);
+  }
+
+  .xl\:focus\:text-shadow-lg:focus {
+    text-shadow: 3px 3px 6px rgb(0 0 0 / 26%), 0 0 5px rgb(15 3 86 / 22%);
+  }
+
+  .xl\:focus\:text-shadow-xl:focus {
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
+  }
+
+  .xl\:focus\:text-shadow-none:focus {
+    text-shadow: none;
   }
 }

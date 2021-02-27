@@ -18,9 +18,20 @@ export default function Modal() {
         к&nbsp;появлению питомца в доме.
       </p>
       <div className="mb-2">
-        <Link to="/school" className={buttonClass() + " m-auto w-72 text-xl"}>
+        <a
+          className={buttonClass() + ` m-auto w-72 cursor-pointer`}
+          onClick={() => {
+            setModalBody(<SchoolModal />);
+            setShowModal(true);
+            document.documentElement.scrollTop = 0;
+            return false;
+          }}
+        >
+          в&nbsp;школу будущих хозяев
+        </a>
+        {/* <Link to="/school" className={buttonClass() + " m-auto w-72 text-xl"}>
           В школу будущих хозяев
-        </Link>
+        </Link> */}
       </div>
     </>
   );

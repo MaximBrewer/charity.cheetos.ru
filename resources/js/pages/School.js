@@ -34,14 +34,10 @@ function School() {
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto">
           <div className="container mx-auto">
-            <h2
-              className={`text-2xl font-bold text-center mt-10 xl:text-left xl:mt-16`}
-            >
+            <h2 className={`text-2xl font-bold text-center mt-8`}>
               ПРОТЯНИ ЛАПУ ДРУЖБЫ
             </h2>
-            <h2
-              className={`text-2xl font-bold text-center my-4 xl:mb-6 xl:text-left`}
-            >
+            <h2 className={`text-2xl font-bold text-center mb-4 xl:mb-12`}>
               ШКОЛА БУДУЩИХ ХОЗЯЕВ
             </h2>
             <p className="text-xl mb-10">

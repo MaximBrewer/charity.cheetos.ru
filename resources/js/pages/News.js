@@ -12,7 +12,7 @@ function News() {
         >
           <div className="max-w-sm xl:max-w-full mx-auto">
             <div className="container mx-auto">
-              <div className="flex flex-col xl:flex-row justify-between items-center">
+              <div className="flex flex-col xl:flex-row justify-between items-start">
                 <div
                   className={`xl:mt-0 xl:w-3/5 order-2 xl:order-${
                     index % 2 ? 1 : 2
@@ -37,7 +37,7 @@ function News() {
                   >
                     {item.title}
                   </h2>
-                  <div className="my-4 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
+                  <div className="my-4 p-3 xl:mt-0 bg-frame bg-cover rounded-3xl overflow-hidden">
                     <div
                       className="rounded-2xl overflow-hidden relative bg-center bg-no-repeat bg-cover w-full pb-100%"
                       style={{ backgroundImage: `url(${item.image})` }}

@@ -7,10 +7,15 @@ function Rules() {
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
-          <h2 className="text-xl text-center font-bold mb-6 mt-12">
+          <h2 className={`text-2xl font-bold text-center mt-8`}>
+            ПРОТЯНИ ЛАПУ ДРУЖБЫ
+          </h2>
+          <h2 className="text-xl text-center font-bold mb-6 mt-4">
             Правила проведения благотворительной акции «Cheetos»
             <br />
-            «Протяни лапу дружбы»<br />(далее – «Акция»)
+            «Протяни лапу дружбы»
+            <br />
+            (далее – «Акция»)
           </h2>
           <div className="mb-10 text-justify text-xl p-mb-4 markdown">
             {Parser(window.App.data.textRules)}

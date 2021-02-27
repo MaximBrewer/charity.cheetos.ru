@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useInputValue from "./input-value";
 import client from "../api/client";
 import { useModal } from "../context/modal";
@@ -10,12 +10,27 @@ import { buttonClass } from "../Classes";
 export default function GetPetForm({ pet_id }) {
   let { setModalBody } = useModal();
 
+  const [cities, setCities] = useState([]);
+
   let name = useInputValue("name");
   let surname = useInputValue("surname");
   let age = useInputValue("age");
   let email = useInputValue("email");
   let city = useInputValue("city");
   let body = useInputValue("body");
+
+  const getCities = (event) => {
+    city.bind.onChange(event);
+    const eventTarget = event.target;
+    if (eventTarget.value.length > 2)
+      client("/api/cities/search", {
+        body: { q: eventTarget.value },
+      }).then(({ cities }) => {
+        console.log(cities);
+        setCities(cities);
+      });
+    else setCities([]);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -134,21 +149,50 @@ export default function GetPetForm({ pet_id }) {
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
-          <div className="w-full my-2">
+          <div className="w-full my-2 relative">
             <div className={`md-input-box`}>
               <input
                 type="text"
-                className={`focus:outline-none shadow-lg bg-white py-2 px-4 rounded-2xl border-transparent border w-full ${
+                className={`focus:outline-none shadow-lg bg-white py-2 px-4 ${
+                  cities.length ? `rounded-t-2xl` : `rounded-2xl`
+                } border-transparent border w-full ${
                   city.error ? "border-red-500" : ""
                 }`}
                 placeholder="Город проживания"
                 id="city"
                 name="city"
                 required
-                {...city.bind}
+                value={city.bind.value}
+                // {...city.bind}
+                onChange={(e) => getCities(e)}
               />
             </div>
             {city.error && <p className="text-white text-xs">{city.error}</p>}
+            {cities.length ? (
+              <ul className="w-full absolute z-5 bg-white shadow-md py-1 px-0 bg-gray-100 border-t rounded-b-2xl border-gray-300">
+                {cities.map((item, index) => (
+                  <li
+                    className={`py-1 px-2 border-b last:border-0 cursor-pointer`}
+                    key={index}
+                    title={item.value}
+                    onClick={() => {
+                      city.bind.onChange({
+                        currentTarget: { value: item.value },
+                      });
+                      setCities([]);
+                    }}
+                  >
+                    <span
+                      className={`block overflow-ellipsis whitespace-nowrap overflow-hidden`}
+                    >
+                      {item.value}{" "}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              ``
+            )}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">

@@ -6,8 +6,11 @@ import { buttonClass } from "../Classes";
 import SweetImg from "../../images/sweet.jpeg";
 import LoveImg from "../../images/love.jpeg";
 import PetsSlider from "../components/PetsSlider";
+import SchoolModal from "../modals/School";
+import { useModal } from "../context/modal";
 
 function GetPet() {
+  let { setModalBody, setShowModal } = useModal();
   const [dogChecked, setDogChecked] = useState(false);
   const [catChecked, setCatChecked] = useState(false);
   const [pets, setPets] = useState(window.App.data.pets);
@@ -67,9 +70,23 @@ function GetPet() {
                     </div>
                     <span className="w-full">
                       Пройди обучение в <br className="xl:hidden" />
-                      <Link to="/school" className="font-bold underline">
+                      <a
+                        className="font-bold underline cursor-pointer"
+                        onClick={() => {
+                          setModalBody(<SchoolModal />);
+                          setShowModal(true);
+                          document.documentElement.scrollTop = 0;
+                          return false;
+                        }}
+                      >
+                        в&nbsp;школе будущих хозяев
+                      </a>
+                      {/* <Link
+                        to="/school"
+                        className="font-bold underline"
+                      >
                         школе будущих хозяев
-                      </Link>
+                      </Link> */}
                     </span>
                   </li>
                 </ul>
@@ -226,7 +243,7 @@ function GetPet() {
         <div className="w-full h-px "></div>
         <div className="-mb-72 max-w-sm xl:max-w-full xl:mb-0 mx-auto">
           <div className="container mx-auto">
-            <div className="xl:flex justify-between items-center">
+            <div className="xl:flex justify-between items-start">
               <div className={`xl:mt-0 xl:w-3/5 xl:order-1`}>
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
                   ШКОЛА БУДУЩИХ ХОЗЯЕВ
@@ -246,7 +263,7 @@ function GetPet() {
                 </div>
               </div>
               <div className={`xl:w-2/5 xl:pl-24 xl:order-2`}>
-                <div className="my-6 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
+                <div className="my-6 xl:my-0 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
                   <div
                     className="relative bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden pb-100%"
                     style={{ backgroundImage: `url(${SweetImg})` }}
@@ -271,12 +288,12 @@ function GetPet() {
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
-            <div className="xl:flex justify-between items-center">
+            <div className="xl:flex justify-between items-start">
               <div className={`xl:mt-0 xl:w-3/5 xl:order-2`}>
                 <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:text-left xl:mt-0">
                   В ГОСТИ – В ПРИЮТ!
                 </h2>
-                <div className="my-6 p-3 bg-frame bg-cover rounded-3xl overflow-hidden xl:hidden">
+                <div className="my-6 xl:my-0 p-3 bg-frame bg-cover rounded-3xl overflow-hidden xl:hidden">
                   <div
                     className="relative bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden pb-100%"
                     style={{ backgroundImage: `url(${LoveImg})` }}
