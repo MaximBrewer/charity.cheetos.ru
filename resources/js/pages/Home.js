@@ -161,7 +161,7 @@ function Home() {
             </div>
           </div>
         </div> */}
-        <div
+        {/* <div
           className="xl:hidden mt-28 bg-orange-900 bg-80 relative"
           style={{ backgroundImage: `url(${StepsImg})` }}
         >
@@ -182,7 +182,7 @@ function Home() {
               <div className="h-px w-full"></div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <div className="xl:bg-white xl:pt-16">
         <div className="max-w-sm xl:max-w-full mx-auto">
