@@ -22,7 +22,7 @@ export default function GetPetForm({ pet_id }) {
   const getCities = (event) => {
     city.bind.onChange(event);
     const eventTarget = event.target;
-    if (eventTarget.value.length > 2)
+    if (eventTarget.value.length > 1)
       client("/api/cities/search", {
         body: { q: eventTarget.value },
       }).then(({ cities }) => {
