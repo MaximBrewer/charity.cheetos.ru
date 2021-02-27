@@ -92,7 +92,7 @@ function Header({ opened, setOpened }) {
                 </div>
               </div>
               <div className="items-center hidden xl:block text-sm font-bold w-full">
-                <ul className="text-center pl-8 flex items-center justify-between w-full text-shadow-lg">
+                <ul className="text-center pl-8 flex items-center justify-start w-full text-shadow-lg">
                   {menuItems.map((item, index) => (
                     <li
                       key={index}
