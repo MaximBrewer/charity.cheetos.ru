@@ -35,7 +35,7 @@ function Home() {
             </div>
             <div className="xl:w-1/2">
               <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8 xl:text-shadow-xl">
-                Покупай пачки Cheetos “Лапы” и 1 рубль с каждой будет переведен
+                Покупай пачки Cheetos “Лапы” и 1 рубль с каждой пачки будет переведен
                 в фонды помощи бездомным животным.
               </p>
               <div className="my-6 xl:mt-6 xl:mb-0 flex items-center justify-center xl:justify-start">
