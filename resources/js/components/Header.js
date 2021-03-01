@@ -17,16 +17,7 @@ function Header({ opened, setOpened }) {
   }, [location]);
 
   const menuItems = [
-    {
-      props: {
-        href: "https://promo.cheetos.ru",
-        target: "_blank",
-        onClick: () => {
-          setOpened(false);
-        },
-      },
-      text: "Главная",
-    },
+    { props: { to: "/" }, text: "Главная" },
     { props: { to: "/getpet" }, text: "Стать хозяином" },
     { props: { to: "/partners" }, text: "Фонды" },
     {
