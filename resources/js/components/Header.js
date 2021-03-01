@@ -19,7 +19,7 @@ function Header({ opened, setOpened }) {
   const menuItems = [
     {
       props: {
-        href: "https://promo.cheetos.ru",
+        href: "https://cheetos.ru",
         target: "_blank",
         onClick: () => {
           setOpened(false);
