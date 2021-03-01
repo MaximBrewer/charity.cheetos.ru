@@ -38789,7 +38789,7 @@ video {
 }
 
 .markdown ul {
-  list-style: disc;
+  list-style: inside disc;
 }
 
 .markdown ol {

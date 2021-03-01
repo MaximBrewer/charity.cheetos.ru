@@ -106,7 +106,7 @@ function Volunteer() {
                               <div className="text-center mb-4 xl:mb-8 xl:text-xl xl:text-left">
                                 {item.excerpt}
                               </div>
-                              <div className="hidden xl:block xl:mb-8 xl:text-xl">
+                              <div className="hidden xl:block xl:mb-8 xl:text-xl markdown">
                                 {Parser(item.body)}
                               </div>
                             </div>

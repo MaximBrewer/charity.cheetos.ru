@@ -107,7 +107,7 @@ function School() {
                           <div className="text-lg font-bold mb-2">
                             {item.excerpt}
                           </div>
-                          <div className="text-lg mb-2">
+                          <div className="text-lg mb-2 markdown">
                             {Parser(item.body)}
                           </div>
                           <div>{item.y}</div>
@@ -284,7 +284,7 @@ function School() {
                       <div className="text-lg font-bold mb-2">
                         {item.excerpt}
                       </div>
-                      <div className="text-lg mb-2">{Parser(item.body)}</div>
+                      <div className="text-lg mb-2 markdown">{Parser(item.body)}</div>
                       <div>{item.y}</div>
                     </div>
                     <div className="bg-yellow-800 pt-3 pb-1 text-center text-xl font-bold">

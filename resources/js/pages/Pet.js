@@ -104,7 +104,7 @@ function Pet() {
                     <h4 className="mb-4 xl:mb-6 text-xl text-center font-bold xl:text-left">
                       {pet.excerpt}
                     </h4>
-                    <div className="mb-4 xl:mb-16 text-lg text-justify xl:text-left">
+                    <div className="mb-4 xl:mb-16 text-lg text-justify xl:text-left markdown">
                       {Parser(pet.body)}
                     </div>
                     <div className="my-6 flex items-center justify-center xl:justify-start">
