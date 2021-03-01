@@ -29,7 +29,7 @@
 <body className="font-sans h-full text-grey-darkest">
     <div id="app" class="flex flex-col select-none">
     </div>
-    <script src="{{ asset('js/app.js?v1.7') }}" defer></script>
+    <script src="{{ asset('js/app.js?v1.8') }}" defer></script>
 </body>
 
 </html>
