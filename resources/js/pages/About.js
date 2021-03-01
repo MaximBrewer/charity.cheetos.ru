@@ -12,11 +12,12 @@ function About() {
       <div className="xl:pb-16 xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
-            <h2 className="pt-6 xl:pt-12 pb-4 text-2xl font-bold text-center">
+          <div className="w-full h-px"></div>
+            <h2 className="pt-6 xl:pt-12 pb-4 text-2xl font-bold text-center hidden xl:block">
               ПРОТЯНИ ЛАПУ ДРУЖБЫ
             </h2>
             <div className="xl:flex justify-between items-center">
-              <div className="xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
+              <div className="mt-8 xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
                 <OfficialVideo />
               </div>
               <div className="xl:w-1/2">

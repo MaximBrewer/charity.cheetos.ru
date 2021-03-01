@@ -35,7 +35,7 @@ function GetPet() {
       <div className="bg-white xl:bg-transparent">
         <div className="max-w-sm xl:max-w-full mx-auto xl:bg-white">
           <div className="container mx-auto pt-8">
-            <h2 className="mb-3 text-2xl xl:mb-6 font-bold text-center">
+            <h2 className="mb-3 text-2xl xl:mb-6 font-bold text-center hidden xl:block">
               ПРОТЯНИ ЛАПУ ДРУЖБЫ
             </h2>
             <div className="xl:flex xl:pt-6 xl:pb-16 justify-center items-start">
@@ -251,7 +251,7 @@ function GetPet() {
                 <p className="mb-4 text-xl text-justify xl:text-2xl">
                   К новой жизни нужно готовить не только животных, но и будущих
                   хозяев. Узнайте, ответы на самые актуальные вопросы, встающие
-                  перед будущими и настоящими хозяевами лохматых друзей
+                  перед будущими и настоящими хозяевами лохматых друзей.
                 </p>
                 <div className="my-6 hidden xl:block">
                   <a
@@ -263,7 +263,7 @@ function GetPet() {
                       return false;
                     }}
                   >
-                    в&nbsp;школе будущих хозяев
+                    «В&nbsp;школу будущих хозяев»
                   </a>
                   {/* <Link
                     className={`${buttonClass()} w-96 text-xl`}

@@ -19,7 +19,7 @@ function Header({ opened, setOpened }) {
   const menuItems = [
     {
       props: {
-        href: "https://cheetos.ru",
+        href: "https://promo.cheetos.ru",
         target: "_blank",
         onClick: () => {
           setOpened(false);
@@ -81,28 +81,36 @@ function Header({ opened, setOpened }) {
               </div>
               <div className="w-full h-full xl:w-auto">
                 <div className="w-32 m-auto">
-                  <Link
-                    to="/"
+                  <a
+                    href="https://cheetos.ru"
+                    target="_blank"
                     className="block bg-center bg-no-repeat bg-contain w-full"
                     style={{
                       backgroundImage: `url(${LogoImg})`,
                       paddingTop: "59.83%",
                     }}
-                  ></Link>
+                  ></a>
                 </div>
               </div>
               <div className="items-center hidden xl:block text-sm font-bold w-full">
                 <ul className="text-center pl-8 flex items-center justify-start w-full text-shadow-lg">
                   {menuItems.map((item, index) => (
-                    <li
-                      key={index}
-                    >
+                    <li key={index}>
                       {item.props.to ? (
-                        <NavLink {...item.props} activeClassName="active" className="block py-1 px-1 xl:py-3 xl:px-2 uppercase">
+                        <NavLink
+                          {...item.props}
+                          activeClassName="active"
+                          className="block py-1 px-1 xl:py-3 xl:px-2 uppercase"
+                        >
                           {item.text}
                         </NavLink>
                       ) : (
-                        <a {...item.props} className={`block py-1 px-1 xl:py-3 xl:px-2 uppercase ${item.props.className}`}>{item.text}</a>
+                        <a
+                          {...item.props}
+                          className={`block py-1 px-1 xl:py-3 xl:px-2 uppercase ${item.props.className}`}
+                        >
+                          {item.text}
+                        </a>
                       )}
                     </li>
                   ))}
@@ -166,6 +174,9 @@ function Header({ opened, setOpened }) {
           </nav>
         </div>
       </div>
+      <h2 className="text-white pt-6 pb-4 text-2xl font-bold text-center xl:hidden text-shadow-xl">
+        ПРОТЯНИ ЛАПУ ДРУЖБЫ
+      </h2>
     </section>
   );
 }

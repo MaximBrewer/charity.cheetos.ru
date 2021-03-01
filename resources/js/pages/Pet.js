@@ -53,7 +53,7 @@ function Pet() {
         <div className="w-full h-px "></div>
         <div className="-mt-80 max-w-sm xl:max-w-full xl:mb-8 mx-auto xl:mt-0">
           <div className="container mx-auto">
-            <h2 className="text-white xl:text-black pt-6 xl:pt-10 pb-4 xl:pb-10 text-2xl font-bold text-center">
+            <h2 className="text-white xl:text-black pt-6 xl:pt-10 pb-4 xl:pb-10 text-2xl font-bold text-center hidden xl:block">
               ПРОТЯНИ ЛАПУ ДРУЖБЫ
             </h2>
             {!pet || (

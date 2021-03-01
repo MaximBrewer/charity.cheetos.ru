@@ -18,7 +18,7 @@ function Home() {
   return (
     <section
       id="home"
-      className="bg-white xl:bg-transparent mt-52 xl:mt-0 xl:text-white"
+      className="bg-white xl:bg-transparent mt-28 xl:mt-0 xl:text-white"
     >
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
@@ -27,15 +27,12 @@ function Home() {
             ПРОТЯНИ ЛАПУ ДРУЖБЫ
           </h2>
           <div className="xl:flex xl:pb-32 xl:pt-12 justify-between items-start">
-            <div className="-mt-52 xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
-              <h2 className="text-white pt-6 pb-4 text-2xl font-bold text-center xl:hidden">
-                ПРОТЯНИ ЛАПУ ДРУЖБЫ
-              </h2>
+            <div className="-mt-28 xl:mt-0 xl:w-1/2 xl:order-2 xl:pl-16">
               <OfficialVideo />
             </div>
             <div className="xl:w-1/2">
-              <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8 xl:text-shadow-xl">
-                Покупай пачки Cheetos “Лапы” и 1 рубль с каждой пачки будет переведен
+              <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8 xl:text-shadow-xl text-justify">
+                Покупай пачки Cheetos “Лапы” и 1&nbsp;рубль с каждой пачки будет переведен
                 в фонды помощи бездомным животным.
               </p>
               <div className="my-6 xl:mt-6 xl:mb-0 flex items-center justify-center xl:justify-start">

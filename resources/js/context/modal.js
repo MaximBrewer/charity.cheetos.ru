@@ -24,7 +24,7 @@ function ModalProvider({ children }) {
       {" "}
       {children}
       {showModal ? (
-        <div className="z-30 absolute top-24 w-full">
+        <div className="z-30 absolute top-40 xl:top-24 w-full">
           <div className="container mx-auto max-w-xl">
             <div
               className="pt-4 bg-yellow-800 rounded-3xl shadow-lg relative flex flex-col bg-80 outline-none focus:outline-none"

@@ -21,14 +21,15 @@ function Links({ className = "" }) {
 }
 function Logo({ className = "" }) {
   return (
-    <Link
-      to="/"
+    <a
+      href="https://cheetos.ru"
+      target="_blank"
       className={`block bg-center bg-no-repeat bg-contain ${className}`}
       style={{
         backgroundImage: `url(${LogoImg})`,
         paddingTop: "59.83%",
       }}
-    ></Link>
+    ></a>
   );
 }
 function Social({ className = "" }) {

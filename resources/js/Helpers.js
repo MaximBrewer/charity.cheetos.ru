@@ -46,7 +46,7 @@ export function OfficialVideo() {
     }
   };
   return (
-    <div className="my-4 p-3 xl:my-0 bg-frame bg-cover rounded-3xl overflow-hidden">
+    <div className="mb-4 p-3 xl:mb-0 bg-frame bg-cover rounded-3xl overflow-hidden">
       <div className="relative h-0 pb-fluid-video rounded-2xl overflow-hidden">
         <YouTube
           containerClassName="absolute w-full h-full"

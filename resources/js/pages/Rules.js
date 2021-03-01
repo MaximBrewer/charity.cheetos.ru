@@ -7,7 +7,7 @@ function Rules() {
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
-          <h2 className={`text-2xl font-bold text-center mt-8`}>
+          <h2 className={`text-2xl font-bold text-center mt-8 hidden xl:block`}>
             ПРОТЯНИ ЛАПУ ДРУЖБЫ
           </h2>
           <h2 className="text-xl text-center font-bold mb-6 mt-4">
