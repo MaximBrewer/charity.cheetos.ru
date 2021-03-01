@@ -27,7 +27,7 @@ export default function Modal() {
             return false;
           }}
         >
-          в&nbsp;школу будущих хозяев
+          В&nbsp;школу будущих хозяев
         </a>
         {/* <Link to="/school" className={buttonClass() + " m-auto w-72 text-xl"}>
           В школу будущих хозяев

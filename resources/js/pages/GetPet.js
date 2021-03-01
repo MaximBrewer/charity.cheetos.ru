@@ -69,7 +69,7 @@ function GetPet() {
                       </span>
                     </div>
                     <span className="w-full">
-                      Пройди обучение в <br className="xl:hidden" />
+                      Пройди обучение <br className="xl:hidden" />
                       <a
                         className="font-bold underline cursor-pointer"
                         onClick={() => {
@@ -85,7 +85,7 @@ function GetPet() {
                         to="/school"
                         className="font-bold underline"
                       >
-                        школе будущих хозяев
+                        в&nbsp;школе будущих хозяев
                       </Link> */}
                     </span>
                   </li>
@@ -263,7 +263,7 @@ function GetPet() {
                       return false;
                     }}
                   >
-                    «В&nbsp;школу будущих хозяев»
+                    Стать ответственным хозяином
                   </a>
                   {/* <Link
                     className={`${buttonClass()} w-96 text-xl`}
@@ -290,7 +290,7 @@ function GetPet() {
                       return false;
                     }}
                   >
-                    в&nbsp;школе будущих хозяев
+                    Стать ответственным хозяином
                   </a>
                   {/* <Link
                     className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
