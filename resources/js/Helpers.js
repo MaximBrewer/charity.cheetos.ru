@@ -30,14 +30,20 @@ export function OfficialVideo() {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       // autoplay: 1,
-      rel: 0,
-      modestbranding: 1,
-      showinfo: 0,
-      ecver: 2,
+      // rel: 0,
+      // loop: 1,
+      // modestbranding: 1,
+      // showinfo: 0,
+      // ecver: 2,
     },
   };
   const _onReady = (event) => {
     event.target.playVideo();
+  };
+  const __onStateChange = (event) => {
+    if (event.data == YT.PlayerState.ENDED) {
+      event.target.stopVideo();
+    }
   };
   return (
     <div className="my-4 p-3 xl:my-0 bg-frame bg-cover rounded-3xl overflow-hidden">
@@ -48,6 +54,7 @@ export function OfficialVideo() {
           videoId={window.App.data.youtube}
           opts={opts}
           onReady={_onReady}
+          onStateChange={__onStateChange}
         />
       </div>
     </div>
@@ -60,14 +67,20 @@ export function SchoolVideo() {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       // autoplay: 1,
-      rel: 0,
-      modestbranding: 1,
-      showinfo: 0,
-      ecver: 2,
+      // rel: 0,
+      // loop: 1,
+      // modestbranding: 1,
+      // showinfo: 0,
+      // ecver: 2,
     },
   };
   const _onReady = (event) => {
     // event.target.playVideo();
+  };
+  const __onStateChange = (event) => {
+    if (event.data == YT.PlayerState.ENDED) {
+      event.target.stopVideo();
+    }
   };
   return (
     <div className="my-4 xl:my-0 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
@@ -78,6 +91,7 @@ export function SchoolVideo() {
           videoId={window.App.data.youtubeSchool}
           opts={opts}
           onReady={_onReady}
+          onStateChange={__onStateChange}
         />
       </div>
     </div>
