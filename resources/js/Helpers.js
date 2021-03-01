@@ -9,7 +9,14 @@ export function DoubleButton({ xlYellow = false }) {
       <a
         href={window.App.data.doubleLink}
         target="_blank"
-        className={buttonClass() + ` w-64 xl:w-auto xl:px-12 text-xl xl:text-2xl ${xlYellow ? `xl:bg-yellow-800 xl:hover:bg-yellow-600 xl:text-darkOrange-900` : ``}`}
+        className={
+          buttonClass() +
+          ` w-64 xl:w-auto xl:px-12 text-xl xl:text-2xl ${
+            xlYellow
+              ? `xl:bg-yellow-800 xl:hover:bg-yellow-600 xl:text-darkOrange-900`
+              : ``
+          }`
+        }
       >
         Удвоить помощь
       </a>
@@ -23,6 +30,10 @@ export function OfficialVideo() {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       // autoplay: 1,
+      rel: 0,
+      modestbranding: 1,
+      showinfo: 0,
+      ecver: 2,
     },
   };
   const _onReady = (event) => {
@@ -49,6 +60,10 @@ export function SchoolVideo() {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       // autoplay: 1,
+      rel: 0,
+      modestbranding: 1,
+      showinfo: 0,
+      ecver: 2,
     },
   };
   const _onReady = (event) => {
