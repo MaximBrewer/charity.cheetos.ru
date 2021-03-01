@@ -254,12 +254,23 @@ function GetPet() {
                   перед будущими и настоящими хозяевами лохматых друзей
                 </p>
                 <div className="my-6 hidden xl:block">
-                  <Link
+                  <a
+                    className={`${buttonClass()} w-96 text-xl`}
+                    onClick={() => {
+                      setModalBody(<SchoolModal />);
+                      setShowModal(true);
+                      document.documentElement.scrollTop = 0;
+                      return false;
+                    }}
+                  >
+                    в&nbsp;школе будущих хозяев
+                  </a>
+                  {/* <Link
                     className={`${buttonClass()} w-96 text-xl`}
                     to="/school"
                   >
                     Стать ответственным хозяином
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <div className={`xl:w-2/5 xl:pl-24 xl:order-2`}>
@@ -270,12 +281,23 @@ function GetPet() {
                   ></div>
                 </div>
                 <div className="my-6 flex items-center justify-center xl:hidden">
-                  <Link
+                  <a
+                    className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
+                    onClick={() => {
+                      setModalBody(<SchoolModal />);
+                      setShowModal(true);
+                      document.documentElement.scrollTop = 0;
+                      return false;
+                    }}
+                  >
+                    в&nbsp;школе будущих хозяев
+                  </a>
+                  {/* <Link
                     className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
                     to="/school"
                   >
                     Стать ответственным хозяином
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
