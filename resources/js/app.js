@@ -8,7 +8,7 @@ import { AuthProvider } from "./context/auth";
 window.skipScroll = false;
 
 const tagManagerArgs = {
-  gtmId: "GTM-KNQNKBS",
+  gtmId: "GTM-KQWGWDZ",
 };
 TagManager.initialize(tagManagerArgs);
 
