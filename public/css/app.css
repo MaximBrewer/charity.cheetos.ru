@@ -10783,6 +10783,10 @@ video {
   font-size: 1.25rem;
 }
 
+.text-1xl {
+  font-size: 1.5rem;
+}
+
 .text-2xl {
   font-size: 1.625rem;
 }
@@ -49036,6 +49040,10 @@ video {
 
   .xl\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .xl\:text-1xl {
+    font-size: 1.5rem;
   }
 
   .xl\:text-2xl {
