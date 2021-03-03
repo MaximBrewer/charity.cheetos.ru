@@ -73,7 +73,7 @@ function Home() {
                 <ul className="text-lg xl:text-1xl mt-4 mb-6">
                   <li className="flex items-center justify-start mb-3">
                     <div>
-                      <span className="font-bold w-7 h-7 text-white flex items-center justify-center mr-3 xl:mr-6 rounded-full bg-orange-800">
+                      <span className="font-bold w-8 h-8 text-white flex items-center justify-center mr-3 xl:mr-6 rounded-full bg-orange-800">
                         1
                       </span>
                     </div>
@@ -83,7 +83,7 @@ function Home() {
                   </li>
                   <li className="flex items-center justify-start mb-3">
                     <div>
-                      <span className="font-bold w-7 h-7 text-white flex items-center justify-center mr-3 xl:mr-6 rounded-full bg-orange-800">
+                      <span className="font-bold w-8 h-8 text-white flex items-center justify-center mr-3 xl:mr-6 rounded-full bg-orange-800">
                         2
                       </span>
                     </div>
@@ -91,7 +91,7 @@ function Home() {
                   </li>
                   <li className="flex items-center justify-start mb-3">
                     <div>
-                      <span className="font-bold w-7 h-7 text-white flex items-center justify-center mr-3 xl:mr-6 rounded-full bg-orange-800">
+                      <span className="font-bold w-8 h-8 text-white flex items-center justify-center mr-3 xl:mr-6 rounded-full bg-orange-800">
                         3
                       </span>
                     </div>

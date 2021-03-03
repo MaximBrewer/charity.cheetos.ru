@@ -196,10 +196,10 @@ function Header({ opened, setOpened }) {
                   ></a>
                 </div>
               </div>
-              <div className="items-center hidden xl:block text-sm font-bold w-full">
+              <div className="items-center hidden xl:block text-base font-bold w-full">
                 <ul className="text-center pl-8 flex items-center justify-start w-full text-shadow-lg">
                   {menuItems.map((item, index) => (
-                    <li key={index}>
+                    <li key={index} className="transform-gpu hover:scale-110 duration-100 mr-2">
                       {item.props.to ? (
                         <NavLink
                           {...item.props}
