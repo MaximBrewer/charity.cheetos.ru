@@ -33,6 +33,10 @@ function Logo({ className = "" }) {
   );
 }
 function Social({ className = "" }) {
+  const sendToGmData = (data) => {
+    dataLayer.push(data);
+    sendDataToGTM(data);
+  };
   return (
     <>
       <h4 className={`my-4 text-center ${className}`}>
@@ -43,6 +47,18 @@ function Social({ className = "" }) {
           <a
             href={window.App.data.instagram}
             target="_blank"
+            onClick={() => {
+              let data = {
+                event: "GAEvent",
+                eventName: "social_visit",
+                eventCategory: "Social",
+                eventAction: "Visit",
+                eventLabel: "Instagram",
+                eventContext: null,
+                eventValue: null,
+              };
+              sendToGmData(data);
+            }}
             className="rounded-full block w-12 h-12 xl:w-20 xl:h-20 flex items-center justify-center bg-orange-800 xl:bg-transparent text-white"
           >
             <InstagramIcon className="w-8 h-8 xl:w-20 xl:h-20 fill-current" />
@@ -52,6 +68,18 @@ function Social({ className = "" }) {
           <a
             href={window.App.data.vk}
             target="_blank"
+            onClick={() => {
+              let data = {
+                event: "GAEvent",
+                eventName: "social_visit",
+                eventCategory: "Social",
+                eventAction: "Visit",
+                eventLabel: "VK",
+                eventContext: null,
+                eventValue: null,
+              };
+              sendToGmData(data);
+            }}
             className="rounded-full block w-12 h-12 xl:w-20 xl:h-20 flex items-center justify-center bg-orange-800 xl:bg-transparent text-white"
           >
             <VkIcon className="w-7 h-7 xl:w-16 xl:h-16 fill-current" />
@@ -61,6 +89,18 @@ function Social({ className = "" }) {
           <a
             href={window.App.data.tiktok}
             target="_blank"
+            onClick={() => {
+              let data = {
+                event: "GAEvent",
+                eventName: "social_visit",
+                eventCategory: "Social",
+                eventAction: "Visit",
+                eventLabel: "TikTok",
+                eventContext: null,
+                eventValue: null,
+              };
+              sendToGmData(data);
+            }}
             className="rounded-full block w-12 h-12 xl:w-20 xl:h-20 flex items-center justify-center bg-orange-800 xl:bg-transparent text-white"
           >
             <TikTokIcon className="w-7 h-7 xl:w-16 xl:h-16 fill-current" />

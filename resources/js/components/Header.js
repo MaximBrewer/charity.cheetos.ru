@@ -5,8 +5,10 @@ import StepsImg from "../../images/steps.png";
 import LogoImg from "../../images/logo.png";
 import FaqModal from "../modals/Faq";
 import { useModal } from "../context/modal";
+import useGTM from "@elgorditosalsero/react-gtm-hook";
 
 function Header({ opened, setOpened }) {
+  const { sendDataToGTM } = useGTM();
   let { setModalBody, setShowModal, showModal } = useModal();
   let location = useLocation();
   useEffect(() => {
@@ -16,26 +18,137 @@ function Header({ opened, setOpened }) {
     window.skipScroll = false;
   }, [location]);
 
+  const sendToGmData = (data) => {
+    dataLayer.push(data);
+    sendDataToGTM(data);
+  };
+
   const menuItems = [
-    { props: { to: "/" }, text: "Главная" },
-    { props: { to: "/getpet" }, text: "Стать хозяином" },
-    { props: { to: "/partners" }, text: "Фонды" },
+    {
+      props: {
+        to: "/",
+        onClick: () => {
+          let data = {
+            event: "GAEvent",
+            eventName: "Main",
+            eventCategory: "Main",
+            eventAction: "Click",
+            eventLabel: null,
+            eventContext: null,
+            eventValue: null,
+          };
+          sendToGmData(data);
+        },
+      },
+      text: "Главная",
+    },
+    {
+      props: {
+        to: "/getpet",
+        onClick: () => {
+          let data = {
+            event: "GAEvent",
+            eventName: "Prizes",
+            eventCategory: "Prizes",
+            eventAction: "Click",
+            eventLabel: null,
+            eventContext: null,
+            eventValue: null,
+          };
+          sendToGmData(data);
+        },
+      },
+      text: "Стать хозяином",
+    },
+    {
+      props: {
+        to: "/partners",
+        onClick: () => {
+          let data = {
+            event: "GAEvent",
+            eventName: "Products",
+            eventCategory: "Products",
+            eventAction: "Click",
+            eventLabel: null,
+            eventContext: null,
+            eventValue: null,
+          };
+          sendToGmData(data);
+        },
+      },
+      text: "Фонды",
+    },
     {
       props: {
         href: window.App.data.doubleLink,
         target: "_blank",
         onClick: () => {
+          let data = {
+            event: "GAEvent",
+            eventName: "Profile",
+            eventCategory: "Profile",
+            eventAction: "Click",
+            eventLabel: null,
+            eventContext: null,
+            eventValue: null,
+          };
+          sendToGmData(data);
           setOpened(false);
         },
       },
       text: <span>Удвоить помощь в&nbsp;Магнит</span>,
     },
-    // { props: { to: "/school" }, text: "Школа будущих хозяев" },
-    { props: { to: "/rules" }, text: "Правила акции" },
+    // {
+    //   props: {
+    //     to: "/school",
+    //     onClick: () => {
+    //       let data = {
+    //         event: "GAEvent",
+    //         eventName: "Winners",
+    //         eventCategory: "Winners",
+    //         eventAction: "Click",
+    //         eventLabel: null,
+    //         eventContext: null,
+    //         eventValue: null,
+    //       };
+    //       sendToGmData(data);
+    //       setOpened(false);
+    //     },
+    //   },
+    //   text: "Школа будущих хозяев",
+    // },
+    {
+      props: {
+        to: "/rules",
+        onClick: () => {
+          let data = {
+            event: "GAEvent",
+            eventName: "Test",
+            eventCategory: "Test",
+            eventAction: "Click",
+            eventLabel: null,
+            eventContext: null,
+            eventValue: null,
+          };
+          sendToGmData(data);
+        },
+      },
+      text: "Правила акции",
+    },
     // { props: { to: "/news" }, text: "Новости" },
     {
       props: {
         onClick: () => {
+          let data = {
+            event: "GAEvent",
+            eventName: "Feedback",
+            eventCategory: "Feedback",
+            eventAction: "Click",
+            eventLabel: null,
+            eventContext: null,
+            eventValue: null,
+          };
+          sendToGmData(data);
           setOpened(false);
           setModalBody(<FaqModal />);
           setShowModal(true);
