@@ -22,7 +22,7 @@ function App() {
   let { initializing } = useAuth();
   const { init, UseGTMHookProvider } = useGTM();
   const gtmParams = {
-    id: "GTM-T3KPMTD"
+    id: "GTM-KQWGWDZ"
   };
 
   useEffect(() => init(gtmParams), []);
