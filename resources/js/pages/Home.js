@@ -70,7 +70,7 @@ function Home() {
                 <h2 className="text-2xl uppercase font-bold mb-8 hidden xl:block">
                   СТАТЬ ХОЗЯИНОМ
                 </h2>
-                <ul className="text-lg xl:text-xl mt-4 mb-6">
+                <ul className="text-lg xl:text-2xl mt-4 mb-6">
                   <li className="flex items-center justify-start mb-3">
                     <div>
                       <span className="font-bold w-7 h-7 text-white flex items-center justify-center mr-3 xl:mr-6 rounded-full bg-orange-800">
