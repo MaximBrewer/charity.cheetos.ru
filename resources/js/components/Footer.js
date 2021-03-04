@@ -23,7 +23,6 @@ function Logo({ className = "" }) {
   return (
     <a
       href="https://cheetos.ru"
-      target="_blank"
       className={`block bg-center bg-no-repeat bg-contain ${className}`}
       style={{
         backgroundImage: `url(${LogoImg})`,

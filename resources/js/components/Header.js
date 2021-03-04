@@ -96,7 +96,7 @@ function Header({ opened, setOpened }) {
           setOpened(false);
         },
       },
-      text: <span>Удвоить помощь в&nbsp;Магнит</span>,
+      text: <span>Акция в&nbsp;Магнит</span>,
     },
     // {
     //   props: {
@@ -187,7 +187,6 @@ function Header({ opened, setOpened }) {
                 <div className="w-32 m-auto">
                   <a
                     href="https://cheetos.ru"
-                    target="_blank"
                     className="block bg-center bg-no-repeat bg-contain w-full"
                     style={{
                       backgroundImage: `url(${LogoImg})`,
