@@ -58,7 +58,7 @@ function Faq({ category = "charity" }) {
                       item.o ? `h-auto pt-4 pb-6` : `hidden`
                     }`}
                   >
-                    {Parser(item.a)}
+                    {Parser(item.a ?? "")}
                   </div>
                 </div>
               );

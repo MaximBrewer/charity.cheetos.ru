@@ -46,7 +46,7 @@ function Partners() {
                 </div>
                 <div className={`xl:w-3/5 xl:order-2 xl:flex flex-col`}>
                   <div className="my-6 xl:mb-3 xl:mt-0 text-xl text-center xl:text-left xl:order-1 xl:font-semibold xl:w-2/3 markdown">
-                    {Parser(item.excerpt)}
+                    {Parser(item.excerpt ?? "")}
                   </div>
                   <ul className="my-6 xl:my-3 flex items-center justify-between xl:justify-start xl:order-5">
                     {item.site ? (
@@ -103,7 +103,7 @@ function Partners() {
                     )}
                   </ul>
                   <div className="my-6 xl:my-3 text-lg xl:order-2 markdown">
-                    {Parser(item.body)}
+                    {Parser(item.body ?? "")}
                   </div>
                   <div className="xl:order-3 xl:flex">
                     <div className="my-6 flex items-center justify-center ">

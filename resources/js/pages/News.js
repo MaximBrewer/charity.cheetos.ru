@@ -23,7 +23,7 @@ function News() {
                   >
                     {item.title}
                   </h2>
-                  <div className="my-4 text-lg markdown">{Parser(item.body)}</div>
+                  <div className="my-4 text-lg markdown">{Parser(item.body ?? "")}</div>
                 </div>
                 <div
                   className={`w-full xl:w-2/5 xl:${

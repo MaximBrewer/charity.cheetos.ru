@@ -107,7 +107,7 @@ function Volunteer() {
                                 {item.excerpt}
                               </div>
                               <div className="hidden xl:block xl:mb-8 xl:text-xl markdown">
-                                {Parser(item.body)}
+                                {Parser(item.body ?? "")}
                               </div>
                             </div>
                             <div className="hidden xl:block">

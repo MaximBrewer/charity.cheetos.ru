@@ -18,7 +18,7 @@ function Rules() {
             (далее – «Акция»)
           </h2>
           <div className="mb-10 text-justify text-xl p-mb-4 markdown">
-            {Parser(window.App.data.textRules)}
+            {Parser(window.App.data.textRules ?? "")}
           </div>
         </div>
       </div>

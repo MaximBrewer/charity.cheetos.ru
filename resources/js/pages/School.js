@@ -108,7 +108,7 @@ function School() {
                             {item.excerpt}
                           </div>
                           <div className="text-lg mb-2 markdown">
-                            {Parser(item.body)}
+                            {Parser(item.body ?? "")}
                           </div>
                           <div>{item.y}</div>
                         </div>
