@@ -22,7 +22,7 @@ function About() {
               </div>
               <div className="xl:w-1/2">
                 <div className="my-6 text-xl text-justify">
-                  {Parser(window.App.data.textAbout)}
+                  {Parser(window.App.data.textAbout ?? "")}
                 </div>
                 <DoubleButton />
               </div>
