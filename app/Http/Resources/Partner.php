@@ -25,7 +25,7 @@ class Partner extends JsonResource
             'instagram' => $this->instagram,
             'tiktok' => $this->tiktok,
             'excerpt' => $this->excerpt,
-            'image' => Voyager::image($this->thumbnail('small'))
+            'image' => Voyager::image($this->image)
         ];
     }
 }
