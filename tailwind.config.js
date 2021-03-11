@@ -1,5 +1,9 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
+  purge: [
+    './resources/views/**/*.blade.php',
+    './resources/js/**/*.js',
+  ],
   theme: {
     fontSize: {
       xs: ".75rem",

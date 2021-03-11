@@ -17,11 +17,13 @@ mix.react('resources/js/app.js', 'public/js')
   .sass('resources/sass/app.scss', 'public/css')
   // .purgeCss()
   .tailwind('tailwind.config.js')
-  .webpackConfig({
-    externals: [
-      'child_process'
-    ],
-    node: {
-      fs: 'empty'
-    }
-  }).sourceMaps();
+  // .webpackConfig({
+  //   externals: [
+  //     'child_process'
+  //   ],
+  //   node: {
+  //     fs: 'empty'
+  //   }
+  // });
+  //.sourceMaps()
+  ;
