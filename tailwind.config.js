@@ -1,6 +1,5 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
-  purge: false,
   theme: {
     fontSize: {
       xs: ".75rem",

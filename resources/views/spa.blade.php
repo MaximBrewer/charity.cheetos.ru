@@ -23,6 +23,7 @@
     <!-- Styles -->
     <link href="{{ asset('fonts/stylesheet.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css?v1.16') }}" rel="stylesheet">
+    <link href="{{ asset('css/common.css?v1.16') }}" rel="stylesheet">
     
 </head>
 
