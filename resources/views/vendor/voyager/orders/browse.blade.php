@@ -113,7 +113,7 @@
                                                 <input type="checkbox" name="row_id" id="checkbox_{{ $data->getKey() }}" value="{{ $data->getKey() }}">
                                             </td>
                                         @endif
-                                        <td>{{ \App\Models\Pet::find($data->pet_id)->partner->title }}</td>
+                                        <td>{{ \App\Models\Pet::find($data->pet_id) ? \App\Models\Pet::find($data->pet_id)->partner->title : "" }}</td>
                                         @foreach($dataType->browseRows as $row)
                                             @php
                                             if ($data->{$row->field.'_browse'}) {
