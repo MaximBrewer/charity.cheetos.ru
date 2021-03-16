@@ -4,6 +4,9 @@ import client from "../api/client";
 import { useModal } from "../context/modal";
 import SuccessGetPetModal from "../modals/SuccessGetPet";
 import { buttonClass } from "../Classes";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+import ru from "react-phone-number-input/locale/ru";
 
 // components
 
@@ -15,6 +18,7 @@ export default function GetPetForm({ pet_id }) {
   let name = useInputValue("name");
   let surname = useInputValue("surname");
   let age = useInputValue("age");
+  let phone = useInputValue("phone");
   let email = useInputValue("email");
   let city = useInputValue("city");
   let body = useInputValue("body");
@@ -40,6 +44,7 @@ export default function GetPetForm({ pet_id }) {
         name: name.value ? name.value : "",
         surname: surname.value ? surname.value : "",
         age: age.value ? age.value : "",
+        phone: phone.value ? phone.value : "",
         email: email.value ? email.value : "",
         city: city.value ? city.value : "",
         body: body.value ? body.value : "",
@@ -50,8 +55,8 @@ export default function GetPetForm({ pet_id }) {
         name.setValue("");
         surname.setValue("");
         age.setValue("");
+        phone.setValue("");
         email.setValue("");
-        age.setValue("");
         city.setValue("");
         document.documentElement.scrollTop = 0;
         setModalBody(<SuccessGetPetModal />);
@@ -63,6 +68,7 @@ export default function GetPetForm({ pet_id }) {
             name,
             surname,
             age,
+            phone,
             email,
             city,
             body,
@@ -128,6 +134,32 @@ export default function GetPetForm({ pet_id }) {
               />
             </div>
             {age.error && <p className="text-white text-xs">{age.error}</p>}
+          </div>
+        </div>
+        <div className="flex flex-wrap flex-col">
+          <div className="w-full my-2">
+            <div className={`md-input-box`}>
+              <PhoneInput
+                className={`focus:outline-none shadow-lg bg-white py-2 px-4 rounded-2xl border-transparent border w-full ${
+                  phone.error ? "border-red-500" : ""
+                }`}
+                country="RU"
+                defaultCountry="RU"
+                labels={ru}
+                id="phone"
+                name="phone"
+                required
+                placeholder="Телефон"
+                value={phone.bind.value}
+                onChange={(value) => {
+                  phone.bind.onChange({
+                    target: { value: value },
+                    currentTarget: { value: value },
+                  });
+                }}
+              />
+            </div>
+            {phone.error && <p className="text-white text-xs">{phone.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">

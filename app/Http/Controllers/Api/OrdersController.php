@@ -42,7 +42,8 @@ class OrdersController extends Controller
             'age' => 'required|numeric|max:100',
             'email' => 'required|email:rfc,dns',
             'city' => 'required|min:3|regex:/^[a-zA-Zа-яА-ЯёЁ\s]+$/u|max:255',
-            'body' => 'required|min:10'
+            'body' => 'required|min:10',
+            'phone' => 'required|min:12'
         ]);
 
         Order::create($request->all());

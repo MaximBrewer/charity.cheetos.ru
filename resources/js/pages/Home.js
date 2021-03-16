@@ -12,6 +12,7 @@ import { DoubleButton, OfficialVideo, SchoolVideo } from "../Helpers";
 import { buttonClass } from "../Classes";
 import SchoolModal from "../modals/School";
 import { useModal } from "../context/modal";
+import GetPetBlock from "../blocks/GetPetBlock";
 
 function Home() {
   let { setModalBody, setShowModal } = useModal();
@@ -130,6 +131,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <GetPetBlock useTitle={false} />
       <div className="xl:py-0 sm:py-16 ">
         {/* <div className="max-w-sm xl:max-w-full mx-auto xl:text-black">
           <div className="container mx-auto">

@@ -155,7 +155,8 @@ return [
             'required_without' => 'Укажите E-mail или телефон.',
         ],
         'phone' => [
-            'required_without' => 'Укажите E-mail или телефон.',
+            'required' => 'Нужен Ваш телефон.',
+            'min' => 'Слишком короткий номер.'
         ],
     ],
 

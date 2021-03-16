@@ -46,6 +46,7 @@
         "@popperjs/core": "^2.6.0",
         "html-react-parser": "^1.2.4",
         "laravel-mix-tailwind": "^0.1.2",
+        "react-phone-number-input": "^3.1.17",
         "react-slick": "^0.28.0",
         "react-youtube": "^7.13.1"
     }
