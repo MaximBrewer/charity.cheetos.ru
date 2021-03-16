@@ -29,17 +29,17 @@ export default function GetPetBlock({ useTitle }) {
 
   return (
     <>
-      <div className="bg-white xl:bg-transparent" style={{ color: "#000000" }}>
+      <div className="bg-white xl:bg-transparent -mb-px" style={{ color: "#000000" }}>
         <div className="max-w-sm xl:max-w-full mx-auto xl:bg-white">
-          <div className="container mx-auto pt-8">
+          <div className={`container mx-auto ${useTitle ? `pt-8` : ``}`}>
             {useTitle ? (
-              <h2 className="mb-3 text-2xl xl:mb-6 font-bold text-center hidden xl:block">
+              <h2 className="mb-3 pt-8 text-2xl mb-6 font-bold text-center hidden xl:block">
                 ПРОТЯНИ ЛАПУ ДРУЖБЫ
               </h2>
             ) : (
               ``
             )}
-            <div className="xl:flex xl:pt-6 xl:pb-16 justify-center items-start">
+            <div className={`xl:flex xl:pb-16 ${useTitle ? `xl:pt-6` : `xl:pt-16`} justify-center items-start`}>
               <div className="xl:w-1/2">
                 <h3 className="mb-3 xl:mb-6 text-2xl font-semibold text-center xl:text-left">
                   СТАТЬ ХОЗЯИНОМ
@@ -226,6 +226,7 @@ export default function GetPetBlock({ useTitle }) {
             <div className="w-full h-px "></div>
           </div>
         </div>
+            <div className="w-full h-px "></div>
       </div>
       <div className="bg-white xl:bg-transparent mb-84 xl:mb-0">
         <div className="w-full h-px "></div>

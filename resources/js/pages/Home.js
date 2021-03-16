@@ -17,11 +17,8 @@ import GetPetBlock from "../blocks/GetPetBlock";
 function Home() {
   let { setModalBody, setShowModal } = useModal();
   return (
-    <section
-      id="home"
-      className="bg-white xl:bg-transparent mt-28 xl:mt-0 xl:text-white"
-    >
-      <div className="max-w-sm xl:max-w-full mx-auto">
+    <section id="home" className="mt-28 xl:mt-0 xl:text-white">
+      <div className="bg-white xl:bg-transparent max-w-sm xl:max-w-full mx-auto -mb-px">
         <div className="container mx-auto">
           <div className="w-full h-px"></div>
           <h2 className="text-white pt-6 pb-4 text-2xl font-bold text-center hidden xl:block text-shadow-xl">
@@ -33,8 +30,8 @@ function Home() {
             </div>
             <div className="xl:w-1/2">
               <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8 xl:text-shadow-xl text-justify">
-                Покупай пачки Cheetos “Лапы” и 1&nbsp;рубль с каждой пачки будет переведен
-                в фонды помощи бездомным животным.
+                Покупай пачки Cheetos “Лапы” и 1&nbsp;рубль с каждой пачки будет
+                переведен в фонды помощи бездомным животным.
               </p>
               <div className="my-6 xl:mt-6 xl:mb-0 flex items-center justify-center xl:justify-start">
                 <a
@@ -51,8 +48,9 @@ function Home() {
             </div>
           </div>
         </div>
+        <div className="w-full h-px"></div>
       </div>
-      <div className="xl:bg-white xl:text-black">
+      {/* <div className="xl:bg-white xl:text-black">
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <div className="xl:flex xl:py-16 justify-between items-start">
@@ -109,12 +107,12 @@ function Home() {
                       >
                         в&nbsp;школе будущих хозяев
                       </a>
-                      {/* <Link
+                      <Link
                         to="/school"
                         className="font-bold underline"
                       >
                         в&nbsp;школе будущих хозяев
-                      </Link> */}
+                      </Link>s
                     </span>
                   </li>
                 </ul>
@@ -130,7 +128,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <GetPetBlock useTitle={false} />
       <div className="xl:py-0 sm:py-16 ">
         {/* <div className="max-w-sm xl:max-w-full mx-auto xl:text-black">
@@ -194,7 +192,7 @@ function Home() {
         </div>
         <div className="w-full h-px bg-white"></div>
       </div> */}
-      <div className="xl:bg-white xl:py-16 xl:text-black">
+      <div className="bg-white pt-4 xl:py-16 xl:text-black -mb-px">
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto">
             <h2 className="text-2xl text-center font-bold mt-8 xl:mt-0 mb-4">
@@ -210,7 +208,6 @@ function Home() {
         </div>
         <div className="w-full h-px bg-white"></div>
       </div>
-      <div className="w-full h-px xl:hidden"></div>
     </section>
   );
 }
