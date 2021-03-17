@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
+import { sendToGmData } from "../Helpers";
 
 // components
 
@@ -71,6 +72,9 @@ export default function PetsSlider({ pets }) {
                     <Link
                       to={`/pet/${item.id}`}
                       className="w-64 text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
+                      onClick={() => {
+                        sendToGmData("choosePet");
+                      }}
                     >
                       Подробнее
                     </Link>
@@ -108,6 +112,9 @@ export default function PetsSlider({ pets }) {
         <Link
           to={link}
           className="w-64 text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
+          onClick={() => {
+            sendToGmData("choosePet");
+          }}
         >
           Подробнее
         </Link>

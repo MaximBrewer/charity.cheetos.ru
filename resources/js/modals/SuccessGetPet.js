@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { sendToGmData } from "../Helpers";
 import { buttonClass } from "../Classes";
 
 export default function Modal() {
+  useEffect(() => {
+    sendToGmData("successGetPet");
+  }, []);
   return (
     <>
       <h2 className="text-2xl text-center font-bold mb-4">

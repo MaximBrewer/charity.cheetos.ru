@@ -8,6 +8,7 @@ import PartnersSliderXL from "../components/PartnersSliderXL";
 import { buttonClass } from "../Classes";
 import GetPetModal from "../modals/GetPet";
 import { useModal } from "../context/modal";
+import { sendToGmData } from "../Helpers";
 
 import {
   GalleryNextIcon as ArrowNextIcon,
@@ -110,6 +111,7 @@ function Pet() {
                     <div className="my-6 flex items-center justify-center xl:justify-start">
                       <a
                         onClick={() => {
+                          sendToGmData("becomeMaster");
                           setModalBody(<GetPetModal pet_id={id} />);
                           setShowModal(true);
                           document.documentElement.scrollTop = 0;

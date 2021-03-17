@@ -30,7 +30,7 @@ function School() {
   return (
     <section id="school" className="xl:bg-white">
       <div className="w-full h-px "></div>
-      <div className="bg-white xl:bg-transparent">
+      <div className="bg-white xl:bg-transparent -mb-px">
         <div className="w-full h-px "></div>
         <div className="max-w-sm xl:max-w-full xl:mb-8 mx-auto">
           <div className="container mx-auto">
@@ -56,7 +56,7 @@ function School() {
                   return item.kind == "common" ? (
                     <div
                       key={index}
-                      className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 border-7 cursor-pointer border-yellow-800`}
+                      className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 border-7 cursor-pointer border-yellow-800 bg-yellow-800`}
                       onClick={() => {
                         setLessons((prevState) => {
                           return prevState.map((i, k) => {
@@ -64,7 +64,7 @@ function School() {
                               ...i,
                               o: !i.o && k == index,
                               y:
-                                k == index && !i.o ? (
+                                k == index && !i.o && i.video ? (
                                   <div className="my-4 rounded-3xl overflow-hidden bg-gray-300">
                                     <div
                                       id="responsiveVideoWrapper"
@@ -231,9 +231,9 @@ function School() {
               return item.kind == kind ? (
                 <div
                   key={index}
-                  className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 border-7 border-white cursor-pointer ${
+                  className={`rounded-xl xl:rounded-2xl overflow-hidden mb-4 border-7 border-white bg-white cursor-pointer ${
                     item.o ? `border-yellow-800` : `xl:border-yellow-800`
-                  }`}
+                  } xl:bg-yellow-800`}
                   onClick={() => {
                     setLessons((prevState) => {
                       return prevState.map((i, k) => {
@@ -241,7 +241,7 @@ function School() {
                           ...i,
                           o: !i.o && k == index,
                           y:
-                            k == index && !i.o ? (
+                            k == index && !i.o && i.video ? (
                               <div className="my-4 rounded-3xl overflow-hidden bg-gray-300">
                                 <div
                                   id="responsiveVideoWrapper"

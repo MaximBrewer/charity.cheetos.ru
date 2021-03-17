@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { useHistory, useParams, useLocation, Link } from "react-router-dom";
 import Parser from "html-react-parser";
 import { InstagramIcon, VkIcon, TikTokIcon, SiteIcon } from "../Icons";
+import { sendToGmData } from "../Helpers";
 
 function Partners() {
   let history = useHistory();
@@ -111,6 +112,9 @@ function Partners() {
                         href={`${item.site}`}
                         target={`_blank`}
                         className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8"
+                        onClick={() => {
+                          sendToGmData("becomeVolunteer");
+                        }}
                       >
                         Стать волонтёром
                       </a>
@@ -119,6 +123,9 @@ function Partners() {
                       <Link
                         to={`/volunteer/${item.id}#form`}
                         className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none"
+                        onClick={() => {
+                          sendToGmData("travelOrder");
+                        }}
                       >
                         Заявка на поездку в приют
                       </Link>

@@ -69,9 +69,9 @@ function App() {
                 <GuestRoute exact path="/about">
                   <About />
                 </GuestRoute>
-                {/* <GuestRoute exact path="/school">
+                <GuestRoute exact path="/school">
               <School />
-            </GuestRoute> */}
+            </GuestRoute>
                 <GuestRoute exact path="/volunteer/:id">
                   <Volunteer />
                 </GuestRoute>

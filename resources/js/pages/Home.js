@@ -41,6 +41,9 @@ function Home() {
                     buttonClass() +
                     ` w-64 xl:mb-0 xl:w-auto xl:px-12 text-xl xl:bg-yellow-800 xl:hover:bg-yellow-600 xl:text-darkOrange-900`
                   }
+                  onClick={() => {
+                    sendToGmData("doubleHelpHome");
+                  }}
                 >
                   Удвоить помощь
                 </a>

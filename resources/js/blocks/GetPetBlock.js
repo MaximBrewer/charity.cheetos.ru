@@ -3,6 +3,7 @@ import { buttonClass } from "../Classes";
 import SchoolModal from "../modals/School";
 import { useModal } from "../context/modal";
 import PetsSlider from "../components/PetsSlider";
+import { sendToGmData } from "../Helpers";
 
 // components
 
@@ -13,6 +14,18 @@ export default function GetPetBlock({ useTitle }) {
   const [catChecked, setCatChecked] = useState(false);
   const [city, setCity] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+
+  useEffect(() => {
+    if (dogChecked) {
+      sendToGmData("dogChecked");
+    }
+  }, [dogChecked]);
+
+  useEffect(() => {
+    if (dogChecked) {
+      sendToGmData("catChecked");
+    }
+  }, [catChecked]);
 
   useEffect(() => {
     setPets(
@@ -29,7 +42,10 @@ export default function GetPetBlock({ useTitle }) {
 
   return (
     <>
-      <div className="bg-white xl:bg-transparent -mb-px" style={{ color: "#000000" }}>
+      <div
+        className="bg-white xl:bg-transparent -mb-px"
+        style={{ color: "#000000" }}
+      >
         <div className="max-w-sm xl:max-w-full mx-auto xl:bg-white">
           <div className={`container mx-auto ${useTitle ? `pt-8` : ``}`}>
             {useTitle ? (
@@ -39,7 +55,11 @@ export default function GetPetBlock({ useTitle }) {
             ) : (
               ``
             )}
-            <div className={`xl:flex xl:pb-16 ${useTitle ? `xl:pt-6` : `xl:pt-16`} justify-center items-start`}>
+            <div
+              className={`xl:flex xl:pb-16 ${
+                useTitle ? `xl:pt-6` : `xl:pt-16`
+              } justify-center items-start`}
+            >
               <div className="xl:w-1/2">
                 <h3 className="mb-3 xl:mb-6 text-2xl font-semibold text-center xl:text-left">
                   СТАТЬ ХОЗЯИНОМ
@@ -226,7 +246,7 @@ export default function GetPetBlock({ useTitle }) {
             <div className="w-full h-px "></div>
           </div>
         </div>
-            <div className="w-full h-px "></div>
+        <div className="w-full h-px "></div>
       </div>
       <div className="bg-white xl:bg-transparent mb-84 xl:mb-0">
         <div className="w-full h-px "></div>

@@ -5,10 +5,9 @@ import StepsImg from "../../images/steps.png";
 import LogoImg from "../../images/logo.png";
 import FaqModal from "../modals/Faq";
 import { useModal } from "../context/modal";
-import useGTM from "@elgorditosalsero/react-gtm-hook";
+import { sendToGmData } from "../Helpers";
 
 function Header({ opened, setOpened }) {
-  const { sendDataToGTM } = useGTM();
   let { setModalBody, setShowModal, showModal } = useModal();
   let location = useLocation();
   useEffect(() => {
@@ -18,26 +17,13 @@ function Header({ opened, setOpened }) {
     window.skipScroll = false;
   }, [location]);
 
-  const sendToGmData = (data) => {
-    dataLayer.push(data);
-    sendDataToGTM(data);
-  };
-
   const menuItems = [
     {
       props: {
         to: "/",
         onClick: () => {
-          let data = {
-            event: "GAEvent",
-            eventName: "Main",
-            eventCategory: "Main",
-            eventAction: "Click",
-            eventLabel: null,
-            eventContext: null,
-            eventValue: null,
-          };
-          sendToGmData(data);
+          setOpened(false);
+          sendToGmData("Main");
         },
       },
       text: "Главная",
@@ -46,16 +32,8 @@ function Header({ opened, setOpened }) {
       props: {
         to: "/getpet",
         onClick: () => {
-          let data = {
-            event: "GAEvent",
-            eventName: "Prizes",
-            eventCategory: "Prizes",
-            eventAction: "Click",
-            eventLabel: null,
-            eventContext: null,
-            eventValue: null,
-          };
-          sendToGmData(data);
+          setOpened(false);
+          sendToGmData("menuBecomeMaster");
         },
       },
       text: "Стать хозяином",
@@ -64,16 +42,8 @@ function Header({ opened, setOpened }) {
       props: {
         to: "/partners",
         onClick: () => {
-          let data = {
-            event: "GAEvent",
-            eventName: "Products",
-            eventCategory: "Products",
-            eventAction: "Click",
-            eventLabel: null,
-            eventContext: null,
-            eventValue: null,
-          };
-          sendToGmData(data);
+          setOpened(false);
+          sendToGmData("menuPertners");
         },
       },
       text: "Фонды",
@@ -83,17 +53,8 @@ function Header({ opened, setOpened }) {
         href: window.App.data.doubleLink,
         target: "_blank",
         onClick: () => {
-          let data = {
-            event: "GAEvent",
-            eventName: "Profile",
-            eventCategory: "Profile",
-            eventAction: "Click",
-            eventLabel: null,
-            eventContext: null,
-            eventValue: null,
-          };
-          sendToGmData(data);
           setOpened(false);
+          sendToGmData("menuMagnit");
         },
       },
       text: <span>Акция в&nbsp;Магнит</span>,
@@ -102,16 +63,7 @@ function Header({ opened, setOpened }) {
     //   props: {
     //     to: "/school",
     //     onClick: () => {
-    //       let data = {
-    //         event: "GAEvent",
-    //         eventName: "Winners",
-    //         eventCategory: "Winners",
-    //         eventAction: "Click",
-    //         eventLabel: null,
-    //         eventContext: null,
-    //         eventValue: null,
-    //       };
-    //       sendToGmData(data);
+    //       sendToGmData("Winners");
     //       setOpened(false);
     //     },
     //   },
@@ -121,16 +73,8 @@ function Header({ opened, setOpened }) {
       props: {
         to: "/rules",
         onClick: () => {
-          let data = {
-            event: "GAEvent",
-            eventName: "Test",
-            eventCategory: "Test",
-            eventAction: "Click",
-            eventLabel: null,
-            eventContext: null,
-            eventValue: null,
-          };
-          sendToGmData(data);
+          setOpened(false);
+          sendToGmData("Test");
         },
       },
       text: "Правила акции",
@@ -139,16 +83,7 @@ function Header({ opened, setOpened }) {
     {
       props: {
         onClick: () => {
-          let data = {
-            event: "GAEvent",
-            eventName: "Feedback",
-            eventCategory: "Feedback",
-            eventAction: "Click",
-            eventLabel: null,
-            eventContext: null,
-            eventValue: null,
-          };
-          sendToGmData(data);
+          sendToGmData("Feedback");
           setOpened(false);
           setModalBody(<FaqModal />);
           setShowModal(true);
@@ -198,7 +133,10 @@ function Header({ opened, setOpened }) {
               <div className="items-center hidden xl:block text-base font-bold w-full">
                 <ul className="text-center pl-8 flex items-center justify-start w-full text-shadow-lg">
                   {menuItems.map((item, index) => (
-                    <li key={index} className="transform-gpu hover:scale-110 duration-100 mr-2">
+                    <li
+                      key={index}
+                      className="transform-gpu hover:scale-110 duration-100 mr-2"
+                    >
                       {item.props.to ? (
                         <NavLink
                           {...item.props}
@@ -257,13 +195,7 @@ function Header({ opened, setOpened }) {
                   {menuItems.map((item, index) => (
                     <li className="py-1" key={index}>
                       {item.props.to ? (
-                        <NavLink
-                          {...item.props}
-                          activeClassName="active"
-                          onClick={() => {
-                            setOpened(false);
-                          }}
-                        >
+                        <NavLink {...item.props} activeClassName="active">
                           {item.text}
                         </NavLink>
                       ) : (

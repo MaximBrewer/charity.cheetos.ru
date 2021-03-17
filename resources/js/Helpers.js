@@ -2,6 +2,23 @@ import React from "react";
 import YouTube from "react-youtube";
 import { buttonClass } from "./Classes";
 import FrameImg from "../images/frame.png";
+import useGTM from "@elgorditosalsero/react-gtm-hook";
+
+const { sendDataToGTM } = useGTM();
+
+export const sendToGmData = (name, category = false) => {
+  let data = {
+    event: "GAEvent",
+    eventName: name,
+    eventCategory: category ? category : name,
+    eventAction: "Click",
+    eventLabel: null,
+    eventContext: null,
+    eventValue: null,
+  };
+  sendDataToGTM(data);
+  // dataLayer.push(data);
+};
 
 export function DoubleButton({ xlYellow = false }) {
   return (
