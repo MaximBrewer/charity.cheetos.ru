@@ -57490,7 +57490,8 @@ function GetPetBlock(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "px-4 xl:px-0 pb-4 -mb-84 xl:mb-0 xl:pb-0"
   }, pets && pets.length ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PetsSlider__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    pets: pets
+    pets: pets,
+    sendToGmData: sendToGmData
   }) : ""))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-px "
   })));

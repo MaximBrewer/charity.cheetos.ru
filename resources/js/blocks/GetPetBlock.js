@@ -252,7 +252,11 @@ export default function GetPetBlock({ useTitle, sendToGmData }) {
         <div className="max-w-sm xl:max-w-full mx-auto">
           <div className="container mx-auto pt-8 xl:py-16">
             <div className="px-4 xl:px-0 pb-4 -mb-84 xl:mb-0 xl:pb-0">
-              {pets && pets.length ? <PetsSlider pets={pets} /> : ``}
+              {pets && pets.length ? (
+                <PetsSlider pets={pets} sendToGmData={sendToGmData} />
+              ) : (
+                ``
+              )}
             </div>
           </div>
         </div>
