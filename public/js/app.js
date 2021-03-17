@@ -56645,12 +56645,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-var _useGTM = Object(_elgorditosalsero_react_gtm_hook__WEBPACK_IMPORTED_MODULE_4__["default"])(),
-    sendDataToGTM = _useGTM.sendDataToGTM;
-
 var sendToGmData = function sendToGmData(name) {
   var category = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+  var _useGTM = Object(_elgorditosalsero_react_gtm_hook__WEBPACK_IMPORTED_MODULE_4__["default"])(),
+      sendDataToGTM = _useGTM.sendDataToGTM;
+
   var data = {
     event: "GAEvent",
     eventName: name,

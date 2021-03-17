@@ -4,9 +4,8 @@ import { buttonClass } from "./Classes";
 import FrameImg from "../images/frame.png";
 import useGTM from "@elgorditosalsero/react-gtm-hook";
 
-const { sendDataToGTM } = useGTM();
-
 export const sendToGmData = (name, category = false) => {
+  const { sendDataToGTM } = useGTM();
   let data = {
     event: "GAEvent",
     eventName: name,
