@@ -104,7 +104,7 @@ function Pet({ sendToGmData }) {
                     <h4 className="mb-4 xl:mb-6 text-xl text-center font-bold xl:text-left">
                       {pet.excerpt}
                     </h4>
-                    <div className="mb-4 xl:mb-16 text-lg text-justify xl:text-left markdown">
+                    <div className="mb-4 xl:mb-8 text-lg text-justify xl:text-left markdown">
                       {Parser(pet.body ?? "")}
                       <br />
                       <strong>{pet.city}, {pet.partner}</strong>
