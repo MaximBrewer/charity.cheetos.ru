@@ -59370,12 +59370,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Classes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Classes */ "./resources/js/Classes.js");
 /* harmony import */ var _elgorditosalsero_react_gtm_hook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @elgorditosalsero/react-gtm-hook */ "./node_modules/@elgorditosalsero/react-gtm-hook/dist/react-gtm-hook.esm.js");
+/* harmony import */ var _context_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/modal */ "./resources/js/context/modal.js");
+/* harmony import */ var _modals_School__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modals/School */ "./resources/js/modals/School.js");
+
+
 
 
 
 function Modal() {
   var _useGTM = Object(_elgorditosalsero_react_gtm_hook__WEBPACK_IMPORTED_MODULE_2__["default"])(),
       sendDataToGTM = _useGTM.sendDataToGTM;
+
+  var _useModal = Object(_context_modal__WEBPACK_IMPORTED_MODULE_3__["useModal"])(),
+      setModalBody = _useModal.setModalBody,
+      setShowModal = _useModal.setShowModal;
 
   var sendToGmData = function sendToGmData(name) {
     var category = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
@@ -59405,7 +59413,7 @@ function Modal() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: Object(_Classes__WEBPACK_IMPORTED_MODULE_1__["buttonClass"])() + " m-auto w-72 cursor-pointer",
     onClick: function onClick() {
-      setModalBody( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SchoolModal, null));
+      setModalBody( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modals_School__WEBPACK_IMPORTED_MODULE_4__["default"], null));
       setShowModal(true);
       document.documentElement.scrollTop = 0;
       return false;

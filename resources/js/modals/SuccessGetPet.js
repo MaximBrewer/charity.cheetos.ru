@@ -1,9 +1,12 @@
 import React, {useEffect} from "react";
 import { buttonClass } from "../Classes";
 import useGTM from "@elgorditosalsero/react-gtm-hook";
+import { useModal } from "../context/modal";
+import SchoolModal from "../modals/School";
 
 export default function Modal() {
   const { sendDataToGTM } = useGTM();
+  let { setModalBody, setShowModal } = useModal();
 
   const sendToGmData = (name, category = false) => {
     let data = {
