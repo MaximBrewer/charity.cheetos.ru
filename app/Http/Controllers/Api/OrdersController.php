@@ -41,7 +41,7 @@ class OrdersController extends Controller
             'surname' => 'required|min:3|regex:/^[a-zA-Zа-яА-ЯёЁ\s]+$/u|max:255',
             'age' => 'required|numeric|max:100',
             'email' => 'required|email:rfc,dns',
-            'city' => 'required|min:3|regex:/^[a-zA-Zа-яА-ЯёЁ\s]+$/u|max:255',
+            'city' => 'required|min:3max:255',
             'body' => 'required|min:10',
             'phone' => 'required|min:12'
         ]);
