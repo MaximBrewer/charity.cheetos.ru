@@ -21,7 +21,7 @@ export default function GetPetBlock({ useTitle, sendToGmData }) {
   }, [dogChecked]);
 
   useEffect(() => {
-    if (dogChecked) {
+    if (catChecked) {
       sendToGmData("catChecked");
     }
   }, [catChecked]);

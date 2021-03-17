@@ -57329,7 +57329,7 @@ function GetPetBlock(_ref) {
     }
   }, [dogChecked]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (dogChecked) {
+    if (catChecked) {
       sendToGmData("catChecked");
     }
   }, [catChecked]);
