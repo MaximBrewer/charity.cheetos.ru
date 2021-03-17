@@ -59391,7 +59391,7 @@ function Modal() {
     sendDataToGTM(data); // dataLayer.push(data);
   };
 
-  useEffect(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     sendToGmData("successGetPet");
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -59448,7 +59448,7 @@ function Modal() {
     sendDataToGTM(data); // dataLayer.push(data);
   };
 
-  useEffect(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     sendToGmData("successTravel");
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {

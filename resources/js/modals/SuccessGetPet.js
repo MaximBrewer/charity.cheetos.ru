@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { buttonClass } from "../Classes";
 import useGTM from "@elgorditosalsero/react-gtm-hook";
 

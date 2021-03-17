@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import useGTM from "@elgorditosalsero/react-gtm-hook";
 
 export default function Modal() {
