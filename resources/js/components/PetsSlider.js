@@ -2,11 +2,10 @@ import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
-import { sendToGmData } from "../Helpers";
 
 // components
 
-export default function PetsSlider({ pets }) {
+export default function PetsSlider({ pets, sendToGmData }) {
   const [isMobile, setIsMobile] = useState(window.outerWidth < 1280);
 
   useLayoutEffect(() => {

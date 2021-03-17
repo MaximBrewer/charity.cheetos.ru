@@ -2,9 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { useHistory, useParams, useLocation, Link } from "react-router-dom";
 import Parser from "html-react-parser";
 import { InstagramIcon, VkIcon, TikTokIcon, SiteIcon } from "../Icons";
-import { sendToGmData } from "../Helpers";
 
-function Partners() {
+function Partners({ sendToGmData }) {
   let history = useHistory();
   let location = useLocation();
 
@@ -23,9 +22,7 @@ function Partners() {
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
-          <h2
-            className={`text-2xl font-bold text-center mt-8 hidden xl:block`}
-          >
+          <h2 className={`text-2xl font-bold text-center mt-8 hidden xl:block`}>
             ПРОТЯНИ ЛАПУ ДРУЖБЫ
           </h2>
           <h2

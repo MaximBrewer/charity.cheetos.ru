@@ -3,11 +3,10 @@ import { buttonClass } from "../Classes";
 import SchoolModal from "../modals/School";
 import { useModal } from "../context/modal";
 import PetsSlider from "../components/PetsSlider";
-import { sendToGmData } from "../Helpers";
 
 // components
 
-export default function GetPetBlock({ useTitle }) {
+export default function GetPetBlock({ useTitle, sendToGmData }) {
   let { setModalBody, setShowModal } = useModal();
   const [pets, setPets] = useState(window.App.data.pets);
   const [dogChecked, setDogChecked] = useState(false);

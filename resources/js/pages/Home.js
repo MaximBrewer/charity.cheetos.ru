@@ -14,7 +14,7 @@ import SchoolModal from "../modals/School";
 import { useModal } from "../context/modal";
 import GetPetBlock from "../blocks/GetPetBlock";
 
-function Home() {
+function Home({ sendToGmData }) {
   let { setModalBody, setShowModal } = useModal();
   return (
     <section id="home" className="mt-28 xl:mt-0 xl:text-white">
@@ -132,7 +132,7 @@ function Home() {
           </div>
         </div>
       </div> */}
-      <GetPetBlock useTitle={false} />
+      <GetPetBlock useTitle={false} sendToGmData={sendToGmData} />
       <div className="xl:py-0 sm:py-16 ">
         {/* <div className="max-w-sm xl:max-w-full mx-auto xl:text-black">
           <div className="container mx-auto">

@@ -5,9 +5,8 @@ import StepsImg from "../../images/steps.png";
 import LogoImg from "../../images/logo.png";
 import FaqModal from "../modals/Faq";
 import { useModal } from "../context/modal";
-import { sendToGmData } from "../Helpers";
 
-function Header({ opened, setOpened }) {
+function Header({ opened, setOpened, sendToGmData }) {
   let { setModalBody, setShowModal, showModal } = useModal();
   let location = useLocation();
   useEffect(() => {

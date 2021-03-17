@@ -20,12 +20,28 @@ import useGTM from "@elgorditosalsero/react-gtm-hook";
 
 function App() {
   let { initializing } = useAuth();
-  const { init, UseGTMHookProvider } = useGTM();
+  const { init, UseGTMHookProvider, sendDataToGTM } = useGTM();
   const gtmParams = {
-    id: "GTM-KQWGWDZ"
+    id: "GTM-KQWGWDZ",
   };
 
   useEffect(() => init(gtmParams), []);
+
+  const rest = {
+    sendToGmData: (name, category = false) => {
+      let data = {
+        event: "GAEvent",
+        eventName: name,
+        eventCategory: category ? category : name,
+        eventAction: "Click",
+        eventLabel: null,
+        eventContext: null,
+        eventValue: null,
+      };
+      sendDataToGTM(data);
+      // dataLayer.push(data);
+    },
+  };
 
   return (
     <UseGTMHookProvider>
@@ -40,49 +56,49 @@ function App() {
             <ModalProvider>
               <Switch>
                 <GuestRoute exact path="/">
-                  <Home />
+                  <Home {...rest} />
                 </GuestRoute>
                 <GuestRoute exact path="/getpet">
-                  <GetPet />
+                  <GetPet {...rest} />
                 </GuestRoute>
                 <GuestRoute exact path="/pet/:id">
-                  <Pet />
+                  <Pet {...rest} />
                 </GuestRoute>
                 <GuestRoute exact path="/rules">
-                  <Rules />
+                  <Rules {...rest} />
                 </GuestRoute>
                 <GuestRoute exact path="/faq">
                   <Redirect to="/faq/charity" />
                 </GuestRoute>
                 <GuestRoute exact path="/faq/charity">
-                  <Faq category="charity" />
+                  <Faq {...rest} category="charity" />
                 </GuestRoute>
                 <GuestRoute exact path="/faq/dog">
-                  <Faq category="dog" />
+                  <Faq {...rest} category="dog" />
                 </GuestRoute>
                 <GuestRoute exact path="/faq/cat">
-                  <Faq category="cat" />
+                  <Faq {...rest} category="cat" />
                 </GuestRoute>
                 <GuestRoute exact path="/faq/stock">
-                  <Faq category="stock" />
+                  <Faq {...rest} category="stock" />
                 </GuestRoute>
                 <GuestRoute exact path="/about">
-                  <About />
+                  <About {...rest} />
                 </GuestRoute>
                 <GuestRoute exact path="/school">
-              <School />
-            </GuestRoute>
+                  <School {...rest} />
+                </GuestRoute>
                 <GuestRoute exact path="/volunteer/:id">
-                  <Volunteer />
+                  <Volunteer {...rest} />
                 </GuestRoute>
                 <GuestRoute exact path="/news">
-                  <News />
+                  <News {...rest} />
                 </GuestRoute>
                 <GuestRoute exact path="/partners">
-                  <Partners />
+                  <Partners {...rest} />
                 </GuestRoute>
                 <GuestRoute>
-                  <NotFound />
+                  <NotFound {...rest} />
                 </GuestRoute>
               </Switch>
             </ModalProvider>

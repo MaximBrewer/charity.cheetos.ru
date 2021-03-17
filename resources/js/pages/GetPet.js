@@ -10,12 +10,12 @@ import GetPetBlock from "../blocks/GetPetBlock";
 import SchoolModal from "../modals/School";
 import { useModal } from "../context/modal";
 
-function GetPet() {
+function GetPet({ sendToGmData }) {
   let { setModalBody, setShowModal } = useModal();
 
   return (
     <section id="about">
-      <GetPetBlock useTitle={true} />
+      <GetPetBlock useTitle={true} sendToGmData={sendToGmData}/>
       <div className="bg-white mb-72 xl:mb-0 xl:pt-20 xl:pb-10">
         <div className="w-full h-px "></div>
         <div className="-mb-72 max-w-sm xl:max-w-full xl:mb-0 mx-auto">

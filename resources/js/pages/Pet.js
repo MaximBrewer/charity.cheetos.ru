@@ -8,14 +8,13 @@ import PartnersSliderXL from "../components/PartnersSliderXL";
 import { buttonClass } from "../Classes";
 import GetPetModal from "../modals/GetPet";
 import { useModal } from "../context/modal";
-import { sendToGmData } from "../Helpers";
 
 import {
   GalleryNextIcon as ArrowNextIcon,
   GalleryPrevIcon as ArrowPrevIcon,
 } from "../Icons";
 
-function Pet() {
+function Pet({ sendToGmData }) {
   const { id } = useParams();
   let { setModalBody, setShowModal } = useModal();
 

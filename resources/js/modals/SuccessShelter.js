@@ -1,7 +1,23 @@
 import React from "react";
-import { sendToGmData } from "../Helpers";
+import useGTM from "@elgorditosalsero/react-gtm-hook";
 
 export default function Modal() {
+  const { sendDataToGTM } = useGTM();
+
+  const sendToGmData = (name, category = false) => {
+    let data = {
+      event: "GAEvent",
+      eventName: name,
+      eventCategory: category ? category : name,
+      eventAction: "Click",
+      eventLabel: null,
+      eventContext: null,
+      eventValue: null,
+    };
+    sendDataToGTM(data);
+    // dataLayer.push(data);
+  };
+
   useEffect(() => {
     sendToGmData("successTravel");
   }, []);

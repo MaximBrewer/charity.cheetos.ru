@@ -4,6 +4,7 @@ import LogoImg from "../../images/logo.png";
 import ChestorImg from "../../images/chestor.png";
 import ChestorImgXl from "../../images/chestor-xl.png";
 import { InstagramIcon, VkIcon, TikTokIcon } from "../Icons";
+import useGTM from "@elgorditosalsero/react-gtm-hook";
 
 function Links({ className = "" }) {
   return (
@@ -32,6 +33,7 @@ function Logo({ className = "" }) {
   );
 }
 function Social({ className = "" }) {
+  const { sendDataToGTM } = useGTM();
   const sendToGmData = (data) => {
     dataLayer.push(data);
     sendDataToGTM(data);

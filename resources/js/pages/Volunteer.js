@@ -9,9 +9,8 @@ import LoveImg from "../../images/love.jpeg";
 import { buttonClass } from "../Classes";
 import ShelterForm from "../components/ShelterForm";
 import { ArrowNextIcon, ArrowPrevIcon } from "../Icons";
-import { sendToGmData } from "../Helpers";
 
-function Volunteer() {
+function Volunteer({ sendToGmData }) {
   const { id } = useParams();
   let history = useHistory();
   let location = useLocation();
@@ -68,9 +67,7 @@ function Volunteer() {
       <div className="w-full h-px"></div>
       <div className="max-w-sm xl:max-w-full mx-auto">
         <div className="container mx-auto">
-          <h2
-            className={`text-2xl font-bold text-center mt-8 hidden xl:block`}
-          >
+          <h2 className={`text-2xl font-bold text-center mt-8 hidden xl:block`}>
             ПРОТЯНИ ЛАПУ ДРУЖБЫ
           </h2>
           <h2
