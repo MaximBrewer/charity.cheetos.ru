@@ -60292,7 +60292,7 @@ function Pet(_ref) {
     className: "mb-4 xl:mb-6 text-xl text-center font-bold xl:text-left"
   }, pet.excerpt), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mb-4 xl:mb-16 text-lg text-justify xl:text-left markdown"
-  }, Object(html_react_parser__WEBPACK_IMPORTED_MODULE_2__["default"])((_pet$body = pet.body) !== null && _pet$body !== void 0 ? _pet$body : "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, Object(html_react_parser__WEBPACK_IMPORTED_MODULE_2__["default"])((_pet$body = pet.body) !== null && _pet$body !== void 0 ? _pet$body : ""), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, pet.city, ", ", pet.partner)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "my-6 flex items-center justify-center xl:justify-start"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     onClick: function onClick() {

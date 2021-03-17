@@ -76,6 +76,63 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('common-lessons/relation', \Voyager\CommonLessonsController::class . '@relation')->name('voyager.common-lessons.relation');
         Route::post('common-lessons/remove', \Voyager\CommonLessonsController::class . '@remove_media')->name('voyager.common-lessons.media.remove');
 
+
+        Route::get('new-orders', \Voyager\NewOrdersController::class . '@index')->name('voyager.new-orders.index');
+        Route::get('new-orders/create', \Voyager\NewOrdersController::class . '@create')->name('voyager.new-orders.create');
+        Route::post('new-orders', \Voyager\NewOrdersController::class . '@store')->name('voyager.new-orders.store');
+        Route::get('new-orders/{id}', \Voyager\NewOrdersController::class . '@show')->name('voyager.new-orders.show');
+        Route::get('new-orders/{id}/edit', \Voyager\NewOrdersController::class . '@edit')->name('voyager.new-orders.edit');
+        Route::put('new-orders/{id}', \Voyager\NewOrdersController::class . '@update')->name('voyager.new-orders.update');
+        Route::delete('new-orders/{id}', \Voyager\NewOrdersController::class . '@destroy')->name('voyager.new-orders.destroy');
+        Route::get('new-orders/order', \Voyager\NewOrdersController::class . '@order')->name('voyager.new-orders.order');
+        Route::post('new-orders/action', \Voyager\NewOrdersController::class . '@action')->name('voyager.new-orders.action');
+        Route::post('new-orders/order', \Voyager\NewOrdersController::class . '@update_order')->name('voyager.new-orders.update_order');
+        Route::get('new-orders/{id}/restore', \Voyager\NewOrdersController::class . '@restore')->name('voyager.new-orders.restore');
+        Route::get('new-orders/relation', \Voyager\NewOrdersController::class . '@relation')->name('voyager.new-orders.relation');
+        Route::post('new-orders/remove', \Voyager\NewOrdersController::class . '@remove_media')->name('voyager.new-orders.media.remove');
+
+        Route::get('canceled-orders', \Voyager\CanceledOrdersController::class . '@index')->name('voyager.canceled-orders.index');
+        Route::get('canceled-orders/create', \Voyager\CanceledOrdersController::class . '@create')->name('voyager.canceled-orders.create');
+        Route::post('canceled-orders', \Voyager\CanceledOrdersController::class . '@store')->name('voyager.canceled-orders.store');
+        Route::get('canceled-orders/{id}', \Voyager\CanceledOrdersController::class . '@show')->name('voyager.canceled-orders.show');
+        Route::get('canceled-orders/{id}/edit', \Voyager\CanceledOrdersController::class . '@edit')->name('voyager.canceled-orders.edit');
+        Route::put('canceled-orders/{id}', \Voyager\CanceledOrdersController::class . '@update')->name('voyager.canceled-orders.update');
+        Route::delete('canceled-orders/{id}', \Voyager\CanceledOrdersController::class . '@destroy')->name('voyager.canceled-orders.destroy');
+        Route::get('canceled-orders/order', \Voyager\CanceledOrdersController::class . '@order')->name('voyager.canceled-orders.order');
+        Route::post('canceled-orders/action', \Voyager\CanceledOrdersController::class . '@action')->name('voyager.canceled-orders.action');
+        Route::post('canceled-orders/order', \Voyager\CanceledOrdersController::class . '@update_order')->name('voyager.canceled-orders.update_order');
+        Route::get('canceled-orders/{id}/restore', \Voyager\CanceledOrdersController::class . '@restore')->name('voyager.canceled-orders.restore');
+        Route::get('canceled-orders/relation', \Voyager\CanceledOrdersController::class . '@relation')->name('voyager.canceled-orders.relation');
+        Route::post('canceled-orders/remove', \Voyager\CanceledOrdersController::class . '@remove_media')->name('voyager.canceled-orders.media.remove');
+
+        Route::get('finished-orders', \Voyager\FinishedOrdersController::class . '@index')->name('voyager.finished-orders.index');
+        Route::get('finished-orders/create', \Voyager\FinishedOrdersController::class . '@create')->name('voyager.finished-orders.create');
+        Route::post('finished-orders', \Voyager\FinishedOrdersController::class . '@store')->name('voyager.finished-orders.store');
+        Route::get('finished-orders/{id}', \Voyager\FinishedOrdersController::class . '@show')->name('voyager.finished-orders.show');
+        Route::get('finished-orders/{id}/edit', \Voyager\FinishedOrdersController::class . '@edit')->name('voyager.finished-orders.edit');
+        Route::put('finished-orders/{id}', \Voyager\FinishedOrdersController::class . '@update')->name('voyager.finished-orders.update');
+        Route::delete('finished-orders/{id}', \Voyager\FinishedOrdersController::class . '@destroy')->name('voyager.finished-orders.destroy');
+        Route::get('finished-orders/order', \Voyager\FinishedOrdersController::class . '@order')->name('voyager.finished-orders.order');
+        Route::post('finished-orders/action', \Voyager\FinishedOrdersController::class . '@action')->name('voyager.finished-orders.action');
+        Route::post('finished-orders/order', \Voyager\FinishedOrdersController::class . '@update_order')->name('voyager.finished-orders.update_order');
+        Route::get('finished-orders/{id}/restore', \Voyager\FinishedOrdersController::class . '@restore')->name('voyager.finished-orders.restore');
+        Route::get('finished-orders/relation', \Voyager\FinishedOrdersController::class . '@relation')->name('voyager.finished-orders.relation');
+        Route::post('finished-orders/remove', \Voyager\FinishedOrdersController::class . '@remove_media')->name('voyager.finished-orders.media.remove');
+
+        Route::get('confirmed-orders', \Voyager\ConfirmedOrdersController::class . '@index')->name('voyager.confirmed-orders.index');
+        Route::get('confirmed-orders/create', \Voyager\ConfirmedOrdersController::class . '@create')->name('voyager.confirmed-orders.create');
+        Route::post('confirmed-orders', \Voyager\ConfirmedOrdersController::class . '@store')->name('voyager.confirmed-orders.store');
+        Route::get('confirmed-orders/{id}', \Voyager\ConfirmedOrdersController::class . '@show')->name('voyager.confirmed-orders.show');
+        Route::get('confirmed-orders/{id}/edit', \Voyager\ConfirmedOrdersController::class . '@edit')->name('voyager.confirmed-orders.edit');
+        Route::put('confirmed-orders/{id}', \Voyager\ConfirmedOrdersController::class . '@update')->name('voyager.confirmed-orders.update');
+        Route::delete('confirmed-orders/{id}', \Voyager\ConfirmedOrdersController::class . '@destroy')->name('voyager.confirmed-orders.destroy');
+        Route::get('confirmed-orders/order', \Voyager\ConfirmedOrdersController::class . '@order')->name('voyager.confirmed-orders.order');
+        Route::post('confirmed-orders/action', \Voyager\ConfirmedOrdersController::class . '@action')->name('voyager.confirmed-orders.action');
+        Route::post('confirmed-orders/order', \Voyager\ConfirmedOrdersController::class . '@update_order')->name('voyager.confirmed-orders.update_order');
+        Route::get('confirmed-orders/{id}/restore', \Voyager\ConfirmedOrdersController::class . '@restore')->name('voyager.confirmed-orders.restore');
+        Route::get('confirmed-orders/relation', \Voyager\ConfirmedOrdersController::class . '@relation')->name('voyager.confirmed-orders.relation');
+        Route::post('confirmed-orders/remove', \Voyager\ConfirmedOrdersController::class . '@remove_media')->name('voyager.confirmed-orders.media.remove');
+
         event(new RoutingAdminAfter());
     });
 });

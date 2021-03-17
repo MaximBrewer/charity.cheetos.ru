@@ -106,6 +106,8 @@ function Pet({ sendToGmData }) {
                     </h4>
                     <div className="mb-4 xl:mb-16 text-lg text-justify xl:text-left markdown">
                       {Parser(pet.body ?? "")}
+                      <br />
+                      <strong>{pet.city}, {pet.partner}</strong>
                     </div>
                     <div className="my-6 flex items-center justify-center xl:justify-start">
                       <a

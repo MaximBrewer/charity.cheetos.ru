@@ -15,4 +15,9 @@ class Pet extends Model
     {
         return $this->belongsTo(Partner::class, 'partner_id', 'id');
     }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city_id', 'id');
+    }
 }

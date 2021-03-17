@@ -23,7 +23,9 @@ class Pet extends JsonResource
             'excerpt' => $this->excerpt,
             'body' => $this->body,
             'city_id' => $this->city_id,
+            'city' => $this->city->title,
             'partner_id' => $this->partner_id,
+            'partner' => $this->partner->title,
             'image' => Voyager::image($this->thumbnail('medium')),
             'images' => array_map(function ($image) {
                 return Voyager::image($this->getThumbnail($image, 'medium'));
