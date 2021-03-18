@@ -24,8 +24,9 @@ function App() {
   const gtmParams = {
     id: "GTM-KQWGWDZ",
   };
-
-  useEffect(() => init(gtmParams), []);
+  useEffect(() => {
+    init(gtmParams);
+  }, []);
 
   const rest = {
     sendToGmData: (name, category = false) => {

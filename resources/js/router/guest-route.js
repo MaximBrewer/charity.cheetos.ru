@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -25,6 +25,15 @@ function GuestRoute({ component: Component, title, ...rest }) {
     sendDataToGTM(data);
     // dataLayer.push(data);
   };
+
+  useEffect(() => {
+    console.log(9)
+    sendDataToGTM({
+      event: "gtm",
+      eventName: "DomReady",
+      eventCategory: "DomReady",
+    });
+  }, []);
 
   return (
     <div className="overflow-hidden relative flex flex-col min-h-screen">
