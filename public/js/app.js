@@ -61005,13 +61005,11 @@ function GuestRoute(_ref) {
     sendDataToGTM(data); // dataLayer.push(data);
   };
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    console.log(9);
-    sendDataToGTM({
-      event: "gtm",
-      eventName: "DomReady",
-      eventCategory: "DomReady"
-    });
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {// sendDataToGTM({
+    //   event: "gtm",
+    //   eventName: "DomReady",
+    //   eventCategory: "DomReady",
+    // });
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "overflow-hidden relative flex flex-col min-h-screen"
