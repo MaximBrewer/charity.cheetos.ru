@@ -8,6 +8,7 @@ use TCG\Voyager\Events\Routing;
 use TCG\Voyager\Events\RoutingAdmin;
 use TCG\Voyager\Events\RoutingAdminAfter;
 use TCG\Voyager\Events\RoutingAfter;
+use Maatwebsite\Excel\Facades\Excel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +34,18 @@ Route::group(['prefix' => 'admin'], function () {
         // GET	/comments/{comment}/edit	edit	comments.edit
         // PUT/PATCH	/comments/{comment}	update	comments.update
         // DELETE	/comments/{comment}	destroy	comments.destroy
+
+        Route::get('xls/orders', function () {
+            return Excel::download(new \App\Exports\OrdersExport, 'orders.xlsx');
+        });
+
+        Route::get('xls/trips', function () {
+            return Excel::download(new \App\Exports\TripsExport, 'trips.xlsx');
+        });
+
+        Route::get('xls/questions', function () {
+            return Excel::download(new \App\Exports\FaqsExport, 'questions.xlsx');
+        });
 
         Route::get('cat-lessons', \Voyager\CatLessonsController::class . '@index')->name('voyager.cat-lessons.index');
         Route::get('cat-lessons/create', \Voyager\CatLessonsController::class . '@create')->name('voyager.cat-lessons.create');
@@ -136,5 +149,6 @@ Route::group(['prefix' => 'admin'], function () {
         event(new RoutingAdminAfter());
     });
 });
+
 
 Route::get('/{uri?}', '\App\Http\Controllers\SpaController@index')->where('uri', '(.*)');
