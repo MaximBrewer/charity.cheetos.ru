@@ -27,11 +27,11 @@ function GuestRoute({ component: Component, title, ...rest }) {
   };
 
   useEffect(() => {
-    // sendDataToGTM({
-    //   event: "gtm",
-    //   eventName: "DomReady",
-    //   eventCategory: "DomReady",
-    // });
+    sendDataToGTM({
+      event: "gtm",
+      eventName: "DomReady",
+      eventCategory: "DomReady",
+    });
   }, []);
 
   return (
