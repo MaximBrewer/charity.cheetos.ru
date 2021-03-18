@@ -6,7 +6,7 @@ export default function Modal() {
   return (
     <>
       <h2 className="text-2xl text-center font-bold mb-2">
-      Школа будущих хозяев будет доступна с 16.03.2021
+      Школа будущих хозяев будет доступна с 23.03.2021
       </h2>
       <div className="mb-2">
         <Link to="/" className={buttonClass() + " text-lg"}>

@@ -59323,7 +59323,7 @@ __webpack_require__.r(__webpack_exports__);
 function Modal() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "text-2xl text-center font-bold mb-2"
-  }, "\u0428\u043A\u043E\u043B\u0430 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0445\u043E\u0437\u044F\u0435\u0432 \u0431\u0443\u0434\u0435\u0442 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430 \u0441 16.03.2021"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "\u0428\u043A\u043E\u043B\u0430 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0445\u043E\u0437\u044F\u0435\u0432 \u0431\u0443\u0434\u0435\u0442 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430 \u0441 23.03.2021"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
