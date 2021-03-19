@@ -194,3 +194,26 @@
     list-style: decimal;
   }
 }
+
+.bg-yellow-900 {
+  .PhoneInputInput {
+    background-color: transparent !important;
+    outline: none !important;
+    border-width: 0 !important;
+    &:focus {
+      outline: none !important;
+    }
+    &::-moz-placeholder {
+      color: currentColor;
+      text-indent: 2.2rem;
+    }
+    &:-ms-input-placeholder {
+      color: currentColor;
+      text-indent: 2.2rem;
+    }
+    &::placeholder {
+      color: currentColor;
+      text-indent: 2.2rem;
+    }
+  }
+}

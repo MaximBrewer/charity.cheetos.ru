@@ -8,9 +8,12 @@ import { useModal } from "../context/modal";
 import useGTM from "@elgorditosalsero/react-gtm-hook";
 
 function GuestRoute({ component: Component, title, ...rest }) {
+  
   const [opened, setOpened] = React.useState(false);
   let { showModal } = useModal();
   const { sendDataToGTM } = useGTM();
+
+  console.log({ ...rest });
 
   const sendToGmData = (name, category = false) => {
     let data = {

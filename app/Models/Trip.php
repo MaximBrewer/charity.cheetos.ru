@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Trip extends Model
 {
     use HasFactory;
-    protected $fillable = ['quantity', 'partner_id', 'email', 'city_id'];
+    protected $fillable = ['quantity', 'partner_id', 'email', 'city_id', 'phone'];
 
     public function partner()
     {

@@ -38809,6 +38809,31 @@ video {
   list-style: decimal;
 }
 
+.bg-yellow-900 .PhoneInputInput {
+  background-color: transparent !important;
+  outline: none !important;
+  border-width: 0 !important;
+}
+
+.bg-yellow-900 .PhoneInputInput:focus {
+  outline: none !important;
+}
+
+.bg-yellow-900 .PhoneInputInput::-moz-placeholder {
+  color: currentColor;
+  text-indent: 2.2rem;
+}
+
+.bg-yellow-900 .PhoneInputInput:-ms-input-placeholder {
+  color: currentColor;
+  text-indent: 2.2rem;
+}
+
+.bg-yellow-900 .PhoneInputInput::placeholder {
+  color: currentColor;
+  text-indent: 2.2rem;
+}
+
 @media (min-width: 1280px) {
   .xl\:container {
     width: 100%;

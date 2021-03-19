@@ -5,6 +5,9 @@ import { useModal } from "../context/modal";
 import SuccessShelterModal from "../modals/SuccessShelter";
 import { buttonClass } from "../Classes";
 import { OkIcon, SelectArrowIcon } from "../Icons";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+import ru from "react-phone-number-input/locale/ru";
 
 // components
 
@@ -13,38 +16,28 @@ export default function ShelterForm({ partner_id }) {
 
   let email = useInputValue("email");
   let quantity = useInputValue("quantity");
-
-  const cityEl = useRef(null);
+  let phone = useInputValue("phone");
+  let city = useInputValue("city");
 
   const [citySelectOpen, setCitySelectOpen] = useState(false);
-  const [city, setCity] = useState(null);
-
-  const handleClickOutside = (e) => {
-    if (cityEl.current && !cityEl.current.contains(event.target)) {
-      alert("You clicked outside of me!");
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     client("/api/trip", {
       body: {
-        city_id: city ? city.id : null,
+        city: city.value ? city.value : "",
         partner_id: partner_id,
         email: email.value ? email.value : "",
+        phone: phone.value ? phone.value : "",
         quantity: quantity.value ? quantity.value : "",
       },
     })
       .then((data) => {
-        setCity(null);
         email.setValue("");
         quantity.setValue("");
+        phone.setValue("");
+        city.setValue("");
         setModalBody(<SuccessShelterModal />);
         setShowModal(true);
         document.documentElement.scrollTop = 0;
@@ -52,11 +45,17 @@ export default function ShelterForm({ partner_id }) {
       .catch((error) => {
         console.log(error);
         error.json().then(({ errors }) => {
-          [email, quantity].forEach(({ parseServerError }) =>
+          [email, quantity, phone, city].forEach(({ parseServerError }) =>
             parseServerError(errors)
           );
         });
       });
+  };
+
+  const getCityTitle = (id) => {
+    for (let city of window.App.data.cities) {
+      if (city.id == id) return city.title;
+    }
   };
 
   return (
@@ -65,19 +64,17 @@ export default function ShelterForm({ partner_id }) {
         <div className="flex flex-wrap flex-col">
           <div className="w-full my-2">
             <div className={`md-input-box`}>
-              <div className="mt-1 relative" ref={cityEl}>
+              <div className="mt-1 relative z-5">
                 <div
                   onClick={() => setCitySelectOpen(true)}
                   aria-haspopup="listbox"
                   aria-expanded="true"
                   aria-labelledby="listbox-label"
-                  className={`focus:outline-none text-xl text-center placeholder-current bg-yellow-900 py-3 px-4 rounded-2xl border-transparent border w-full ${
-                    quantity.error ? "border-red-500" : ""
-                  }`}
+                  className={`focus:outline-none text-xl text-center placeholder-current bg-yellow-900 py-3 px-4 rounded-2xl border-transparent border w-full`}
                 >
                   <span className="flex items-center justify-center">
                     <span className="block truncate">
-                      {city ? city.title : "Город"}
+                      {city.value ? getCityTitle(city.value) : "Город"}
                     </span>
                   </span>
                   <span className="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
@@ -102,7 +99,9 @@ export default function ShelterForm({ partner_id }) {
                           key={index}
                           onClick={() => {
                             setCitySelectOpen(false);
-                            setCity(item);
+                            city.bind.onChange({
+                              currentTarget: { value: item.id },
+                            });
                           }}
                           id="listbox-item-0"
                           role="option"
@@ -123,7 +122,7 @@ export default function ShelterForm({ partner_id }) {
                 </div>
               </div>
             </div>
-            {/* {city.error && <p className="text-red-500 text-xs">{city.error}</p>} */}
+            {city.error && <p className="text-red-500 text-xs">{city.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
@@ -143,6 +142,34 @@ export default function ShelterForm({ partner_id }) {
             </div>
             {quantity.error && (
               <p className="text-red-500 text-xs">{quantity.error}</p>
+            )}
+          </div>
+        </div>
+        <div className="flex flex-wrap flex-col">
+          <div className="w-full my-2">
+            <div className={`md-input-box`}>
+              <PhoneInput
+                className={`focus:outline-none text-xl text-center placeholder-current bg-yellow-900 py-3 px-4 rounded-2xl border-transparent border w-full ${
+                  phone.error ? "border-red-500" : ""
+                }`}
+                country="RU"
+                defaultCountry="RU"
+                labels={ru}
+                id="phone"
+                name="phone"
+                required
+                placeholder="Телефон"
+                value={phone.bind.value}
+                onChange={(value) => {
+                  phone.bind.onChange({
+                    target: { value: value },
+                    currentTarget: { value: value },
+                  });
+                }}
+              />
+            </div>
+            {phone.error && (
+              <p className="text-red-500 text-xs">{phone.error}</p>
             )}
           </div>
         </div>

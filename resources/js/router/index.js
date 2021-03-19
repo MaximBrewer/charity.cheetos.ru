@@ -20,10 +20,12 @@ import useGTM from "@elgorditosalsero/react-gtm-hook";
 
 function App() {
   let { initializing } = useAuth();
+  
   const { init, UseGTMHookProvider, sendDataToGTM } = useGTM();
   const gtmParams = {
     id: "GTM-KQWGWDZ",
   };
+
   useEffect(() => {
     init(gtmParams);
   }, []);

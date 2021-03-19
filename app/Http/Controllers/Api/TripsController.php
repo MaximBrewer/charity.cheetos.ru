@@ -39,11 +39,20 @@ class TripsController extends Controller
         $request->validate([
             'quantity' => 'required|numeric|max:100',
             'email' => 'required|email:rfc,dns',
-            'city_id' => 'required',
-            // 'partner_id' => 'required|min:10'
+            'city' => 'required',
+            'phone' => 'required|min:12',
+            'partner_id' => 'required'
+        ], [
+            'city.required' => 'Выберите город.',
+            'quantity.required' => 'Укажите кол-во человек.',
+            'email.required' => 'Укажите E-mail.',
+            'email.email' => 'Укажите правильный E-mail.',
         ]);
+        
+        $attrs = $request->all();
+        $attrs['city_id'] = $attrs['city'];
 
-        Trip::create($request->all());
+        Trip::create($attrs);
         return ['message' => 'Мы получили Ваше сообщение, до скорейшей обратной связи!'];
     }
 
