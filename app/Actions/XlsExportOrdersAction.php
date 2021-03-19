@@ -38,7 +38,7 @@ class XlsExportOrdersAction extends AbstractAction
 
     public function shouldActionDisplayOnDataType()
     {
-        return $this->dataType->slug == 'orders';
+        return $this->dataType->model_name == 'App\Models\Order';
     }
 
     public function getDefaultRoute()
