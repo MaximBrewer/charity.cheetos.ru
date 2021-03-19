@@ -16,7 +16,7 @@
                 <td>{{ $trip->city->title }}</td>
                 <td>{{ $trip->quantity }}</td>
                 <td>{{ $trip->email }}</td>
-                <td>{{ $order->phone }}</td>
+                <td>{{ $trip->phone }}</td>
                 <td>{{ \Illuminate\Support\Carbon::parse($trip->created_at)->format('d.m.Y H:i') }}</td>
             </tr>
         @endforeach
