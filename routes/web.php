@@ -132,19 +132,19 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('finished-orders/relation', \Voyager\FinishedOrdersController::class . '@relation')->name('voyager.finished-orders.relation');
         Route::post('finished-orders/remove', \Voyager\FinishedOrdersController::class . '@remove_media')->name('voyager.finished-orders.media.remove');
 
-        Route::get('confirmed-orders', \Voyager\ConfirmedOrdersController::class . '@index')->name('voyager.confirmed-orders.index');
-        Route::get('confirmed-orders/create', \Voyager\ConfirmedOrdersController::class . '@create')->name('voyager.confirmed-orders.create');
-        Route::post('confirmed-orders', \Voyager\ConfirmedOrdersController::class . '@store')->name('voyager.confirmed-orders.store');
-        Route::get('confirmed-orders/{id}', \Voyager\ConfirmedOrdersController::class . '@show')->name('voyager.confirmed-orders.show');
-        Route::get('confirmed-orders/{id}/edit', \Voyager\ConfirmedOrdersController::class . '@edit')->name('voyager.confirmed-orders.edit');
-        Route::put('confirmed-orders/{id}', \Voyager\ConfirmedOrdersController::class . '@update')->name('voyager.confirmed-orders.update');
-        Route::delete('confirmed-orders/{id}', \Voyager\ConfirmedOrdersController::class . '@destroy')->name('voyager.confirmed-orders.destroy');
-        Route::get('confirmed-orders/order', \Voyager\ConfirmedOrdersController::class . '@order')->name('voyager.confirmed-orders.order');
-        Route::post('confirmed-orders/action', \Voyager\ConfirmedOrdersController::class . '@action')->name('voyager.confirmed-orders.action');
-        Route::post('confirmed-orders/order', \Voyager\ConfirmedOrdersController::class . '@update_order')->name('voyager.confirmed-orders.update_order');
-        Route::get('confirmed-orders/{id}/restore', \Voyager\ConfirmedOrdersController::class . '@restore')->name('voyager.confirmed-orders.restore');
-        Route::get('confirmed-orders/relation', \Voyager\ConfirmedOrdersController::class . '@relation')->name('voyager.confirmed-orders.relation');
-        Route::post('confirmed-orders/remove', \Voyager\ConfirmedOrdersController::class . '@remove_media')->name('voyager.confirmed-orders.media.remove');
+        Route::get('accepted-orders', \Voyager\AcceptedOrdersController::class . '@index')->name('voyager.accepted-orders.index');
+        Route::get('accepted-orders/create', \Voyager\AcceptedOrdersController::class . '@create')->name('voyager.accepted-orders.create');
+        Route::post('accepted-orders', \Voyager\AcceptedOrdersController::class . '@store')->name('voyager.accepted-orders.store');
+        Route::get('accepted-orders/{id}', \Voyager\AcceptedOrdersController::class . '@show')->name('voyager.accepted-orders.show');
+        Route::get('accepted-orders/{id}/edit', \Voyager\AcceptedOrdersController::class . '@edit')->name('voyager.accepted-orders.edit');
+        Route::put('accepted-orders/{id}', \Voyager\AcceptedOrdersController::class . '@update')->name('voyager.accepted-orders.update');
+        Route::delete('accepted-orders/{id}', \Voyager\AcceptedOrdersController::class . '@destroy')->name('voyager.accepted-orders.destroy');
+        Route::get('accepted-orders/order', \Voyager\AcceptedOrdersController::class . '@order')->name('voyager.accepted-orders.order');
+        Route::post('accepted-orders/action', \Voyager\AcceptedOrdersController::class . '@action')->name('voyager.accepted-orders.action');
+        Route::post('accepted-orders/order', \Voyager\AcceptedOrdersController::class . '@update_order')->name('voyager.accepted-orders.update_order');
+        Route::get('accepted-orders/{id}/restore', \Voyager\AcceptedOrdersController::class . '@restore')->name('voyager.accepted-orders.restore');
+        Route::get('accepted-orders/relation', \Voyager\AcceptedOrdersController::class . '@relation')->name('voyager.accepted-orders.relation');
+        Route::post('accepted-orders/remove', \Voyager\AcceptedOrdersController::class . '@remove_media')->name('voyager.accepted-orders.media.remove');
 
         event(new RoutingAdminAfter());
     });

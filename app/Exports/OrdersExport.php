@@ -10,16 +10,19 @@ class OrdersExport implements FromView
 {
 
     private $ids;
+    private $scope;
 
-    public function __construct($ids = null)
+    public function __construct($scope, $ids = null)
     {
+        $this->scope = $scope;
         $this->ids = $ids;
     }
 
     public function view(): View
     {
+        $orders = !empty($this->ids) ? Order::whereIn('id', $this->ids)->get() : Order::{$this->scope}();
         return view('exports.orders', [
-            'orders' => $this->ids ? Order::whereIn('id', $this->ids)->get() : Order::all()
+            'orders' =>  $orders
         ]);
     }
 }

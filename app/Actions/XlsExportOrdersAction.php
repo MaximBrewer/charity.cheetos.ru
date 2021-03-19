@@ -10,7 +10,21 @@ class XlsExportOrdersAction extends AbstractAction
 
     public function massAction($ids, $comingFrom)
     {
-        return Excel::download(new \App\Exports\OrdersExport($ids), 'orders.xlsx');
+        if (empty($ids)) {
+            if (strstr($comingFrom, 'new-orders')) {
+                return Excel::download(new \App\Exports\OrdersExport('new'), 'orders.xlsx');
+            } elseif (strstr($comingFrom, 'canceled-orders')) {
+                return Excel::download(new \App\Exports\OrdersExport('canceled'), 'orders.xlsx');
+            } elseif (strstr($comingFrom, 'accepted-orders')) {
+                return Excel::download(new \App\Exports\OrdersExport('accepted'), 'orders.xlsx');
+            } elseif (strstr($comingFrom, 'finished-orders')) {
+                return Excel::download(new \App\Exports\OrdersExport('finished'), 'orders.xlsx');
+            } else {
+                return Excel::download(new \App\Exports\OrdersExport('all'), 'orders.xlsx');
+            }
+        } else {
+            return Excel::download(new \App\Exports\OrdersExport('all', $ids), 'orders.xlsx');
+        }
     }
 
     public function getTitle()

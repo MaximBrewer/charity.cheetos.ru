@@ -34,8 +34,8 @@ class Order extends Model
     {
         return $query->where('status', 'finished');
     }
-    public function scopeConfirmed($query)
+    public function scopeAccepted($query)
     {
-        return $query->where('status', 'confirmed');
+        return $query->where('status', 'accepted');
     }
 }
