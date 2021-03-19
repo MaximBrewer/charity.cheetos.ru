@@ -19,9 +19,12 @@ class AppServiceProvider extends ServiceProvider
         \App\Models\Partner::observe(\App\Observers\Partner::class);
         \App\Models\Pet::observe(\App\Observers\Pet::class);
         \App\Models\Post::observe(\App\Observers\Post::class);
-
         \App\Models\Faq::observe(\App\Observers\Faq::class);
         \App\User::observe(\App\Observers\User::class);
+
+        \TCG\Voyager\Facades\Voyager::addAction(\App\Actions\XlsExportOrdersAction::class);
+        \TCG\Voyager\Facades\Voyager::addAction(\App\Actions\XlsExportFaqsAction::class);
+        \TCG\Voyager\Facades\Voyager::addAction(\App\Actions\XlsExportTripsAction::class);
     }
 
     /**

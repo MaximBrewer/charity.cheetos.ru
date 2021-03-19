@@ -11,6 +11,12 @@ class Pet extends Model
     use HasFactory;
     use Resizable;
 
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', true);
+    }
+
     public function partner()
     {
         return $this->belongsTo(Partner::class, 'partner_id', 'id');

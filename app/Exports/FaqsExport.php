@@ -8,10 +8,17 @@ use Maatwebsite\Excel\Concerns\FromView;
 
 class FaqsExport implements FromView
 {
+    private $ids;
+
+    public function __construct($ids = null)
+    {
+        $this->ids = $ids;
+    }
+
     public function view(): View
     {
         return view('exports.faqs', [
-            'faqs' => Faq::all()
+            'faqs' => $this->ids ? Faq::whereIn('id', $this->ids)->get() : Faq::all()
         ]);
     }
 }
