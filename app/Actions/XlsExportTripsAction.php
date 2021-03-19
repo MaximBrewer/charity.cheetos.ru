@@ -10,6 +10,7 @@ class XlsExportTripsAction extends AbstractAction
 
     public function massAction($ids, $comingFrom)
     {
+        $ids = empty($ids) || !$ids || (isset($ids[0]) && !$ids[0]) ? null : $ids;
         return Excel::download(new \App\Exports\TripsExport($ids), 'trips.xlsx');
     }
 

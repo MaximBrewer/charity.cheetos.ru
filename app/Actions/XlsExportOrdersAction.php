@@ -10,7 +10,8 @@ class XlsExportOrdersAction extends AbstractAction
 
     public function massAction($ids, $comingFrom)
     {
-        if (empty($ids) || !$ids || (isset($ids[0]) && !$ids[0])) {
+        $ids = empty($ids) || !$ids || (isset($ids[0]) && !$ids[0]) ? null : $ids;
+        if (!$ids) {
             if (strstr($comingFrom, 'new-orders')) {
                 return Excel::download(new \App\Exports\OrdersExport('new'), 'orders.xlsx');
             } elseif (strstr($comingFrom, 'canceled-orders')) {

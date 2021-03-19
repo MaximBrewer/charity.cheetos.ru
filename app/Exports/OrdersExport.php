@@ -20,7 +20,7 @@ class OrdersExport implements FromView
 
     public function view(): View
     {
-        $orders = !empty($this->ids) ? Order::whereIn('id', $this->ids)->get() : ($this->scope == 'all' ? Order::all() : Order::{$this->scope}()->get());
+        $orders = $this->ids ? Order::whereIn('id', $this->ids)->get() : ($this->scope == 'all' ? Order::all() : Order::{$this->scope}()->get());
         return view('exports.orders', [
             'orders' =>  $orders
         ]);
