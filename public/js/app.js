@@ -57703,7 +57703,7 @@ function Links(_ref) {
     to: "/rules",
     className: "hover:underline"
   }, "\u041F\u0440\u0430\u0432\u0438\u043B\u0430 \u0430\u043A\u0446\u0438\u0438"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    to: "/files/agreement.pdf",
+    href: "/files/agreement.pdf",
     className: "hover:underline",
     target: "_blank"
   }, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u043E\u0435 \u0441\u043E\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " \xA9 \u0412\u0421\u0415 \u041F\u0420\u0410\u0412\u0410 \u0417\u0410\u0429\u0418\u0429\u0415\u041D\u042B");

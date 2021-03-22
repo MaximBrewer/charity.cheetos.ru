@@ -13,7 +13,7 @@ function Links({ className = "" }) {
         Правила акции
       </Link>
       <br />
-      <a to="/files/agreement.pdf" className="hover:underline" target="_blank">
+      <a href="/files/agreement.pdf" className="hover:underline" target="_blank">
         Пользовательское соглашение
       </a>
       <br /> © ВСЕ ПРАВА ЗАЩИЩЕНЫ
