@@ -60106,7 +60106,7 @@ function Partners(_ref) {
     }) : "", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "my-12 xl:flex justify-between items-start"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "xl:w-2/5 xl:order-1 xl:mr-24"
+      className: "xl:w-1/5 xl:order-1 xl:mr-24"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "my-4 w-40 m-auto xl:my-0 xl:w-72"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -60115,13 +60115,13 @@ function Partners(_ref) {
         backgroundImage: "url(".concat(item.image, ")")
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "xl:w-3/5 xl:order-2 xl:flex flex-col"
+      className: "xl:w-4/5 xl:order-2 xl:flex flex-col"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "my-6 xl:mb-3 xl:mt-0 text-xl text-center xl:text-left xl:order-1 xl:font-semibold xl:w-2/3 markdown"
     }, Object(html_react_parser__WEBPACK_IMPORTED_MODULE_2__["default"])((_item$excerpt = item.excerpt) !== null && _item$excerpt !== void 0 ? _item$excerpt : "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       className: "my-6 xl:my-3 flex items-center justify-between xl:justify-start xl:order-5"
     }, item.site ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      className: "mx-4"
+      className: "mx-4 xl:ml-0"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: item.site,
       target: "_blank",
@@ -60157,11 +60157,11 @@ function Partners(_ref) {
     }, Object(html_react_parser__WEBPACK_IMPORTED_MODULE_2__["default"])((_item$body = item.body) !== null && _item$body !== void 0 ? _item$body : "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "xl:order-3 xl:flex"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "my-6 flex items-center justify-center "
+      className: "my-6 flex items-center justify-center"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "".concat(item.site),
       target: "_blank",
-      className: "text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none xl:mr-8",
+      className: "text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-4 text-white font-bold text-center focus:outline-none xl:mr-8",
       onClick: function onClick() {
         sendToGmData("becomeVolunteer");
       }
@@ -60169,11 +60169,20 @@ function Partners(_ref) {
       className: "my-6 flex items-center justify-center"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/volunteer/".concat(item.id, "#form"),
-      className: "text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-7 text-white font-bold text-center focus:outline-none",
+      className: "text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-4 text-white font-bold text-center focus:outline-none xl:mr-8",
       onClick: function onClick() {
         sendToGmData("travelOrder");
       }
-    }, "\u0417\u0430\u044F\u0432\u043A\u0430 \u043D\u0430 \u043F\u043E\u0435\u0437\u0434\u043A\u0443 \u0432 \u043F\u0440\u0438\u044E\u0442"))))));
+    }, "\u0417\u0430\u044F\u0432\u043A\u0430 \u043D\u0430 \u043F\u043E\u0435\u0437\u0434\u043A\u0443 \u0432 \u043F\u0440\u0438\u044E\u0442")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "my-6 flex items-center justify-center "
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "".concat(item.how),
+      target: "_blank",
+      className: "text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-4 text-white font-bold text-center focus:outline-none xl:mr-8",
+      onClick: function onClick() {
+        sendToGmData("becomeVolunteer");
+      }
+    }, "\u041A\u0430\u043A \u0435\u0449\u0435 \u043F\u043E\u043C\u043E\u0447\u044C \u0444\u043E\u043D\u0434\u0443"))))));
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-px"
   }));
