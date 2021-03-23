@@ -60180,7 +60180,7 @@ function Partners(_ref) {
       target: "_blank",
       className: "text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-4 text-white font-bold text-center focus:outline-none xl:mr-8",
       onClick: function onClick() {
-        sendToGmData("becomeVolunteer");
+        sendToGmData("donateFund");
       }
     }, "\u041A\u0430\u043A \u0435\u0449\u0435 \u043F\u043E\u043C\u043E\u0447\u044C \u0444\u043E\u043D\u0434\u0443"))))));
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

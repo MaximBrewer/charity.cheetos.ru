@@ -133,7 +133,7 @@ function Partners({ sendToGmData }) {
                         target={`_blank`}
                         className="text-xl bg-darkOrange-900 hover:bg-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-4 text-white font-bold text-center focus:outline-none xl:mr-8"
                         onClick={() => {
-                          sendToGmData("becomeVolunteer");
+                          sendToGmData("donateFund");
                         }}
                       >
                         Как еще помочь фонду
