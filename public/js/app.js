@@ -58211,17 +58211,16 @@ function Header(_ref) {
       }
     },
     text: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u0410\u043A\u0446\u0438\u044F \u0432\xA0\u041C\u0430\u0433\u043D\u0438\u0442")
-  }, // {
-  //   props: {
-  //     to: "/school",
-  //     onClick: () => {
-  //       sendToGmData("Winners");
-  //       setOpened(false);
-  //     },
-  //   },
-  //   text: "Школа будущих хозяев",
-  // },
-  {
+  }, {
+    props: {
+      to: "/school",
+      onClick: function onClick() {
+        sendToGmData("Winners");
+        setOpened(false);
+      }
+    },
+    text: "Школа будущих хозяев"
+  }, {
     props: {
       to: "/rules",
       onClick: function onClick() {

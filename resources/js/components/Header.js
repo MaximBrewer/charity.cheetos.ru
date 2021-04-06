@@ -58,16 +58,16 @@ function Header({ opened, setOpened, sendToGmData }) {
       },
       text: <span>Акция в&nbsp;Магнит</span>,
     },
-    // {
-    //   props: {
-    //     to: "/school",
-    //     onClick: () => {
-    //       sendToGmData("Winners");
-    //       setOpened(false);
-    //     },
-    //   },
-    //   text: "Школа будущих хозяев",
-    // },
+    {
+      props: {
+        to: "/school",
+        onClick: () => {
+          sendToGmData("Winners");
+          setOpened(false);
+        },
+      },
+      text: "Школа будущих хозяев",
+    },
     {
       props: {
         to: "/rules",
