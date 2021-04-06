@@ -90,7 +90,7 @@ export default function GetPetBlock({ useTitle, sendToGmData }) {
                     </div>
                     <span className="w-full">
                       Пройди обучение <br className="xl:hidden" />
-                      <a
+                      {/* <a
                         className="font-bold underline cursor-pointer"
                         onClick={() => {
                           setModalBody(<SchoolModal />);
@@ -100,13 +100,13 @@ export default function GetPetBlock({ useTitle, sendToGmData }) {
                         }}
                       >
                         в&nbsp;школе будущих хозяев
-                      </a>
-                      {/* <Link
+                      </a> */}
+                      <Link
                       to="/school"
                       className="font-bold underline"
                     >
                       в&nbsp;школе будущих хозяев
-                    </Link> */}
+                    </Link>
                     </span>
                   </li>
                 </ul>

@@ -31,7 +31,7 @@ function GetPet({ sendToGmData }) {
                   перед будущими и настоящими хозяевами лохматых друзей.
                 </p>
                 <div className="my-6 hidden xl:block">
-                  <a
+                  {/* <a
                     className={`${buttonClass()} w-96 text-xl`}
                     onClick={() => {
                       setModalBody(<SchoolModal />);
@@ -41,13 +41,13 @@ function GetPet({ sendToGmData }) {
                     }}
                   >
                     Стать ответственным хозяином
-                  </a>
-                  {/* <Link
+                  </a> */}
+                  <Link
                     className={`${buttonClass()} w-96 text-xl`}
                     to="/school"
                   >
                     Стать ответственным хозяином
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
               <div className={`xl:w-2/5 xl:pl-24 xl:order-2`}>
@@ -58,7 +58,7 @@ function GetPet({ sendToGmData }) {
                   ></div>
                 </div>
                 <div className="my-6 flex items-center justify-center xl:hidden">
-                  <a
+                  {/* <a
                     className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
                     onClick={() => {
                       setModalBody(<SchoolModal />);
@@ -68,13 +68,13 @@ function GetPet({ sendToGmData }) {
                     }}
                   >
                     Стать ответственным хозяином
-                  </a>
-                  {/* <Link
+                  </a> */}
+                  <Link
                     className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
                     to="/school"
                   >
                     Стать ответственным хозяином
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
             </div>
