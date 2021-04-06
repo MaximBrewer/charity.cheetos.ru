@@ -112,7 +112,7 @@ function School() {
                           </div>
                           <div>{item.y}</div>
                         </div>
-                        <div className="bg-yellow-800 pt-3 pb-1 text-center text-xl font-bold">
+                        <div className="bg-yellow-800 pt-3 pb-1 text-center text-xl font-bold" onClick={(e) => e.stopPropagation()}>
                           {item.prologue}
                         </div>
                       </div>

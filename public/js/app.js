@@ -60579,7 +60579,10 @@ function School() {
     }, item.excerpt), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "text-lg mb-2 markdown"
     }, Object(html_react_parser__WEBPACK_IMPORTED_MODULE_5__["default"])((_item$body = item.body) !== null && _item$body !== void 0 ? _item$body : "")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, item.y)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "bg-yellow-800 pt-3 pb-1 text-center text-xl font-bold"
+      className: "bg-yellow-800 pt-3 pb-1 text-center text-xl font-bold",
+      onClick: function onClick(e) {
+        return e.stopPropagation();
+      }
     }, item.prologue))) : "";
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-px "
