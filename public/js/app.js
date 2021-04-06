@@ -60503,9 +60503,9 @@ function School() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "text-2xl font-bold text-center mt-8 hidden xl:block"
   }, "\u041F\u0420\u041E\u0422\u042F\u041D\u0418 \u041B\u0410\u041F\u0423 \u0414\u0420\u0423\u0416\u0411\u042B"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "text-2xl font-bold text-center mb-4 xl:mb-12"
+    className: "text-2xl font-bold text-center xl:mb-16 mt-4 xl:mt-0"
   }, "\u0428\u041A\u041E\u041B\u0410 \u0411\u0423\u0414\u0423\u0429\u0418\u0425 \u0425\u041E\u0417\u042F\u0415\u0412"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-xl mb-10"
+    className: "text-xl mb-10 mt-4"
   }, "\u041A \u043D\u043E\u0432\u043E\u0439 \u0436\u0438\u0437\u043D\u0438 \u043D\u0443\u0436\u043D\u043E \u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u0436\u0438\u0432\u043E\u0442\u043D\u044B\u0445, \u043D\u043E \u0438 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0445\u043E\u0437\u044F\u0435\u0432. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u0423\u0437\u043D\u0430\u0439\u0442\u0435, \u043E\u0442\u0432\u0435\u0442\u044B \u043D\u0430 \u0441\u0430\u043C\u044B\u0435 \u0430\u043A\u0442\u0443\u0430\u043B\u044C\u043D\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-px "
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

@@ -37,10 +37,10 @@ function School() {
             <h2 className={`text-2xl font-bold text-center mt-8 hidden xl:block`}>
               ПРОТЯНИ ЛАПУ ДРУЖБЫ
             </h2>
-            <h2 className={`text-2xl font-bold text-center mb-4 xl:mb-12`}>
+            <h2 className={`text-2xl font-bold text-center xl:mb-16 mt-4 xl:mt-0`}>
               ШКОЛА БУДУЩИХ ХОЗЯЕВ
             </h2>
-            <p className="text-xl mb-10">
+            <p className="text-xl mb-10 mt-4">
               К новой жизни нужно готовить не только животных, но и будущих
               хозяев. <br />
               Узнайте, ответы на самые актуальные вопросы!
