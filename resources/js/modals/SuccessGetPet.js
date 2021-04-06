@@ -3,6 +3,7 @@ import { buttonClass } from "../Classes";
 import useGTM from "@elgorditosalsero/react-gtm-hook";
 import { useModal } from "../context/modal";
 import SchoolModal from "../modals/School";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Modal() {
   const { sendDataToGTM } = useGTM();

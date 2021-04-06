@@ -3,6 +3,7 @@ import { buttonClass } from "../Classes";
 import SchoolModal from "../modals/School";
 import { useModal } from "../context/modal";
 import PetsSlider from "../components/PetsSlider";
+import { Link, useHistory } from "react-router-dom";
 
 // components
 
