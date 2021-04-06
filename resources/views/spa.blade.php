@@ -22,14 +22,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('fonts/stylesheet.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css?v1.34') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css?v1.35') }}" rel="stylesheet">
     
 </head>
 
 <body className="font-sans h-full text-grey-darkest">
     <div id="app" class="flex flex-col select-none">
     </div>
-    <script src="{{ asset('js/app.js?v1.34') }}" defer></script>
+    <script src="{{ asset('js/app.js?v1.35') }}" defer></script>
 </body>
 
 </html>

@@ -43,7 +43,7 @@ function School() {
             <p className="text-xl mb-10 mt-4">
               К новой жизни нужно готовить не только животных, но и будущих
               хозяев. <br />
-              Узнайте, ответы на самые актуальные вопросы!
+              Узнайте ответы на самые актуальные вопросы!
             </p>
           </div>
           <div className="w-full h-px "></div>
@@ -135,7 +135,7 @@ function School() {
               Какое у вас животное
             </h2>
             <p className="text-sm xl:text-lg text-center mb-4 xl:text-left">
-              будущее или настоящее
+              будущее или настоящее?
             </p>
             <div className="xl:flex items-center">
               <div className="xl:w-1/2">
