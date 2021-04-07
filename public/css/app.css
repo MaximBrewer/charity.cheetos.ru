@@ -38834,6 +38834,10 @@ video {
   text-indent: 2.2rem;
 }
 
+iframe .ytp-cued-thumbnail-overlay {
+  z-index: 300;
+}
+
 @media (min-width: 1280px) {
   .xl\:container {
     width: 100%;

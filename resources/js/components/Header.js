@@ -22,7 +22,7 @@ function Header({ opened, setOpened, sendToGmData }) {
         to: "/",
         onClick: () => {
           setOpened(false);
-          sendToGmData("Main");
+          sendToGmData("menuMain");
         },
       },
       text: "Главная",
@@ -62,7 +62,7 @@ function Header({ opened, setOpened, sendToGmData }) {
       props: {
         to: "/school",
         onClick: () => {
-          sendToGmData("Winners");
+          sendToGmData("menuSchool");
           setOpened(false);
         },
       },
@@ -73,7 +73,7 @@ function Header({ opened, setOpened, sendToGmData }) {
         to: "/rules",
         onClick: () => {
           setOpened(false);
-          sendToGmData("Test");
+          sendToGmData("menuRules");
         },
       },
       text: "Правила акции",
@@ -82,7 +82,7 @@ function Header({ opened, setOpened, sendToGmData }) {
     {
       props: {
         onClick: () => {
-          sendToGmData("Feedback");
+          sendToGmData("menuFaq");
           setOpened(false);
           setModalBody(<FaqModal />);
           setShowModal(true);

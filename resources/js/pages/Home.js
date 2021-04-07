@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import SweetImg from "../../images/sweet.jpeg";
 import DogImg from "../../images/god.jpg";
 import StepsImg from "../../images/steps.png";
 
@@ -133,8 +134,71 @@ function Home({ sendToGmData }) {
         </div>
       </div> */}
       <GetPetBlock useTitle={false} sendToGmData={sendToGmData} />
+      <div className="bg-white xl:bg-transparent max-w-sm xl:max-w-full mx-auto -mb-px">
+        <div className="container mx-auto">
+          <div className="w-full h-px"></div>
+          <h2 className="pt-12 text-2xl font-bold text-center block xl:hidden">
+            ШКОЛА БУДУЩИХ ХОЗЯЕВ
+          </h2>
+          <div className="xl:flex xl:pb-32 xl:pt-12 justify-between items-start">
+            <div className="xl:w-2/5 xl:order-1 xl:pr-16">
+              <div className="my-4 xl:my-0 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
+                <div
+                  className="relative rounded-2xl overflow-hidden bg-center bg-no-repeat bg-cover w-full pb-100%"
+                  style={{ backgroundImage: `url(${SweetImg})` }}
+                ></div>
+              </div>
+            </div>
+            <div className="xl:w-3/5 xl:order-2">
+              <h2 className="text-white pt-6 pb-4 text-2xl font-bold hidden xl:block text-shadow-xl">
+                ШКОЛА БУДУЩИХ ХОЗЯЕВ
+              </h2>
+              <p className="text-xl xl:text-2xl xl:font-bold xl:mb-8 xl:text-shadow-xl text-justify">
+                К новой жизни надо подготовиться всем: и четвероногим друзьям, и
+                их потенциальным владельцам. Узнайте ответы на актуальные
+                вопросы, которые часто задают хозяева собак и кошек.
+              </p>
+              <div className="my-6 flex items-start justify-center xl:justify-start">
+                <Link
+                  to="/school"
+                  onClick={() => {
+                    sendToGmData("knowMore");
+                  }}
+                  className={
+                    buttonClass() +
+                    ` w-64 xl:mb-0 xl:w-auto xl:px-12 text-xl xl:bg-yellow-800 xl:hover:bg-yellow-600 xl:text-darkOrange-900 py-2 px-7`
+                  }
+                >
+                  Узнать больше
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-px"></div>
+        {/* </div>
+      <div className="xl:bg-white xl:text-black">
+        <div className="max-w-sm xl:max-w-full mx-auto">
+          <div className="container mx-auto">
+            <div className="xl:flex xl:py-16 justify-between items-start">
+              <div className="xl:w-1/2 xl:pl-20 xl:pr-36">
+                <h2 className="text-2xl text-center uppercase font-bold mb-4 mt-8 xl:hidden">
+                  СТАТЬ ХОЗЯИНОМ
+                </h2>
+                <div className="my-4 xl:my-0 p-3 bg-frame bg-cover rounded-3xl overflow-hidden">
+                  <div
+                    className="relative rounded-2xl overflow-hidden bg-center bg-no-repeat bg-cover w-full pb-100%"
+                    style={{ backgroundImage: `url(${DogImg})` }}
+                  ></div>
+                </div>
+              </div>
+              <div className="xl:w-1/2 xl:pl-20"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="xl:py-0 sm:py-16 ">
-        {/* <div className="max-w-sm xl:max-w-full mx-auto xl:text-black">
+        <div className="max-w-sm xl:max-w-full mx-auto xl:text-black">
           <div className="container mx-auto">
             <div className="xl:flex items-start justify-between">
               <div className="xl:w-1/2">
