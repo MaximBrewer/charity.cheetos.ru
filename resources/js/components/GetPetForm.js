@@ -79,7 +79,7 @@ export default function GetPetForm({ pet_id }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={`text-left`}>
         <div className="flex flex-wrap flex-col">
           <div className="w-full my-2">
             <div className={`md-input-box`}>
@@ -95,7 +95,7 @@ export default function GetPetForm({ pet_id }) {
                 {...name.bind}
               />
             </div>
-            {name.error && <p className="text-white text-xs">{name.error}</p>}
+            {name.error && <p className="text-red-900 text-sm px-2">{name.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
@@ -114,7 +114,7 @@ export default function GetPetForm({ pet_id }) {
               />
             </div>
             {surname.error && (
-              <p className="text-white text-xs">{surname.error}</p>
+              <p className="text-red-900 text-sm px-2">{surname.error}</p>
             )}
           </div>
         </div>
@@ -133,7 +133,11 @@ export default function GetPetForm({ pet_id }) {
                 {...age.bind}
               />
             </div>
-            {age.error && <p className="text-white text-xs">{age.error}</p>}
+            {age.error && <p className="text-red-900 text-sm px-2">{age.error}</p>}
+            <p className="text-gray-800 text-sm px-2 pt-1">
+              Младше 18 лет? Тогда зови на помощь родителей. Только
+              совершеннолетние могут забрать животное домой.
+            </p>
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
@@ -159,7 +163,7 @@ export default function GetPetForm({ pet_id }) {
                 }}
               />
             </div>
-            {phone.error && <p className="text-white text-xs">{phone.error}</p>}
+            {phone.error && <p className="text-red-900 text-sm px-2">{phone.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
@@ -177,7 +181,7 @@ export default function GetPetForm({ pet_id }) {
                 {...email.bind}
               />
             </div>
-            {email.error && <p className="text-white text-xs">{email.error}</p>}
+            {email.error && <p className="text-red-900 text-sm px-2">{email.error}</p>}
           </div>
         </div>
         <div className="flex flex-wrap flex-col">
@@ -199,7 +203,7 @@ export default function GetPetForm({ pet_id }) {
                 onChange={(e) => getCities(e)}
               />
             </div>
-            {city.error && <p className="text-white text-xs">{city.error}</p>}
+            {city.error && <p className="text-red-900 text-sm px-2">{city.error}</p>}
             {cities.length ? (
               <ul className="w-full absolute z-5 bg-white shadow-md py-1 px-0 bg-gray-100 border-t rounded-b-2xl border-gray-300">
                 {cities.map((item, index) => (
@@ -241,7 +245,7 @@ export default function GetPetForm({ pet_id }) {
                 {...body.bind}
               />
             </div>
-            {body.error && <p className="text-white text-xs">{body.error}</p>}
+            {body.error && <p className="text-red-900 text-sm px-2">{body.error}</p>}
           </div>
         </div>
         <div className="my-4 flex items-center justify-center">

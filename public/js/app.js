@@ -57381,6 +57381,9 @@ function GetPetBlock(_ref) {
     className: "xl:hidden"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
     to: "/school",
+    onClick: function onClick() {
+      sendToGmData("toSchool");
+    },
     className: "font-bold underline"
   }, "\u0432\xA0\u0448\u043A\u043E\u043B\u0435 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0445\u043E\u0437\u044F\u0435\u0432"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "xl:w-1/2"
@@ -57976,7 +57979,8 @@ function GetPetForm(_ref) {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    onSubmit: handleSubmit
+    onSubmit: handleSubmit,
+    className: "text-left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap flex-col"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -57991,7 +57995,7 @@ function GetPetForm(_ref) {
     name: "name",
     required: true
   }, name.bind))), name.error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-white text-xs"
+    className: "text-red-900 text-sm px-2"
   }, name.error))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap flex-col"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58006,7 +58010,7 @@ function GetPetForm(_ref) {
     name: "surname",
     required: true
   }, surname.bind))), surname.error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-white text-xs"
+    className: "text-red-900 text-sm px-2"
   }, surname.error))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap flex-col"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58021,8 +58025,10 @@ function GetPetForm(_ref) {
     name: "age",
     required: true
   }, age.bind))), age.error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-white text-xs"
-  }, age.error))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-red-900 text-sm px-2"
+  }, age.error), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-gray-800 text-sm px-2 pt-1"
+  }, "\u041C\u043B\u0430\u0434\u0448\u0435 18 \u043B\u0435\u0442? \u0422\u043E\u0433\u0434\u0430 \u0437\u043E\u0432\u0438 \u043D\u0430 \u043F\u043E\u043C\u043E\u0449\u044C \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439. \u0422\u043E\u043B\u044C\u043A\u043E \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u043D\u043E\u043B\u0435\u0442\u043D\u0438\u0435 \u043C\u043E\u0433\u0443\u0442 \u0437\u0430\u0431\u0440\u0430\u0442\u044C \u0436\u0438\u0432\u043E\u0442\u043D\u043E\u0435 \u0434\u043E\u043C\u043E\u0439."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap flex-col"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full my-2"
@@ -58049,7 +58055,7 @@ function GetPetForm(_ref) {
       });
     }
   })), phone.error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-white text-xs"
+    className: "text-red-900 text-sm px-2"
   }, phone.error))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap flex-col"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58064,7 +58070,7 @@ function GetPetForm(_ref) {
     name: "email",
     required: true
   }, email.bind))), email.error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-white text-xs"
+    className: "text-red-900 text-sm px-2"
   }, email.error))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap flex-col"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58084,7 +58090,7 @@ function GetPetForm(_ref) {
       return getCities(e);
     }
   })), city.error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-white text-xs"
+    className: "text-red-900 text-sm px-2"
   }, city.error), cities.length ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "w-full absolute z-5 bg-white shadow-md py-1 px-0 bg-gray-100 border-t rounded-b-2xl border-gray-300"
   }, cities.map(function (item, index) {
@@ -58116,7 +58122,7 @@ function GetPetForm(_ref) {
     name: "body",
     required: true
   }, body.bind))), body.error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-white text-xs"
+    className: "text-red-900 text-sm px-2"
   }, body.error))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "my-4 flex items-center justify-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -58229,8 +58235,16 @@ function Header(_ref) {
       }
     },
     text: "Правила акции"
-  }, // { props: { to: "/news" }, text: "Новости" },
-  {
+  }, {
+    props: {
+      to: "/news",
+      onClick: function onClick() {
+        sendToGmData("menuNews");
+      },
+      className: "cursor-pointer block"
+    },
+    text: "Новости"
+  }, {
     props: {
       onClick: function onClick() {
         sendToGmData("menuFaq");
@@ -58286,7 +58300,7 @@ function Header(_ref) {
       className: "transform-gpu hover:scale-110 duration-100 mr-2"
     }, item.props.to ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], _extends({}, item.props, {
       activeClassName: "active",
-      className: "block py-1 px-1 xl:py-3 xl:px-2 uppercase"
+      className: "block py-1 px-1 xl:py-3 uppercase"
     }), item.text) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", _extends({}, item.props, {
       className: "block py-1 px-1 xl:py-3 xl:px-2 uppercase ".concat(item.props.className)
     }), item.text));
@@ -59457,6 +59471,9 @@ function Modal() {
     className: "mb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
     to: "/school",
+    onClick: function onClick() {
+      sendToGmData("toSchool");
+    },
     className: Object(_Classes__WEBPACK_IMPORTED_MODULE_1__["buttonClass"])() + " m-auto w-72 text-xl"
   }, "\u0412 \u0448\u043A\u043E\u043B\u0443 \u0431\u0443\u0434\u0443\u0449\u0438\u0445 \u0445\u043E\u0437\u044F\u0435\u0432")));
 }
@@ -59791,7 +59808,10 @@ function GetPet(_ref) {
     className: "my-6 hidden xl:block"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "".concat(Object(_Classes__WEBPACK_IMPORTED_MODULE_4__["buttonClass"])(), " w-96 text-xl"),
-    to: "/school"
+    to: "/school",
+    onClick: function onClick() {
+      sendToGmData("toSchool");
+    }
   }, "\u0421\u0442\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u043C \u0445\u043E\u0437\u044F\u0438\u043D\u043E\u043C"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "xl:w-2/5 xl:pl-24 xl:order-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -59805,7 +59825,10 @@ function GetPet(_ref) {
     className: "my-6 flex items-center justify-center xl:hidden"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none",
-    to: "/school"
+    to: "/school",
+    onClick: function onClick() {
+      sendToGmData("toSchool");
+    }
   }, "\u0421\u0442\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u043C \u0445\u043E\u0437\u044F\u0438\u043D\u043E\u043C")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-px "
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -59926,7 +59949,9 @@ function Home(_ref) {
     id: "home",
     className: "mt-28 xl:mt-0 xl:text-white"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg-white xl:bg-transparent max-w-sm xl:max-w-full mx-auto -mb-px"
+    className: "bg-white xl:bg-transparent"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "max-w-sm xl:max-w-full mx-auto -mb-px"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container mx-auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -59952,11 +59977,13 @@ function Home(_ref) {
     }
   }, "\u0423\u0434\u0432\u043E\u0438\u0442\u044C \u043F\u043E\u043C\u043E\u0449\u044C"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-px"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blocks_GetPetBlock__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_blocks_GetPetBlock__WEBPACK_IMPORTED_MODULE_12__["default"], {
     useTitle: false,
     sendToGmData: sendToGmData
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg-white xl:bg-transparent max-w-sm xl:max-w-full mx-auto -mb-px"
+    className: "bg-white xl:bg-transparent"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "max-w-sm xl:max-w-full mx-auto -mb-px"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container mx-auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -59990,6 +60017,16 @@ function Home(_ref) {
     className: Object(_Classes__WEBPACK_IMPORTED_MODULE_9__["buttonClass"])() + " w-64 xl:mb-0 xl:w-auto xl:px-12 text-xl xl:bg-yellow-800 xl:hover:bg-yellow-600 xl:text-darkOrange-900 py-2 px-7"
   }, "\u0423\u0437\u043D\u0430\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0435"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-px"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bg-white xl:pt-16 text-black"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "max-w-sm xl:max-w-full mx-auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container mx-auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "text-2xl text-center font-bold mt-8 xl:mt-0 mb-4"
+  }, "\u041D\u041E\u0412\u041E\u0421\u0422\u0418"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NewsSlider__WEBPACK_IMPORTED_MODULE_7__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full h-px bg-white"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bg-white pt-4 xl:py-16 xl:text-black -mb-px"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -60029,10 +60066,18 @@ __webpack_require__.r(__webpack_exports__);
 function News() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     id: "news",
-    className: "bg-white xl:mt-8"
+    className: "bg-white"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-px"
-  }), window.App.data.news.map(function (item, index) {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "max-w-sm xl:max-w-full mx-auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container mx-auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "text-2xl font-bold text-center mt-8 hidden xl:block"
+  }, "\u041F\u0420\u041E\u0422\u042F\u041D\u0418 \u041B\u0410\u041F\u0423 \u0414\u0420\u0423\u0416\u0411\u042B"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "text-2xl font-bold text-center mt-4 xl:mt-0"
+  }, "\u041D\u041E\u0412\u041E\u0421\u0422\u0418"))), window.App.data.news.map(function (item, index) {
     var _item$body;
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

@@ -31,20 +31,12 @@ function GetPet({ sendToGmData }) {
                   перед будущими и настоящими хозяевами лохматых друзей.
                 </p>
                 <div className="my-6 hidden xl:block">
-                  {/* <a
-                    className={`${buttonClass()} w-96 text-xl`}
-                    onClick={() => {
-                      setModalBody(<SchoolModal />);
-                      setShowModal(true);
-                      document.documentElement.scrollTop = 0;
-                      return false;
-                    }}
-                  >
-                    Стать ответственным хозяином
-                  </a> */}
                   <Link
                     className={`${buttonClass()} w-96 text-xl`}
                     to="/school"
+                    onClick={() => {
+                      sendToGmData("toSchool");
+                    }}
                   >
                     Стать ответственным хозяином
                   </Link>
@@ -58,20 +50,12 @@ function GetPet({ sendToGmData }) {
                   ></div>
                 </div>
                 <div className="my-6 flex items-center justify-center xl:hidden">
-                  {/* <a
-                    className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
-                    onClick={() => {
-                      setModalBody(<SchoolModal />);
-                      setShowModal(true);
-                      document.documentElement.scrollTop = 0;
-                      return false;
-                    }}
-                  >
-                    Стать ответственным хозяином
-                  </a> */}
                   <Link
                     className="w-full text-xl bg-white text-darkOrange-900 hover:text-darkOrange-800 shadow-lg hover:shadow-xl active:top-px relative outline-none rounded-2xl py-2 px-2 font-bold text-center focus:outline-none"
                     to="/school"
+                    onClick={() => {
+                      sendToGmData("toSchool");
+                    }}
                   >
                     Стать ответственным хозяином
                   </Link>

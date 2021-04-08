@@ -91,19 +91,11 @@ export default function GetPetBlock({ useTitle, sendToGmData }) {
                     </div>
                     <span className="w-full">
                       Пройди обучение <br className="xl:hidden" />
-                      {/* <a
-                        className="font-bold underline cursor-pointer"
-                        onClick={() => {
-                          setModalBody(<SchoolModal />);
-                          setShowModal(true);
-                          document.documentElement.scrollTop = 0;
-                          return false;
-                        }}
-                      >
-                        в&nbsp;школе будущих хозяев
-                      </a> */}
                       <Link
                       to="/school"
+                      onClick={() => {
+                        sendToGmData("toSchool");
+                      }}
                       className="font-bold underline"
                     >
                       в&nbsp;школе будущих хозяев

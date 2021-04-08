@@ -78,7 +78,16 @@ function Header({ opened, setOpened, sendToGmData }) {
       },
       text: "Правила акции",
     },
-    // { props: { to: "/news" }, text: "Новости" },
+    {
+      props: {
+        to: "/news",
+        onClick: () => {
+          sendToGmData("menuNews");
+        },
+        className: `cursor-pointer block`,
+      },
+      text: "Новости",
+    },
     {
       props: {
         onClick: () => {
@@ -140,7 +149,7 @@ function Header({ opened, setOpened, sendToGmData }) {
                         <NavLink
                           {...item.props}
                           activeClassName="active"
-                          className="block py-1 px-1 xl:py-3 xl:px-2 uppercase"
+                          className="block py-1 px-1 xl:py-3 uppercase"
                         >
                           {item.text}
                         </NavLink>
