@@ -31,9 +31,17 @@ function Home({ sendToGmData }) {
                 <OfficialVideo />
               </div>
               <div className="xl:w-1/2">
-                <p className="text-xl xl:text-2xl xl:order-1 xl:font-bold xl:mb-8 xl:text-shadow-xl text-justify">
-                  Покупай пачки Cheetos “Лапы” и 1&nbsp;рубль с каждой пачки
-                  будет переведен в фонды помощи бездомным животным.
+                <p className="text-xl xl:text-xl xl:order-1 xl:font-bold xl:mb-8 xl:text-shadow-xl text-justify">
+                  Не обязательно быть супергероем, чтобы помогать кому-то.
+                  <br />
+                  Присоединяйся к миссии Честера — протяни лапу дружбы и помоги
+                  четвероногим!
+                  <br />
+                  Все просто: купи Cheetos «Лапы» со вкусом «Пицца» — и
+                  1&nbsp;рубль с каждой проданной пачки пойдет в
+                  благотворительные фонды помощи животным.
+                  <br />А ещё ты можешь оставить заявку на нашем сайте и взять
+                  лохматого друга домой.
                 </p>
                 <div className="my-6 xl:mt-6 xl:mb-0 flex items-center justify-center xl:justify-start">
                   <a
